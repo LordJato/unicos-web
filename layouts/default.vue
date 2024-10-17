@@ -3,6 +3,7 @@
       <VMain>
         <slot />
       </VMain>
+      <Footer />
       <VScrollYTransition>
         <VBtn
           v-show="fab"

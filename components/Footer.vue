@@ -5,10 +5,10 @@
         <VCol cols="12" md="6">
           <div>
             <div>
-              <VImg src="/img/logo.png" max-height="125" max-width="125" />
+              <VImg src="/img/unicos-logo.png" max-height="125" max-width="125" />
             </div>
             <p class="text-body-2 text-caption mt-2">
-              OOBRA is a platform that empowers digital workers by allowing them
+              UNICOS is a platform that empowers digital workers by allowing them
               to take advantage of an agency's benefits, while simultaneously
               providing Clients a reliable channel for effortless recruitment;
               Grow your portfolio with real world experiences through Oobra, the
@@ -31,8 +31,8 @@
           <div>
             <div class="font-weight-bold mb-2">Contact with us</div>
             <v-btn
-              v-for="item in icons"
-              :key="item"
+              v-for="(item, i) in icons"
+              :key="i"
               :icon="item.icon"
               variant="text"
               class="text-caption ml-n4"
@@ -43,7 +43,7 @@
       <VDivider color="white-thirdy" thickness="2"></VDivider>
       <div class="py-6 text-caption text-center">
         Copyright &#9400;
-        {{ new Date().getFullYear() }} OOBRA. All rights reserved.
+        {{ new Date().getFullYear() }} Unicos. All rights reserved.
       </div>
     </VContainer>
   </VFooter>
