@@ -7,13 +7,13 @@
               <span
                 class="font-weight-bold d-inline home-header text-h3 text-md-h2"
               >
-                Unlock agency benefits and focus your career with
+              Experience the power of a unified HR solution that adapts to your growing business needs with
               </span>
               <span
                 class="font-weight-bold home-header text-h3 text-md-h2"
                 id="oobraText"
               >
-                OOBRA
+                UNICOS
                 <!-- <img src="/img/logo.png" class="d-inline" alt="OOBRA Logo" /> -->
               </span>
             </div>
