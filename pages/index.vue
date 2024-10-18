@@ -16,6 +16,21 @@
                 label="Search templates" variant="solo" hide-details single-line @click:append-inner="onClick"
                 width="350"></VTextField>
             </div>
+            <div class="mt-12">
+            <p class="text-overline font-weight-bold">Registered Agencies</p>
+            <VRow>
+              <VCol sm="4" cols="6" v-for="(agency, i) in agencies" :key="i">
+                <VCard flat color="transparent" max-width="150">
+                  <VImg
+                    :src="agency.img"
+                    :alt="agency.img"
+                    height="50px"
+                    style="box-shadow: 20px #000;"
+                  />
+                </VCard>
+              </VCol>
+            </VRow>
+          </div>
 
           </VCol>
           <VCol cols="12" md="6">
@@ -61,30 +76,8 @@ function onClick() {
 }
 </script>
 
+
 <style scoped>
-#homePage {
-  position: relative;
-  z-index: 0;
-  background-color: #e9f2fb;
-}
-
-section#chooseOobraSection {
-  background-color: #007acc;
-  z-index: -9999;
-}
-
-.rounded-bottom {
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
-}
-
-#oobraText {
-  font-family: "Audiowide", cursive !important;
-  color: #007acc;
-}
-</style>
-
-<style lang="scss" scoped>
 section {
   position: relative;
   min-height: 100vh;
@@ -93,93 +86,4 @@ section {
   align-items: center;
 }
 
-.choose-oobra-ul>li {
-  list-style: square;
-  margin: 20px 15px;
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.75rem;
-
-  &::marker {
-    font-size: 0.7em;
-  }
-}
-
-.svg-border-waves {
-  .v-image {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 3rem;
-    width: 100%;
-    overflow: hidden;
-  }
-
-  img {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    margin-bottom: -2px;
-    z-index: -1;
-  }
-}
-
-.circle {
-  stroke: white;
-  stroke-dasharray: 650;
-  stroke-dashoffset: 650;
-  -webkit-transition: all 0.5s ease-in-out;
-  opacity: 0.3;
-}
-
-.playBut {
-  /*  border: 1px solid red;*/
-  display: inline-block;
-  -webkit-transition: all 0.5s ease;
-
-  .triangle {
-    -webkit-transition: all 0.7s ease-in-out;
-    stroke-dasharray: 240;
-    stroke-dashoffset: 480;
-    stroke: white;
-    transform: translateY(0);
-  }
-
-  &:hover {
-    .triangle {
-      stroke-dashoffset: 0;
-      opacity: 1;
-      stroke: white;
-      animation: nudge 0.7s ease-in-out;
-
-      @keyframes nudge {
-        0% {
-          transform: translateX(0);
-        }
-
-        30% {
-          transform: translateX(-5px);
-        }
-
-        50% {
-          transform: translateX(5px);
-        }
-
-        70% {
-          transform: translateX(-2px);
-        }
-
-        100% {
-          transform: translateX(0);
-        }
-      }
-    }
-
-    .circle {
-      stroke-dashoffset: 0;
-      opacity: 1;
-    }
-  }
-}
 </style>
