@@ -1,91 +1,92 @@
 <template>
-  <div>
-    <VAppBar
-      :elevation="2"
-      height="70"
-      class="px-6 px-md-16"
-    >
-      <VToolbarTitle class="mx-0">
-        <NuxtLink to="/">
-          <VImg
-            src="/img/logo.png"
-            cover
-            max-height="225"
-            max-width="225"
-            alt="OOBRA"
-          />
-        </NuxtLink>
-      </VToolbarTitle>
+  <nav>
+    <VAppBar height="60" class="px-16" :color="props.color" :flat="props.flat" :class="{ expand: props.flat }"
+      scroll-behavior="hide" order="1">
+      <VAppBarTitle class="px-md-10">
+        <VImg src="/img/unicos-logo.png" cover max-height="225" max-width="225" alt="Portfolio Icon" />
+      </VAppBarTitle>
       <VSpacer />
       <VAppBarNavIcon @click.stop="drawer = !drawer" class="d-flex d-md-none">
         <VIcon size="x-large" color="primary"> mdi-reorder-horizontal </VIcon>
       </VAppBarNavIcon>
-      <div class="d-none d-md-flex">
-        <VBtn
-          v-for="(tab, i) in tabs"
-          :key="i"
-          variant="plain"
-          class="font-weight-bold text-body-1 text-black"
-          nuxt
-          :to="tab.path"
-        >
-          {{ tab.title }}
+      <div class="d-none d-md-flex px-md-10">
+        <VBtn v-for="(link, i) in links" :key="i" variant="text" @click="onClick(link.section)">
+          {{ link.title }}
         </VBtn>
-      </div>
-      <VSpacer class="d-none d-md-flex" />
-      <div class="d-none d-md-flex">
-        <VBtn
-          height="100"
-          variant="text"
-          class="font-weight-bold text-body-2"
-          color="primary"
-        >
-          Login
-        </VBtn>
-        <VBtn
-          variant="flat"
-          height="100"
-          class="font-weight-bold text-body-2"
-          color="primary"
-          >Sign Up</VBtn
-        >
       </div>
     </VAppBar>
+    <VNavigationDrawer v-model="drawer" temporary scrim order="0" class="d-md-none">
+      <VListItem height="80" prepend-avatar="/img/unicos-logo.png" title="Steto Javellana"></VListItem>
+      <VDivider />
 
-    <!-- Navigation Drawer -->
-    <VNavigationDrawer v-model="drawer" position="fixed" temporary>
-      <VList nav dense>
-        <VListItem
-          v-for="(tab, i) in tabs"
-          :key="i"
-          :title="tab.title"
-          nuxt
-          :to="tab.path"
-        ></VListItem>
+      <VList density="compact" nav>
+        <VListItem height="50" v-for="(link, i) in links" :key="i" variant="text" @click="onClick(link.section)"
+          :prepend-icon="link.icon" :title="link.title" />
       </VList>
     </VNavigationDrawer>
-  </div>
+  </nav>
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+const props = defineProps({
+  color: String,
+  flat: Boolean,
+});
 
-const drawer = ref(false);
-const tabs = reactive([
-  { path: "/", title: "Home" },
-  { path: "/how-it-works", title: "How It Works" },
-  { path: "/benefits", title: "Benefits" },
-  { path: "/opportunities", title: "Opportunities" },
-  { path: "/about", title: "About Us" },
-  { path: "/contact", title: "Contact" },
-]);
+import { ref } from "vue";
+import { useGoTo } from "vuetify";
+
+const scrollTo = useGoTo();
+
+const goToOptions = {
+  container: "__nuxt",
+  duration: 300,
+  easing: "easeInOutCubic",
+  offset: -5,
+};
+
+const drawer = ref<boolean>(false);
+
+const links = [
+  {
+    icon: "mdi-home",
+    title: "Home",
+    section: "#homeSection",
+  },
+  {
+    icon: "mdi-account-details",
+    title: "Skill",
+    section: "#skillSection",
+  },
+  {
+    icon: "mdi-account-tie",
+    title: "Service",
+    section: "#serviceSection",
+  },
+  {
+    icon: "mdi-folder",
+    title: "Projects",
+    section: "#projectSection",
+  },
+  {
+    icon: "mdi-card-account-mail",
+    title: "Contact",
+    section: "#contactSection",
+  },
+];
+
+function onClick(e: string) {
+  scrollTo(e, goToOptions);
+}
 </script>
 
 <style scoped>
-.btn {
-  text-transform: unset !important;
+.v-toolbar {
+  transition: 0.5s ease;
 }
-.v-btn--active{
-  color: #007ACC !important;
+
+.expand {
+  height: 70px !important;
+  padding-top: 30px;
 }
 </style>
