@@ -5,7 +5,7 @@
         <VCol cols="12" md="6">
           <div>
             <div>
-              <VImg src="/img/unicos-logo.png" max-height="125" max-width="125" />
+              <VImg src="/img/logo.png" max-height="125" max-width="125" />
             </div>
             <p class="text-body-2 text-caption mt-2">
               Simplify human resources management across your entire organization with UNICOS, the ultimate

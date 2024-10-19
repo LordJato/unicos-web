@@ -3,7 +3,7 @@
     <VAppBar height="60" class="px-3" :color="props.color" :flat="props.flat" :class="{ expand: props.flat }"
       scroll-behavior="hide" order="1">
       <VAppBarTitle class="px-md-10">
-        <VImg src="/img/logo-white.png" cover max-height="225" max-width="225" alt="Portfolio Icon" />
+        <VImg src="/img/logo-white.png" :class="props.flat ? '' : 'ms-2'" cover :max-width="props.flat ? 220 : 150 " alt="Portfolio Icon" style="transition: 0.5s ease;"/>
       </VAppBarTitle>
       <VSpacer />
       <VAppBarNavIcon @click.stop="drawer = !drawer" class="d-flex d-md-none">
