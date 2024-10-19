@@ -59,7 +59,7 @@ const links = [
     section: "#skillSection",
   },
 
-  {
+  { 
     icon: "mdi-folder",
     title: "Job Opportunities",
     section: "#projectSection",
