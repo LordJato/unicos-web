@@ -5,9 +5,6 @@
         <VRow align="center" justify="center" class="h-100">
           <VCol cols="12" md="6">
             <div class="mt-6">
-              <div class="font-weight-bold text-h4 text-md-h3 text-white">
-                UNICOS
-              </div>
               <div class="font-weight-bold text-h5 text-md-h4 text-white mt-5">
                 Unify HR management with our multi-company platform. One tenant, one login, endless possibilities.
               </div>
@@ -17,7 +14,7 @@
                 width="350"></VTextField>
             </div>
             <div class="mt-12">
-            <p class="text-overline font-weight-bold">Registered Agencies</p>
+            <p class="text-overline font-weight-bold text-white">Registered Companies</p>
             <VRow>
               <VCol sm="4" cols="6" v-for="(agency, i) in agencies" :key="i">
                 <VCard flat color="transparent" max-width="150">

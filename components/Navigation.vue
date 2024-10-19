@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <VAppBar height="60" class="px-16" :color="props.color" :flat="props.flat" :class="{ expand: props.flat }"
+    <VAppBar height="60" class="px-3" :color="props.color" :flat="props.flat" :class="{ expand: props.flat }"
       scroll-behavior="hide" order="1">
       <VAppBarTitle class="px-md-10">
         <VImg src="/img/unicos-logo.png" cover max-height="225" max-width="225" alt="Portfolio Icon" />
@@ -10,7 +10,7 @@
         <VIcon size="x-large" color="primary"> mdi-reorder-horizontal </VIcon>
       </VAppBarNavIcon>
       <div class="d-none d-md-flex px-md-10">
-        <VBtn v-for="(link, i) in links" :key="i" variant="text" @click="onClick(link.section)">
+        <VBtn v-for="(link, i) in links" :key="i" variant="text" @click="onClick(link.section)" class="text-white">
           {{ link.title }}
         </VBtn>
       </div>
@@ -55,23 +55,19 @@ const links = [
   },
   {
     icon: "mdi-account-details",
-    title: "Skill",
+    title: "About",
     section: "#skillSection",
   },
-  {
-    icon: "mdi-account-tie",
-    title: "Service",
-    section: "#serviceSection",
-  },
+
   {
     icon: "mdi-folder",
-    title: "Projects",
+    title: "Job Opportunities",
     section: "#projectSection",
   },
   {
-    icon: "mdi-card-account-mail",
-    title: "Contact",
-    section: "#contactSection",
+    icon: "mdi-account-tie",
+    title: "Contact Us",
+    section: "#serviceSection",
   },
 ];
 
