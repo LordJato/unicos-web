@@ -5,15 +5,13 @@ import { createVuetify, type ThemeDefinition } from 'vuetify'
 const myCustomLightTheme: ThemeDefinition = {
   dark: false,
   colors: { 
-    primary: '#007ACC',
+    primary: '#213268',
     secondary: '#5CB85C',
     error: '#B00020',
     info: '#2196F3',
     success: '#4CAF50',
     warning: '#FB8C00',
-    'white-primary' : '#FBFBFB',
-    'white-secondary' : '#E9F2FB',
-    'white-thirdy' : '#D3E5F7'
+    'white-primary' : '#FAFAFA',
   }
 }
 

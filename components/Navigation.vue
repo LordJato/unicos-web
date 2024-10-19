@@ -3,7 +3,7 @@
     <VAppBar height="60" class="px-3" :color="props.color" :flat="props.flat" :class="{ expand: props.flat }"
       scroll-behavior="hide" order="1">
       <VAppBarTitle class="px-md-10">
-        <VImg src="/img/unicos-logo.png" cover max-height="225" max-width="225" alt="Portfolio Icon" />
+        <VImg src="/img/logo-white.png" cover max-height="225" max-width="225" alt="Portfolio Icon" />
       </VAppBarTitle>
       <VSpacer />
       <VAppBarNavIcon @click.stop="drawer = !drawer" class="d-flex d-md-none">
@@ -16,7 +16,7 @@
       </div>
     </VAppBar>
     <VNavigationDrawer v-model="drawer" temporary scrim order="0" class="d-md-none">
-      <VListItem height="80" prepend-avatar="/img/unicos-logo.png" title="Steto Javellana"></VListItem>
+      <VListItem height="80" prepend-avatar="/img/icon.png" title="Steto Javellana"></VListItem>
       <VDivider />
 
       <VList density="compact" nav>
