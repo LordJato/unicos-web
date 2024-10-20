@@ -10,7 +10,7 @@
         <VIcon size="x-large" color="primary"> mdi-reorder-horizontal </VIcon>
       </VAppBarNavIcon>
       <div class="d-none d-md-flex px-md-10">
-        <VBtn v-for="(link, i) in links" :key="i" variant="text" @click="onClick(link.section)" class="text-white">
+        <VBtn v-for="(link, i) in links" :key="i" variant="text" @click="onClick(link.section)" class="text-white"  :to="link.path">
           {{ link.title }}
         </VBtn>
       </div>
@@ -21,7 +21,7 @@
 
       <VList density="compact" nav>
         <VListItem height="50" v-for="(link, i) in links" :key="i" variant="text" @click="onClick(link.section)"
-          :prepend-icon="link.icon" :title="link.title" />
+          :prepend-icon="link.icon" :title="link.title"  :to="link.path" />
       </VList>
     </VNavigationDrawer>
   </nav>
@@ -52,22 +52,26 @@ const links = [
     icon: "mdi-home",
     title: "Home",
     section: "#homeSection",
+    path: "/",
   },
   {
     icon: "mdi-account-details",
     title: "About",
-    section: "#skillSection",
+    section: "#aboutSection",
+    path: "/about",
   },
 
   { 
     icon: "mdi-folder",
     title: "Job Opportunities",
-    section: "#projectSection",
+    section: "#jobOpportunitiesSection",
+    path: "/job-opportunities",
   },
   {
     icon: "mdi-account-tie",
     title: "Contact Us",
-    section: "#serviceSection",
+    section: "#contactUsSection",
+    path: "/contact",
   },
 ];
 

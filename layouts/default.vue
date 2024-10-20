@@ -1,7 +1,7 @@
 <template>
   <VApp>
     <Navigation :color="color" :flat="flat" />
-    <VMain class="pa-0">
+    <VMain :class="{ 'pa-0': path === '/' }">
       <slot />
     </VMain>
     <Footer />
@@ -14,6 +14,10 @@
 
 <script setup lang="ts">
 import { useDisplay } from "vuetify";
+
+import { useRoute } from 'vue-router'
+
+const { path } = useRoute()
 
 const show = ref<boolean>(false);
 const fab = ref<boolean | null>(false);
