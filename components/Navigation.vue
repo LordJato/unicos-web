@@ -56,22 +56,38 @@ const links = [
   },
   {
     icon: "mdi-account-details",
+    title: "How It Works",
+    section: "#howItWorksSection",
+    path: "/how-it-works",
+  },
+
+  {
+    icon: "mdi-account-details",
     title: "About",
     section: "#aboutSection",
     path: "/about",
   },
 
-  { 
-    icon: "mdi-folder",
-    title: "Job Opportunities",
-    section: "#jobOpportunitiesSection",
-    path: "/job-opportunities",
+
+  {
+    icon: "mdi-account-details",
+    title: "Pricing",
+    section: "#pricingSection",
+    path: "/pricing",
   },
+
   {
     icon: "mdi-account-tie",
     title: "Contact Us",
     section: "#contactUsSection",
     path: "/contact",
+  },
+
+  { 
+    icon: "mdi-folder",
+    title: "Careers",
+    section: "#careersSection",
+    path: "/careers",
   },
 ];
 
