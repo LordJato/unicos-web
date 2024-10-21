@@ -12,6 +12,7 @@ const myCustomLightTheme: ThemeDefinition = {
     success: '#4CAF50',
     warning: '#FB8C00',
     'white-primary' : '#FAFAFA',
+    'white-secondary' : '#e9f2fb'
   }
 }
 

@@ -52,7 +52,8 @@
                     Mission
                   </VCardTitle>
                   <VCardText class="text-subtitle-2">
-                    Empower organizations to unite, optimize, and thrive by delivering innovative, secure, and intuitive HRIS solutions, fostering exceptional employee experiences, and driving data-driven decisions.
+                    Empower organizations to unite, optimize, and thrive by delivering innovative, secure, and intuitive
+                    HRIS solutions, fostering exceptional employee experiences, and driving data-driven decisions.
                   </VCardText>
                 </VCard>
               </VCol>
