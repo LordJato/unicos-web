@@ -14,15 +14,32 @@
         </path>
       </svg>
     </div>
-    <VContainer class="position-relative">
-      <p class="text-white-primary my-16 text-h4 font-weight-bold text-center">Have Some Question?</p>
+    <VContainer class="position-relative mt-16">
+      <div class="text-white-primary my-16 d-flex justify-center text-center">
+        <div>
+          <h2 class="text-h4 font-weight-bold mb-5">Have Some Question?</h2>
+          <p class="w-75 mx-auto">Thank you for your interest in our services. Please fill out the form below or e-mail
+            us at suppor@unicos.com. We'll respond promptly to your inquiry.</p>
+        </div>
+
+      </div>
+
       <VRow justify="center" align="center">
         <VCol cols="8">
           <VRow>
             <VCol cols="12" md="6" class="text-center">
               <VImg src="/img/contact/bg.svg" max-width="250" class="ms-auto" />
               <div class="text-center">
-                Hello
+
+                <VDivider thickness="2"></VDivider>
+       
+
+                <h1> Get in touch</h1>
+
+                <VIcon
+                  style="background: linear-gradient(90deg, rgba(33,50,104,1) 0%, rgba(22,26,51,1) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                  mdi-phone
+                </VIcon>
               </div>
 
             </VCol>

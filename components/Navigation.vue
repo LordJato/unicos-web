@@ -7,7 +7,7 @@
       </VAppBarTitle>
       <VSpacer />
       <VAppBarNavIcon @click.stop="drawer = !drawer" class="d-flex d-md-none">
-        <VIcon size="x-large" color="primary"> mdi-reorder-horizontal </VIcon>
+        <VIcon size="x-large" color="white"> mdi-reorder-horizontal </VIcon>
       </VAppBarNavIcon>
       <div class="d-none d-md-flex px-md-10">
         <VBtn v-for="(link, i) in links" :key="i" variant="text" @click="onClick(link.section)" class="text-white"  :to="link.path">
