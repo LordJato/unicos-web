@@ -32,10 +32,7 @@
               <div class="text-center">
 
                 <VDivider thickness="2"></VDivider>
-       
-
                 <h1> Get in touch</h1>
-
                 <VIcon
                   style="background: linear-gradient(90deg, rgba(33,50,104,1) 0%, rgba(22,26,51,1) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
                   mdi-phone
@@ -44,32 +41,32 @@
 
             </VCol>
             <VCol cols="12" md="6">
-              <v-card class="mx-auto pa-6 pb-8" elevation="8" max-width="448" rounded="lg">
+              <VCard class="mx-auto pa-6 pb-8" elevation="8" max-width="448" rounded="lg">
                 <div class="text-subtitle-1 text-medium-emphasis">Name</div>
 
-                <v-text-field density="compact" prepend-inner-icon="mdi-account" variant="outlined"></v-text-field>
+                <VTextField density="compact" prepend-inner-icon="mdi-account" variant="outlined"></VTextField>
 
 
                 <div class="text-subtitle-1 text-medium-emphasis">Email</div>
 
-                <v-text-field density="compact" prepend-inner-icon="mdi-email-outline"
-                  variant="outlined"></v-text-field>
+                <VTextField density="compact" prepend-inner-icon="mdi-email-outline"
+                  variant="outlined"></VTextField>
 
                 <div class="text-subtitle-1 text-medium-emphasis">Phone</div>
 
-                <v-text-field density="compact" prepend-inner-icon="mdi-phone" variant="outlined"></v-text-field>
+                <VTextField density="compact" prepend-inner-icon="mdi-phone" variant="outlined"></VTextField>
 
                 <div class="text-subtitle-1 text-medium-emphasis">Message</div>
 
                 <VTextarea density="compact" prepend-inner-icon="mdi-message" variant="outlined"></VTextarea>
 
 
-                <v-btn color="primary" append-icon="mdi-email-fast" block>
+                <VBtn color="primary" append-icon="mdi-email-fast" block>
                   Send Email
-                </v-btn>
+                </VBtn>
 
 
-              </v-card>
+              </VCard>
             </VCol>
           </VRow>
         </VCol>

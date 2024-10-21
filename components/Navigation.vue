@@ -78,8 +78,8 @@ const links = [
 
   {
     icon: "mdi-account-tie",
-    title: "Contact Us",
-    section: "#contactUsSection",
+    title: "Contact",
+    section: "#contactSection",
     path: "/contact",
   },
 
