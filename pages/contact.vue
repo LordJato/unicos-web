@@ -29,15 +29,33 @@
           <VRow>
             <VCol cols="12" md="6" class="text-center">
               <VImg src="/img/contact/bg.svg" max-width="250" class="ms-auto" />
-              <div class="text-center">
-
-                <VDivider thickness="2"></VDivider>
-                <h1> Get in touch</h1>
-                <VIcon
-                  style="background: linear-gradient(90deg, rgba(33,50,104,1) 0%, rgba(22,26,51,1) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-                  mdi-phone
-                </VIcon>
-              </div>
+              <div class="px-16">
+  <VDivider thickness="2"></VDivider>
+  <h1 class="text-start">Get in touch</h1>
+  <div class="d-flex flex-column">
+    <div class="d-flex align-items-center mb-2">
+      <VIcon class="me-2"
+        style="background: linear-gradient(90deg, rgba(33,50,104,1) 0%, rgba(22,26,51,1) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+        mdi-phone
+      </VIcon>
+      <span>+639764861327</span>
+    </div>
+    <div class="d-flex align-items-center mb-2">
+      <VIcon class="me-2"
+        style="background: linear-gradient(90deg, rgba(33,50,104,1) 0%, rgba(22,26,51,1) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+        mdi-email
+      </VIcon>
+      <span>support@unicos.com</span>
+    </div>
+    <div class="d-flex align-items-center">
+      <VIcon class="me-2"
+        style="background: linear-gradient(90deg, rgba(33,50,104,1) 0%, rgba(22,26,51,1) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+        mdi-map-marker-circle
+      </VIcon>
+      <span>Bacolod City, Negros Occidental, Philippines</span>
+    </div>
+  </div>
+</div>
 
             </VCol>
             <VCol cols="12" md="6">
@@ -49,8 +67,7 @@
 
                 <div class="text-subtitle-1 text-medium-emphasis">Email</div>
 
-                <VTextField density="compact" prepend-inner-icon="mdi-email-outline"
-                  variant="outlined"></VTextField>
+                <VTextField density="compact" prepend-inner-icon="mdi-email-outline" variant="outlined"></VTextField>
 
                 <div class="text-subtitle-1 text-medium-emphasis">Phone</div>
 
@@ -97,5 +114,6 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #e9f2fb;
 }
 </style>
