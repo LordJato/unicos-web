@@ -1,7 +1,7 @@
 <template>
   <VApp>
     <Navigation :color="color" :flat="flat" />
-    <VMain :class="{ 'pa-0': isHomePage }">
+    <VMain class="pa-0">
       <slot />
     </VMain>
     <Footer />
@@ -18,10 +18,10 @@ import { useRoute } from 'vue-router'
 
 const route = useRoute()
 
-const isHomePage = computed(() => {
-  const arr = ['/', '/contact', '/opportunities']
-  return arr.includes(route.path)
-} )
+// const isHomePage = computed(() => {
+//   const arr = ['/', '/contact', '/opportunities']
+//   return arr.includes(route.path)
+// } )
 
 // watch(route, (val, newVal) => {
 //   const result = isHomePage.value
