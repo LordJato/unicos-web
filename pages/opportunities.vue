@@ -1,64 +1,70 @@
 <template>
-  <div id="opportunitiesSection">
-    <div class="overlay">
+  <section id="opportunitiesSection">
+    <div id="opportunitiesBackground">
+      <div class="overlay">
+      </div>
+      <div class="position-relative h-100">
+        <VContainer fluid style="padding-top: 20%;">
+          <VRow justify="center" align="center">
+            <VCol cols="12" md="6" >
+              <h1 class="text-white text-h3 font-weight-bold">Career Opportunities at Your Fingertips</h1>
+            </VCol>
+            <VCol cols="12" md="6"></VCol>
+          </VRow>
+        </VContainer>
+        <VContainer>
+          <VRow justify="center" align="center" style="margin-top: 15%;">
+            <VCol cols="12" md="4" class="d-flex justify-center align-center">
+              <v-card prepend-icon="$vuetify" subtitle="The #1 Vue UI Library" width="400">
+                <template v-slot:title>
+                  <span class="font-weight-black">Welcome to Vuetify</span>
+                </template>
+
+                <v-card-text class="bg-surface-light pt-4">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ratione debitis quis est labore
+                  voluptatibus!
+                  Eaque
+                  cupiditate minima, at placeat totam, magni doloremque veniam neque porro libero rerum unde
+                  voluptatem!
+                </v-card-text>
+              </v-card>
+            </VCol>
+            <VCol cols="12" md="4" class="d-flex justify-center align-center">
+              <v-card prepend-icon="$vuetify" subtitle="The #1 Vue UI Library" width="400">
+                <template v-slot:title>
+                  <span class="font-weight-black">Welcome to Vuetify</span>
+                </template>
+
+                <v-card-text class="bg-surface-light pt-4">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ratione debitis quis est labore
+                  voluptatibus!
+                  Eaque
+                  cupiditate minima, at placeat totam, magni doloremque veniam neque porro libero rerum unde
+                  voluptatem!
+                </v-card-text>
+              </v-card>
+            </VCol>
+            <VCol cols="12" md="4" class="d-flex justify-center align-center">
+              <v-card prepend-icon="$vuetify" subtitle="The #1 Vue UI Library" width="400">
+                <template v-slot:title>
+                  <span class="font-weight-black">Welcome to Vuetify</span>
+                </template>
+
+                <v-card-text class="bg-surface-light pt-4">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ratione debitis quis est labore
+                  voluptatibus!
+                  Eaque
+                  cupiditate minima, at placeat totam, magni doloremque veniam neque porro libero rerum unde
+                  voluptatem!
+                </v-card-text>
+              </v-card>
+            </VCol>
+          </VRow>
+        </VContainer>
+      </div>
     </div>
-    <div class="position-relative h-100 d-flex align-center">
-      <VContainer fluid class="mt-16 mt-sm-0" >
-        <VRow justify="center" align="center">
-          <VCol cols="12" md="6" class="d-flex justify-center align-center">
-            <h1 class="text-white text-h3 font-weight-bold">Career Opportunities at Your Fingertips</h1>
-          </VCol>
-          <VCol cols="12" md="6"></VCol>
-        </VRow>
-        <VRow justify="center" align="center">
-          <VCol cols="12" md="4" class="d-flex justify-center align-center">
-            <v-card prepend-icon="$vuetify" subtitle="The #1 Vue UI Library" width="400">
-              <template v-slot:title>
-                <span class="font-weight-black">Welcome to Vuetify</span>
-              </template>
 
-              <v-card-text class="bg-surface-light pt-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ratione debitis quis est labore
-                voluptatibus!
-                Eaque
-                cupiditate minima, at placeat totam, magni doloremque veniam neque porro libero rerum unde voluptatem!
-              </v-card-text>
-            </v-card>
-          </VCol>
-          <VCol cols="12" md="4" class="d-flex justify-center align-center">
-            <v-card prepend-icon="$vuetify" subtitle="The #1 Vue UI Library" width="400">
-              <template v-slot:title>
-                <span class="font-weight-black">Welcome to Vuetify</span>
-              </template>
-
-              <v-card-text class="bg-surface-light pt-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ratione debitis quis est labore
-                voluptatibus!
-                Eaque
-                cupiditate minima, at placeat totam, magni doloremque veniam neque porro libero rerum unde voluptatem!
-              </v-card-text>
-            </v-card>
-          </VCol>
-          <VCol cols="12" md="4" class="d-flex justify-center align-center">
-            <v-card prepend-icon="$vuetify" subtitle="The #1 Vue UI Library" width="400">
-              <template v-slot:title>
-                <span class="font-weight-black">Welcome to Vuetify</span>
-              </template>
-
-              <v-card-text class="bg-surface-light pt-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ratione debitis quis est labore
-                voluptatibus!
-                Eaque
-                cupiditate minima, at placeat totam, magni doloremque veniam neque porro libero rerum unde voluptatem!
-              </v-card-text>
-            </v-card>
-          </VCol>
-        </VRow>
-      </VContainer>
-    </div>
-
-
-  </div>
+  </section>
 </template>
 
 <script setup>
@@ -72,7 +78,7 @@ useSeoMeta({
 </script>
 
 <style scoped>
-#opportunitiesSection {
+#opportunitiesBackground {
   position: relative;
   display: flex;
   justify-content: center;
@@ -81,7 +87,7 @@ useSeoMeta({
   background-color: #e9f2fb;
 }
 
-#opportunitiesSection::before {
+#opportunitiesBackground::before {
   content: '';
   position: absolute;
   top: 0;
