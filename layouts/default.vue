@@ -19,7 +19,7 @@ import { useRoute } from 'vue-router'
 const route = useRoute()
 
 const isHomePage = computed(() => {
-  const arr = ['/', '/contact']
+  const arr = ['/', '/contact', '/opportunities']
   return arr.includes(route.path)
 } )
 

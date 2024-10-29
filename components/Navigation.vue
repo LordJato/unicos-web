@@ -3,7 +3,7 @@
     <VAppBar height="60" class="px-3" :color="props.color" :flat="props.flat" :class="{ expand: props.flat }"
       scroll-behavior="hide" order="1">
       <VAppBarTitle class="px-md-10">
-        <VImg src="/img/logo-white.png" :class="props.flat ? '' : 'ms-2'" cover :max-width="props.flat ? 220 : 150 " alt="Portfolio Icon" style="transition: 0.5s ease;"/>
+        <VImg src="/img/logo-white.png" :class="props.flat ? '' : 'ms-2'" cover :max-width="props.flat ? 120 : 80 " alt="Portfolio Icon" style="transition: 0.5s ease;"/>
       </VAppBarTitle>
       <VSpacer />
       <VAppBarNavIcon @click.stop="drawer = !drawer" class="d-flex d-md-none">
@@ -85,9 +85,9 @@ const links = [
 
   { 
     icon: "mdi-folder",
-    title: "Careers",
-    section: "#careersSection",
-    path: "/careers",
+    title: "Opportunities",
+    section: "#opportunitiesSection",
+    path: "/opportunities",
   },
 ];
 
