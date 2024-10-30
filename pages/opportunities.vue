@@ -63,7 +63,6 @@
         </VContainer>
       </div>
     </div>
-
   </section>
 </template>
 
@@ -78,15 +77,6 @@ useSeoMeta({
 </script>
 
 <style scoped>
-#opportunitiesBackground {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #e9f2fb;
-}
-
 #opportunitiesBackground::before {
   content: '';
   position: absolute;
