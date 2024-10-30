@@ -29,7 +29,7 @@ const darkTheme: ThemeDefinition = {
     'white-secondary' : '#e9f2fb'
   }
 }
-
+ 
 export default defineNuxtPlugin(nuxt => {
   const vuetify = createVuetify({
     theme: {

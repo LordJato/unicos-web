@@ -61,27 +61,3 @@ function toTop() {
   });
 }
 </script>
-
-<style>
-.updown-animation {
-  animation-name: updown;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease;
-  transition: all 0.3s;
-}
-
-@keyframes updown {
-  0% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(-30px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
-}
-</style>

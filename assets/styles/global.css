@@ -1,5 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+
+.v-application {
+    background-image: url("/img/application-bg.svg") !important;
+    background-attachment: fixed !important;
+    background-position: center !important;
+    background-size: cover !important;
+}
+
+section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.svg-border-waves img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #FAFAFA;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #213268;
+    border-radius: 7px;
+}
+
+
 .v-btn--active {
-  /* custom styles */
-  background-color: #c8d9e9 !important;
-  color: #213268 !important;
+    /* custom styles */
+    background-color: #c8d9e9 !important;
+    color: #213268 !important;
 }

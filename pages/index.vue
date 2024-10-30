@@ -1,6 +1,7 @@
 <template>
-  <section id="homePage">
-    <VParallax src="/img/index/bg.jpg" height="950" class="px-2">
+  <div>
+    <section id="homePage">
+    <VParallax :src="parallaxImg" height="100%" class="px-2">
       <VContainer fluid class="h-100">
         <VRow align="center" justify="center" class="h-100">
           <VCol cols="12" lg="5" md="6">
@@ -20,14 +21,21 @@
         </VRow>
 
       </VContainer>
-
+      <div class="svg-border-waves ">
+        <img src="/img/border-waves.svg" />
+      </div>
     </VParallax>
+ 
   </section>
+  <Pricing></Pricing>
+  </div>
+
 </template>
 
 <script setup lang="ts">
 
 import { ref } from 'vue'
+import parallaxImg from "/img/index/bg.jpg";
 import spacexImage from "/img/agency-logo/spacex.png";
 import metaImage from "/img/agency-logo/meta.png";
 import microsoftImage from "/img/agency-logo/microsoft.png";
@@ -60,11 +68,4 @@ function onClick() {
 
 
 <style scoped>
-section #homePage {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 </style>
