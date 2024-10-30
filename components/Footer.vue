@@ -1,8 +1,8 @@
 <template>
   <VFooter absolute class="pa-0">
-    <VContainer fluid class="px-6 px-md-16">
-      <VRow class="py-8">
-        <VCol cols="12" md="6">
+    <VContainer fluid>
+      <VRow class="py-8" justify="center">
+        <VCol cols="12" lg="4" md="6">
           <div>
             <div>
               <VImg src="/img/logo.png" max-height="125" max-width="125" />
@@ -15,26 +15,33 @@
             </p>
           </div>
         </VCol>
-        <VCol cols="12" md="3">
-          <div>
-            <div class="font-weight-bold mb-2">Contact Us</div>
-            <div class="text-body-2 text-caption">
+        <VCol cols="12" lg="3" md="3" sm="12">
+            <div class="font-weight-bold mb-3">Contact Us</div>
+            <div class="text-body-2 text-caption mb-3">
               <span class="font-weight-bold">Email:</span> info@unicos.com
             </div>
             <div class="text-body-2 text-caption">
               <span class="font-weight-bold">Phone:</span> (123) 456-7890
             </div>
-          </div>
-        </VCol>
-        <VCol cols="12" md="3">
-          <div>
-            <div class="font-weight-bold mb-2">Contact with us</div>
+            <div>
             <v-btn v-for="(item, i) in icons" :key="i" :icon="item.icon" variant="text" class="text-caption ml-n4"
               :color="item.color"></v-btn>
           </div>
         </VCol>
+        <VCol cols="12" lg="3" md="3" sm="12">
+          <div class="font-weight-bold mb-3">Help</div>
+          <div>
+            <a href="#" class="text-caption mb-1 text-decoration-none">For Company</a>
+          </div>
+          <div>
+            <a href="#" class="text-caption mb-1 text-decoration-none">For Client</a>
+          </div>
+          <div>
+            <a href="#" class="text-caption mb-1 text-decoration-none">For Worker</a>
+          </div>
+        </VCol>
       </VRow>
-      <VDivider color="white-thirdy" thickness="2"></VDivider>
+      <VDivider color="white-indigo-darken-3" thickness="2" class="mx-md-16"></VDivider>
       <div class="py-6 text-caption text-center">
         Copyright &#9400;
         {{ new Date().getFullYear() }} UNICOS. All rights reserved.

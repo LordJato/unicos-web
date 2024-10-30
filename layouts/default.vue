@@ -41,7 +41,7 @@ const { mdAndDown } = useDisplay();
 
 watch(fab, (newVal) => {
   if (newVal) {
-    color.value = "primary";
+    color.value = "white-primary";
     flat.value = false;
   } else {
     color.value = "transparent";

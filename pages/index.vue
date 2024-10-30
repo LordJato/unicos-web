@@ -1,9 +1,9 @@
 <template>
   <section id="homePage">
-    <VParallax src="/img/index/bg.jpg" height="950" class="px-2  px-md-16">
+    <VParallax src="/img/index/bg.jpg" height="950" class="px-2">
       <VContainer fluid class="h-100">
         <VRow align="center" justify="center" class="h-100">
-          <VCol cols="12" md="6">
+          <VCol cols="12" lg="5" md="6">
             <div class="mt-6">
               <div class="font-weight-bold text-h5 text-md-h4 text-white mt-5">
                 Unify HR management with our multi-company platform. One tenant, one login, endless possibilities.
@@ -13,27 +13,12 @@
                 label="Search templates" variant="solo" hide-details single-line @click:append-inner="onClick"
                 width="350"></VTextField>
             </div>
-            <div class="mt-12">
-            <p class="text-overline font-weight-bold text-white">Registered Companies</p>
-            <VRow>
-              <VCol sm="4" cols="6" v-for="(agency, i) in agencies" :key="i">
-                <VCard flat color="transparent" max-width="150">
-                  <VImg
-                    :src="agency.img"
-                    :alt="agency.img"
-                    height="50px"
-                    style="box-shadow: 20px #000;"
-                  />
-                </VCard>
-              </VCol>
-            </VRow>
-          </div>
 
           </VCol>
-          <VCol cols="12" md="6">
-
+          <VCol cols="12" lg="5" md="6">
           </VCol>
         </VRow>
+
       </VContainer>
 
     </VParallax>
@@ -50,7 +35,7 @@ import { useDisplay } from "vuetify";
 
 const { mdAndUp } = useDisplay();
 
-const title = ref("Home");
+const title = ref("Unicos");
 useSeoMeta({
   title,
 });
@@ -75,12 +60,11 @@ function onClick() {
 
 
 <style scoped>
-section {
+section #homePage {
   position: relative;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 </style>

@@ -1,16 +1,19 @@
 <template>
   <nav>
-    <VAppBar height="60" class="px-3" :color="props.color" :flat="props.flat" :class="{ expand: props.flat }"
-      scroll-behavior="hide" order="1">
-      <VAppBarTitle class="px-md-10">
-        <VImg src="/img/logo-white.png" :class="props.flat ? '' : 'ms-2'" cover :max-width="props.flat ? 120 : 80 " alt="Portfolio Icon" style="transition: 0.5s ease;"/>
+    <VAppBar height="60" :color="props.color" :flat="props.flat" :class="{ expand: props.flat }" scroll-behavior="hide"
+      order="1" theme="darkTheme">
+      <VAppBarTitle>
+        <VImg :src="logoSrc" cover :max-width="props.flat ? 120 : 90" alt="Portfolio Icon"
+          style="transition: 0.5s ease;" />
       </VAppBarTitle>
-      <VSpacer />
-      <VAppBarNavIcon @click.stop="drawer = !drawer" class="d-flex d-md-none">
-        <VIcon size="x-large" color="white"> mdi-reorder-horizontal </VIcon>
+      <VSpacer/>
+      <VAppBarNavIcon @click.stop="drawer = !drawer" class="d-flex d-md-none" >
+        <VIcon size="x-large" :color="props.flat ? 'white-secondary' : 'primary'"> mdi-reorder-horizontal </VIcon>
       </VAppBarNavIcon>
-      <div class="d-none d-md-flex px-md-10">
-        <VBtn v-for="(link, i) in links" :key="i" variant="text" @click="onClick(link.section)" class="text-white"  :to="link.path">
+      
+      <div class="d-none d-md-flex">
+        <VBtn v-for="(link, i) in links" :key="i" variant="text" @click="onClick(link.section)" :color="props.flat ? 'white-secondary' : 'primary'" class="text-subtitle-2 font-weight-bold"
+          :to="link.path">
           {{ link.title }}
         </VBtn>
       </div>
@@ -21,7 +24,7 @@
 
       <VList density="compact" nav>
         <VListItem height="50" v-for="(link, i) in links" :key="i" variant="text" @click="onClick(link.section)"
-          :prepend-icon="link.icon" :title="link.title"  :to="link.path" />
+          :prepend-icon="link.icon" :title="link.title" :to="link.path" />
       </VList>
     </VNavigationDrawer>
   </nav>
@@ -35,6 +38,12 @@ const props = defineProps({
 
 import { ref } from "vue";
 import { useGoTo } from "vuetify";
+import logoWhite from '/img/logo-white.png';
+import logo from '/img/logo.png';
+
+const logoSrc = computed(() => {
+  return props.flat ? logoWhite : logo;
+});
 
 const scrollTo = useGoTo();
 
@@ -56,24 +65,16 @@ const links = [
   },
   {
     icon: "mdi-account-details",
-    title: "How It Works",
-    section: "#howItWorksSection",
-    path: "/how-it-works",
-  },
-
-  {
-    icon: "mdi-account-details",
     title: "About",
     section: "#aboutSection",
     path: "/about",
   },
 
-
   {
     icon: "mdi-account-details",
-    title: "Pricing",
-    section: "#pricingSection",
-    path: "/pricing",
+    title: "How It Works",
+    section: "#howItWorksSection",
+    path: "/how-it-works",
   },
 
   {
@@ -83,7 +84,7 @@ const links = [
     path: "/contact",
   },
 
-  { 
+  {
     icon: "mdi-folder",
     title: "Opportunities",
     section: "#opportunitiesSection",
@@ -103,6 +104,11 @@ function onClick(e: string) {
 
 .expand {
   height: 70px !important;
-  padding-top: 30px;
+  padding-top : 40px;
+}
+
+.v-app-bar >>> .v-toolbar__content {
+  padding-right: 160px;
+  padding-left: 160px;
 }
 </style>
