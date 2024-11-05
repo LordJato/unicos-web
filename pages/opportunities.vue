@@ -63,6 +63,9 @@
         </VContainer>
       </div>
     </div>
+    <div class="svg-border-waves ">
+        <img src="/img/border-waves.svg" />
+      </div>
   </section>
 </template>
 

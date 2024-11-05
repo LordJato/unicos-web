@@ -1,7 +1,7 @@
 <template>
   <section id="contactSection">
-    <div class="h-50 position-fixed top-0">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" height="520">
+    <div class="position-fixed top-0">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" height="530">
         <defs>
           <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
             <stop offset="0%" stop-color="#161A33" />
@@ -14,16 +14,14 @@
         </path>
       </svg>
     </div>
-    <VContainer class="position-relative mt-16">
-      <div class="text-white-primary my-16 d-flex justify-center text-center">
+    <VContainer class="position-relative">
+      <div class="text-white-primary d-flex justify-center text-center">
         <div>
           <h2 class="text-h4 font-weight-bold mb-5">Have Some Question?</h2>
           <p class="w-75 mx-auto">Thank you for your interest in our services. Please fill out the form below or e-mail
             us at suppor@unicos.com. We'll respond promptly to your inquiry.</p>
         </div>
-
       </div>
-
       <VRow justify="center" align="center">
         <VCol cols="8">
           <VRow>
@@ -81,16 +79,15 @@
                 <VBtn color="primary" append-icon="mdi-email-fast" block>
                   Send Email
                 </VBtn>
-
-
               </VCard>
             </VCol>
           </VRow>
         </VCol>
       </VRow>
     </VContainer>
-
-
+    <div class="svg-border-waves ">
+      <img src="/img/border-waves.svg" />
+    </div>
   </section>
 </template>
 
