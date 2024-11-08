@@ -1,6 +1,6 @@
 <template>
   <VApp>
-    <div class="loader-wrapper" :class="{ hide: !progressBar }" v-if="progressBar">
+    <div class="loader-wrapper" :class="{ hide: !loadingBar }" v-if="loadingBar">
       <div class="loader"></div>
     </div>
     <Navigation :color="color" :flat="flat" />
@@ -64,22 +64,12 @@ function toTop() {
   });
 }
 
-const progressBar = ref(false);
-
-const { progress, isLoading, start, finish, clear } = useLoadingIndicator({
-  duration: 2000,
-  throttle: 200,
-  estimatedProgress: (duration, elapsed) => (2 / Math.PI * 100) * Math.atan(elapsed / duration * 100 / 50)
+const nuxtApp = useNuxtApp();
+const loadingBar = ref(true);
+nuxtApp.hook("page:start", () => {
+  loadingBar.value = true;
 });
-
-onMounted(() => {
-  start();
-  setTimeout(() => {
-    finish();
-  }, 1000);
-});
-
-watch(isLoading, (newValue) => {
-  progressBar.value = newValue;
+nuxtApp.hook("page:finish", () => {
+  loadingBar.value = false;
 });
 </script>
