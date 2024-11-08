@@ -1,5 +1,8 @@
 <template>
   <VApp>
+    <div class="loader-wrapper" v-if="isLoading" :class="{ hide: !isLoading }">
+  <div class="loader"></div>
+</div>
     <Navigation :color="color" :flat="flat" />
     <VMain class="pa-0">
       <slot />
@@ -60,4 +63,13 @@ function toTop() {
     behavior: "smooth",
   });
 }
+
+const isLoading = ref(true);
+
+onMounted(async () => {
+  await nextTick();
+  setTimeout(() => {
+    isLoading.value = false;
+  }, 1000);
+});
 </script>
