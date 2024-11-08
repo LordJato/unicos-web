@@ -1,8 +1,8 @@
 <template>
   <VApp>
-    <div class="loader-wrapper" v-if="isLoading" :class="{ hide: !isLoading }">
-  <div class="loader"></div>
-</div>
+    <div class="loader-wrapper" :class="{ hide: !progressBar }" v-if="progressBar">
+      <div class="loader"></div>
+    </div>
     <Navigation :color="color" :flat="flat" />
     <VMain class="pa-0">
       <slot />
@@ -64,12 +64,22 @@ function toTop() {
   });
 }
 
-const isLoading = ref(true);
+const progressBar = ref(false);
 
-onMounted(async () => {
-  await nextTick();
+const { progress, isLoading, start, finish, clear } = useLoadingIndicator({
+  duration: 2000,
+  throttle: 200,
+  estimatedProgress: (duration, elapsed) => (2 / Math.PI * 100) * Math.atan(elapsed / duration * 100 / 50)
+});
+
+onMounted(() => {
+  start();
   setTimeout(() => {
-    isLoading.value = false;
+    finish();
   }, 1000);
+});
+
+watch(isLoading, (newValue) => {
+  progressBar.value = newValue;
 });
 </script>
