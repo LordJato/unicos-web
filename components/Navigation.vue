@@ -71,13 +71,6 @@ const links = [
   },
 
   {
-    icon: "mdi-account-details",
-    title: "How It Works",
-    section: "#howItWorksSection",
-    path: "/how-it-works",
-  },
-
-  {
     icon: "mdi-account-tie",
     title: "Contact",
     section: "#contactSection",
