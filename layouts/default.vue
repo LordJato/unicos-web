@@ -66,9 +66,6 @@ function toTop() {
 
 const nuxtApp = useNuxtApp();
 const loadingBar = ref(true);
-nuxtApp.hook("page:start", () => {
-  loadingBar.value = true;
-});
 nuxtApp.hook("page:finish", () => {
   loadingBar.value = false;
 });
