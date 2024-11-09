@@ -16,6 +16,9 @@
           :to="link.path">
           {{ link.title }}
         </VBtn>
+        <VBtn class="text-subtitle-2 font-weight-bold" color="white-secondary" >
+  Login
+</VBtn>
         <VBtn class="text-subtitle-2 font-weight-bold" color="secondary" variant="outlined">
   Register
 </VBtn>
