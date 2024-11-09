@@ -16,6 +16,9 @@
           :to="link.path">
           {{ link.title }}
         </VBtn>
+        <VBtn class="text-subtitle-2 font-weight-bold" color="secondary" variant="outlined">
+  Register
+</VBtn>
       </div>
     </VAppBar>
     <VNavigationDrawer v-model="drawer" temporary scrim order="0" class="d-md-none">
