@@ -6,9 +6,9 @@
           <VRow align="center" justify="center" class="h-100">
             <VCol cols="12" lg="5" md="6">
               <div class="mt-6">
-                <div class="font-weight-bold text-h5 text-md-h4 mt-5">
+                <p class="font-weight-bold text-h5 text-md-h4 mt-5">
                   Unify HR management with our multi-company platform. One tenant, one login, endless possibilities.
-                </div>
+                </p>
 
                 <VTextField class="mt-5" :loading="loading" append-inner-icon="mdi-magnify" density="compact"
                   label="Search templates" variant="solo" hide-details single-line @click:append-inner="onClick"
