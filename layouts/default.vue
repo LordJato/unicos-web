@@ -1,5 +1,5 @@
 <template>
-  <VApp>
+  <VApp theme="darkTheme">
     <div class="loader-wrapper" :class="{ hide: !loadingBar }" v-if="loadingBar">
       <div class="loader"></div>
     </div>
@@ -44,7 +44,7 @@ const { mdAndDown } = useDisplay();
 
 watch(fab, (newVal) => {
   if (newVal) {
-    color.value = "white-primary";
+    color.value = "background";
     flat.value = false;
   } else {
     color.value = "transparent";

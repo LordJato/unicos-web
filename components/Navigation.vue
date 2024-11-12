@@ -6,22 +6,22 @@
         <VImg :src="logoSrc" cover :max-width="props.flat ? 120 : 90" alt="Portfolio Icon"
           style="transition: 0.5s ease;" />
       </VAppBarTitle>
-      <VSpacer/>
-      <VAppBarNavIcon @click.stop="drawer = !drawer" class="d-flex d-md-none" >
+      <VSpacer />
+      <VAppBarNavIcon @click.stop="drawer = !drawer" class="d-flex d-md-none">
         <VIcon size="x-large" :color="props.flat ? 'white-secondary' : 'primary'"> mdi-reorder-horizontal </VIcon>
       </VAppBarNavIcon>
-      
+
       <div class="d-none d-md-flex">
-        <VBtn v-for="(link, i) in links" :key="i" variant="text" @click="onClick(link.section)" :color="props.flat ? 'white-secondary' : 'primary'" class="text-subtitle-2 font-weight-bold"
-          :to="link.path">
+        <VBtn v-for="(link, i) in links" :key="i" variant="text" @click="onClick(link.section)"
+          :color="props.flat ? 'white-secondary' : 'primary'" class="text-subtitle-2 font-weight-bold" :to="link.path">
           {{ link.title }}
         </VBtn>
-        <VBtn class="text-subtitle-2 font-weight-bold" color="white-secondary" >
-  Login
-</VBtn>
+        <VBtn class="text-subtitle-2 font-weight-bold" color="white-secondary">
+          Login
+        </VBtn>
         <VBtn class="text-subtitle-2 font-weight-bold" color="secondary" variant="outlined">
-  Register
-</VBtn>
+          Register
+        </VBtn>
       </div>
     </VAppBar>
     <VNavigationDrawer v-model="drawer" temporary scrim order="0" class="d-md-none">
@@ -103,7 +103,7 @@ function onClick(e: string) {
 
 .expand {
   height: 70px !important;
-  padding-top : 40px;
+  padding-top: 40px;
 }
 
 .v-app-bar :deep(.v-toolbar__content) {
