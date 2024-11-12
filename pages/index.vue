@@ -21,9 +21,9 @@
           </VRow>
 
         </VContainer>
-        <div class="svg-border-waves ">
+        <!-- <div class="svg-border-waves ">
           <img src="/img/border-waves.svg" />
-        </div>
+        </div> -->
       </VParallax>
     </section>
   </div>
