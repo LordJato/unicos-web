@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- hero -->
     <section id="homePage">
       <VParallax :src="parallaxImg" height="100vh" class="px-2">
         <VContainer fluid class="h-100">
@@ -21,10 +22,14 @@
           </VRow>
 
         </VContainer>
-        <!-- <div class="svg-border-waves ">
-          <img src="/img/border-waves.svg" />
-        </div> -->
       </VParallax>
+
+      <!-- about -->
+      <!-- Popular services -->
+      <!-- numbers of client/workers/companies -->
+      <!-- top workers -->
+      <!-- clients says -->
+      <!-- refer -->
     </section>
   </div>
 
