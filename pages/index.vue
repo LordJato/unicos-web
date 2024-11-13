@@ -1,7 +1,7 @@
 <template>
   <div>
-    <!-- hero -->
-    <section id="homePage">
+    <!-- Hero -->
+    <section id="home">
       <VParallax :src="parallaxImg" height="100vh" class="px-2">
         <VContainer fluid class="h-100">
           <VRow align="center" justify="center" class="h-100">
@@ -23,13 +23,31 @@
 
         </VContainer>
       </VParallax>
+    </section>
+    <!-- Hire Now -->
+    <section id="hireNow">
 
-      <!-- about -->
-      <!-- Popular services -->
-      <!-- numbers of client/workers/companies -->
-      <!-- top workers -->
-      <!-- clients says -->
-      <!-- refer -->
+    </section>
+    <!-- Popular services -->
+    <section id="popularServices">
+
+    </section>
+    <!-- Numbers of Client/Workers/Companies -->
+    <section id="numbersOnboard">
+
+    </section>
+    <!-- top workers -->
+    <section id="topWorkers">
+
+    </section>
+    <!-- clients feedback -->
+    <section id="clientsFeedback">
+
+    </section>
+
+    <!-- refer -->
+    <section id="referral">
+
     </section>
   </div>
 
