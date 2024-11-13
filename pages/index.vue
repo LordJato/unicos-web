@@ -26,28 +26,29 @@
     </section>
     <!-- Hire Now -->
     <section id="hireNow">
+      <h1>Hire Now</h1>
 
     </section>
     <!-- Popular services -->
     <section id="popularServices">
-
+      <h1>Popular Services</h1>
     </section>
     <!-- Numbers of Client/Workers/Companies -->
     <section id="numbersOnboard">
-
+      <h1>Total Onboards</h1>
     </section>
     <!-- top workers -->
     <section id="topWorkers">
-
+      <h1>Our Top Workers</h1>
     </section>
     <!-- clients feedback -->
     <section id="clientsFeedback">
-
+      <h1>Clients Feedback</h1>
     </section>
 
     <!-- refer -->
     <section id="referral">
-
+      <h1>Refer</h1>
     </section>
   </div>
 
