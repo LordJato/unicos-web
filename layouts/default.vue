@@ -1,5 +1,5 @@
 <template>
-  <VApp theme="darkTheme">
+  <VApp >
     <div class="loader-wrapper" :class="{ hide: !loadingBar }" v-if="loadingBar">
       <div class="loader"></div>
     </div>

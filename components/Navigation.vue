@@ -1,7 +1,7 @@
 <template>
   <nav>
     <VAppBar height="60" :color="props.color" :flat="props.flat" :class="{ expand: props.flat }" scroll-behavior="hide"
-      order="1" theme="darkTheme">
+      order="1" :elevation="props.flat ? 0 : 5">
       <VAppBarTitle>
         <VImg :src="logoSrc" cover :max-width="props.flat ? 120 : 90" alt="Portfolio Icon"
           style="transition: 0.5s ease;" />

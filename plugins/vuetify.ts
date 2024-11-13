@@ -31,8 +31,8 @@ const darkTheme: ThemeDefinition = {
     success: '#4CAF50',
     warning: '#FB8C00',
     'white-primary' : '#e9f2fb',
-    'on-surface': '#9290C3',
-    'on-background': '#9290C3',
+    'on-surface': '#9DB2BF',
+    'on-background': '#9DB2BF',
   }
 }
  
