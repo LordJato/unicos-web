@@ -24,6 +24,51 @@
         </VContainer>
       </VParallax>
     </section>
+
+    <!-- About -->
+    <section id="about">
+      <VContainer>
+        <VRow>
+          <VCol cols="12" md="7">
+            <VRow class="d-flex justify-center align-center">
+              <VCol>
+                <VCard class="mx-auto" color="surface-variant"
+                  image="https://cdn.vuetifyjs.com/docs/images/cards/dark-beach.jpg" max-width="340"
+                  subtitle="Take a walk down the beach" title="Evening sunset">
+                  <template v-slot:actions>
+                    <v-btn append-icon="mdi-chevron-right" color="red-lighten-2" text="Book Activity" variant="outlined"
+                      block></v-btn>
+                  </template>
+                </VCard>
+                <VCard class="mx-auto" color="surface-variant"
+                  image="https://cdn.vuetifyjs.com/docs/images/cards/dark-beach.jpg" max-width="340"
+                  subtitle="Take a walk down the beach" title="Evening sunset">
+                  <template v-slot:actions>
+                    <v-btn append-icon="mdi-chevron-right" color="red-lighten-2" text="Book Activity" variant="outlined"
+                      block></v-btn>
+                  </template>
+                </VCard>
+              </VCol>
+              <VCol>
+                <VCard class="mx-auto" color="surface-variant"
+                  image="https://cdn.vuetifyjs.com/docs/images/cards/dark-beach.jpg" max-width="340"
+                  subtitle="Take a walk down the beach" title="Evening sunset">
+                  <template v-slot:actions>
+                    <v-btn append-icon="mdi-chevron-right" color="red-lighten-2" text="Book Activity" variant="outlined"
+                      block></v-btn>
+                  </template>
+                </VCard>
+              </VCol>
+            </VRow>
+          </VCol>
+          <VCol cols="12" md="5">
+
+          </VCol>
+        </VRow>
+      </VContainer>
+
+    </section>
+
     <!-- Hire Now -->
     <section id="hireNow">
       <h1>Hire Now</h1>
