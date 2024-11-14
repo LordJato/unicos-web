@@ -30,38 +30,43 @@
       <VContainer>
         <VRow align="stretch" justify="space-between">
           <VCol cols="12" md="4">
-            <VCard height="100%">
+            <VCard height="100%" image="https://images.squarespace-cdn.com/content/v1/5cfb0f8783523500013c5639/1c0249f2-14ba-49f5-94c9-14b82e95c356/Professional-headshots-vancouver--20.jpg">
               <VCardItem>
                 <VCardTitle>Tenant or Company</VCardTitle>
-                <VCardSubtitle>Simplify human resources management across your entire organization with UNICOS, the
-                  ultimate multitenant
-                  platform for all your workforce needs.</VCardSubtitle>
+                <VCardSubtitle>UNICOS: Simplify HR management across your organization.</VCardSubtitle>
               </VCardItem>
               <VCardText>
-                As a company or tenant:
-                Manage multiple companies under one account
-                Post jobs, hire skilled workers, and manage applications
-                Access HRIS, payroll, and employee self-service portals
+                <div>
+                  As a company or tenant, you can:
+                </div>
+                <p>Manage multiple companies under one account</p>
+                <p>Post jobs, hire skilled workers, and manage applications</p>
+                <p>Access HRIS, payroll, and employee self-service portals</p>
               </VCardText>
             </VCard>
 
           </VCol>
           <VCol cols="12" md="4">
-            <VCard height="100%">
+            <VCard height="100%" image="https://freedesignfile.com/upload/2017/04/Smile-job-seekers-HD-picture.jpg">
               <VCardItem>
                 <VCardTitle>Job Seeker</VCardTitle>
                 <VCardSubtitle>Find Your Dream Job or Client with UNICOS</VCardSubtitle>
               </VCardItem>
               <VCardText>
-                As a job seeker or worker, unlock opportunities with UNICOS:
-                Search and apply to job openings from various clients and companies
-                Showcase your skills and experience to attract top employers
-                Connect with clients and companies that need your services.
+                <div>As a job seeker or worker, unlock opportunities with UNICOS:</div>
+                <p> Search and apply to job openings from various clients and companies</p>
+                <p>Highlight your expertise and showcase your portfolio to attract top employers and land your dream
+                  job.</p>
+                <p>Find temporary or project-based work with leading clients.</p>
               </VCardText>
+              <VCardActions>
+                <v-btn append-icon="mdi-chevron-right" color="red-lighten-2" text="Book Activity" variant="outlined"
+                  block></v-btn>
+              </VCardActions>
             </VCard>
           </VCol>
           <VCol cols="12" md="4">
-            <VCard height="100%">
+            <VCard height="100%" image="https://welovesalt.com/my/wp-content/uploads/sites/13/2021/12/my-human-resources-recruitment-agency.png">
               <VCardItem>
                 <VCardTitle>Client</VCardTitle>
                 <VCardSubtitle>Find Your Perfect Match with UNICOS</VCardSubtitle>
@@ -144,4 +149,12 @@ function onClick() {
 </script>
 
 
-<style scoped></style>
+<style scoped>
+:deep(.v-card__image) {
+  -webkit-mask-image: linear-gradient(to right,
+  transparent 0%,
+      rgba(0, 0, 0, 0.10) 60%,
+      rgba(0, 0, 0, 0.20) 80%,
+      rgba(0, 0, 0, 0.100) 100%);
+}
+</style>
