@@ -28,9 +28,9 @@
     <!-- About -->
     <section id="about">
       <VContainer>
-        <VRow>
+        <VRow align="stretch" justify="space-between">
           <VCol cols="12" md="4">
-            <VCard>
+            <VCard height="100%">
               <VCardItem>
                 <VCardTitle>Tenant or Company</VCardTitle>
                 <VCardSubtitle>Simplify human resources management across your entire organization with UNICOS, the
@@ -47,7 +47,7 @@
 
           </VCol>
           <VCol cols="12" md="4">
-            <VCard>
+            <VCard height="100%">
               <VCardItem>
                 <VCardTitle>Job Seeker</VCardTitle>
                 <VCardSubtitle>Find Your Dream Job or Client with UNICOS</VCardSubtitle>
@@ -61,7 +61,7 @@
             </VCard>
           </VCol>
           <VCol cols="12" md="4">
-            <VCard>
+            <VCard height="100%">
               <VCardItem>
                 <VCardTitle>Client</VCardTitle>
                 <VCardSubtitle>Find Your Perfect Match with UNICOS</VCardSubtitle>
