@@ -30,28 +30,50 @@
       <VContainer>
         <VRow>
           <VCol cols="12" md="4">
-            "Streamline Your Workforce Management with UNICOS
-Simplify human resources management across your entire organization with UNICOS, the ultimate multitenant platform for all your workforce needs.
-One Platform, Multiple Companies, Endless Possibilities
-As a client or tenant, you can:
-Register and manage multiple companies under one account
-Hire skilled workers for each company
-Find new clients for your services across all companies
+            <VCard>
+              <VCardItem>
+                <VCardTitle>Tenant or Company</VCardTitle>
+                <VCardSubtitle>Simplify human resources management across your entire organization with UNICOS, the
+                  ultimate multitenant
+                  platform for all your workforce needs.</VCardSubtitle>
+              </VCardItem>
+              <VCardText>
+                As a company or tenant:
+                Manage multiple companies under one account
+                Post jobs, hire skilled workers, and manage applications
+                Access HRIS, payroll, and employee self-service portals
+              </VCardText>
+            </VCard>
+
           </VCol>
           <VCol cols="12" md="4">
-            "Find Your Dream Job or Client with UNICOS"
-As a job seeker or worker, unlock opportunities with UNICOS:
-Search and apply to job openings from various clients and companies
-Showcase your skills and experience to attract top employers
-Connect with clients and companies that need your services
+            <VCard>
+              <VCardItem>
+                <VCardTitle>Job Seeker</VCardTitle>
+                <VCardSubtitle>Find Your Dream Job or Client with UNICOS</VCardSubtitle>
+              </VCardItem>
+              <VCardText>
+                As a job seeker or worker, unlock opportunities with UNICOS:
+                Search and apply to job openings from various clients and companies
+                Showcase your skills and experience to attract top employers
+                Connect with clients and companies that need your services.
+              </VCardText>
+            </VCard>
           </VCol>
           <VCol cols="12" md="4">
-            Find Your Perfect Match with UNICOS
-As a client, find skilled workers tailored to your needs:
-Search our vast pool of qualified candidates
-Filter by skills, experience, and location
-Connect with top talent for your business needs
-</VCol>
+            <VCard>
+              <VCardItem>
+                <VCardTitle>Client</VCardTitle>
+                <VCardSubtitle>Find Your Perfect Match with UNICOS</VCardSubtitle>
+              </VCardItem>
+              <VCardText>
+                As a client, find skilled workers tailored to your needs:
+                Search our vast pool of qualified candidates
+                Filter by skills, experience, and location
+                Connect with top talent for your business needs.
+              </VCardText>
+            </VCard>
+          </VCol>
         </VRow>
       </VContainer>
 
