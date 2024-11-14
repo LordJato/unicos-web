@@ -29,41 +29,29 @@
     <section id="about">
       <VContainer>
         <VRow>
-          <VCol cols="12" md="7">
-            <VRow class="d-flex justify-center align-center">
-              <VCol>
-                <VCard class="mx-auto" color="surface-variant"
-                  image="https://cdn.vuetifyjs.com/docs/images/cards/dark-beach.jpg" max-width="340"
-                  subtitle="Take a walk down the beach" title="Evening sunset">
-                  <template v-slot:actions>
-                    <v-btn append-icon="mdi-chevron-right" color="red-lighten-2" text="Book Activity" variant="outlined"
-                      block></v-btn>
-                  </template>
-                </VCard>
-                <VCard class="mx-auto" color="surface-variant"
-                  image="https://cdn.vuetifyjs.com/docs/images/cards/dark-beach.jpg" max-width="340"
-                  subtitle="Take a walk down the beach" title="Evening sunset">
-                  <template v-slot:actions>
-                    <v-btn append-icon="mdi-chevron-right" color="red-lighten-2" text="Book Activity" variant="outlined"
-                      block></v-btn>
-                  </template>
-                </VCard>
-              </VCol>
-              <VCol>
-                <VCard class="mx-auto" color="surface-variant"
-                  image="https://cdn.vuetifyjs.com/docs/images/cards/dark-beach.jpg" max-width="340"
-                  subtitle="Take a walk down the beach" title="Evening sunset">
-                  <template v-slot:actions>
-                    <v-btn append-icon="mdi-chevron-right" color="red-lighten-2" text="Book Activity" variant="outlined"
-                      block></v-btn>
-                  </template>
-                </VCard>
-              </VCol>
-            </VRow>
+          <VCol cols="12" md="4">
+            "Streamline Your Workforce Management with UNICOS
+Simplify human resources management across your entire organization with UNICOS, the ultimate multitenant platform for all your workforce needs.
+One Platform, Multiple Companies, Endless Possibilities
+As a client or tenant, you can:
+Register and manage multiple companies under one account
+Hire skilled workers for each company
+Find new clients for your services across all companies
           </VCol>
-          <VCol cols="12" md="5">
-
+          <VCol cols="12" md="4">
+            "Find Your Dream Job or Client with UNICOS"
+As a job seeker or worker, unlock opportunities with UNICOS:
+Search and apply to job openings from various clients and companies
+Showcase your skills and experience to attract top employers
+Connect with clients and companies that need your services
           </VCol>
+          <VCol cols="12" md="4">
+            Find Your Perfect Match with UNICOS
+As a client, find skilled workers tailored to your needs:
+Search our vast pool of qualified candidates
+Filter by skills, experience, and location
+Connect with top talent for your business needs
+</VCol>
         </VRow>
       </VContainer>
 
