@@ -30,12 +30,11 @@ section {
     border-radius: 7px;
 }
 
-
+/* 
 .v-btn--active {
-    /* custom styles */
     background-color: #c8d9e9 !important;
     color: #213268 !important;
-}
+} */
 
 .loader-wrapper {
     position: fixed;

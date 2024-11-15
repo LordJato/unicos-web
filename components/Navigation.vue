@@ -1,26 +1,24 @@
 <template>
   <nav>
     <VAppBar height="60" :color="props.color" :flat="props.flat" :class="{ expand: props.flat }" scroll-behavior="hide"
-      order="1" :elevation="props.flat ? 0 : 5">
+      order="1" :elevation="props.flat ? 0 : 5" class="d-flex justify-space-between">
       <VAppBarTitle>
-        <VImg :src="logoSrc" cover :max-width="props.flat ? 120 : 90" alt="Portfolio Icon"
+        <VImg :src="logoWhite" cover :max-width="props.flat ? 120 : 90" alt="Portfolio Icon"
           style="transition: 0.5s ease;" />
       </VAppBarTitle>
-      <VSpacer />
       <VAppBarNavIcon @click.stop="drawer = !drawer" class="d-flex d-md-none">
         <VIcon size="x-large" :color="props.flat ? 'white-secondary' : 'primary'"> mdi-reorder-horizontal </VIcon>
       </VAppBarNavIcon>
 
       <div class="d-none d-md-flex">
-        <VBtn v-for="(link, i) in links" :key="i" variant="text" @click="onClick(link.section)"
-          :color="props.flat ? 'white-secondary' : 'primary'" class="text-subtitle-2 font-weight-bold" :to="link.path">
+        <VBtn v-for="(link, i) in links" :key="i" variant="plain" @click="onClick(link.section)"
+          class="text-subtitle-2 font-weight-bold" :to="link.path">
           {{ link.title }}
         </VBtn>
-        <VBtn class="text-subtitle-2 font-weight-bold" color="white-secondary">
-          Login
-        </VBtn>
-        <VBtn class="text-subtitle-2 font-weight-bold" color="secondary" variant="outlined">
-          Register
+        </div>
+        <div class="d-none d-md-flex">
+        <VBtn class="text-subtitle-2 font-weight-bold" color="primary" rounded="xs" size="large" block variant="flat">
+          Get Started
         </VBtn>
       </div>
     </VAppBar>
@@ -46,10 +44,6 @@ import { ref } from "vue";
 import { useGoTo } from "vuetify";
 import logoWhite from '/img/logo-white.png';
 import logo from '/img/logo.png';
-
-const logoSrc = computed(() => {
-  return props.flat ? logoWhite : logo;
-});
 
 const scrollTo = useGoTo();
 
@@ -107,7 +101,7 @@ function onClick(e: string) {
 }
 
 .v-app-bar :deep(.v-toolbar__content) {
-  padding-right: 160px;
-  padding-left: 160px;
+  padding-right: 150px;
+  padding-left: 150px;
 }
 </style>
