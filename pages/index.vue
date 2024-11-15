@@ -26,9 +26,8 @@
         <img :src="useThemeStore().borderWavesSrc" />
     </div>
     <!-- About -->
-    <section id="about">
-      <VContainer class="position-relative h-100">
- 
+    <div id="about">
+      <VContainer >
         <VRow align="stretch" justify="space-between">
           <VCol cols="12" md="4">
             <VCard height="100%"
@@ -91,8 +90,7 @@
           </VCol>
         </VRow>
       </VContainer>
-
-    </section>
+    </div>
 
     <!-- Hire Now -->
     <section id="hireNow">

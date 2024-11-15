@@ -15,9 +15,7 @@
           class="text-subtitle-2 font-weight-bold" :to="link.path">
           {{ link.title }}
         </VBtn>
-        </div>
-        <div class="d-none d-md-flex">
-        <VBtn class="text-subtitle-2 font-weight-bold" color="primary" rounded="xs" size="large" block variant="flat">
+        <VBtn class="text-subtitle-2 font-weight-bold" color="primary" rounded="xs" size="large" variant="flat">
           Get Started
         </VBtn>
       </div>
