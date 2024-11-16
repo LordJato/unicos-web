@@ -1,5 +1,6 @@
 <template>
-    <VContainer class="h-100">
+    <section id="homeAbout">
+        <VContainer class="h-100">
         <VRow>
             <VCol cols="12" md="4">  <VCard>
             <VImg src="/public/img/index/job-seeker.gif" class="mx-auto rounded-circle" max-width="150"/>
@@ -56,8 +57,9 @@
               </VCardActions>
         </VCard></VCol>
         </VRow>
-      
     </VContainer>
+    </section>
+
 </template>
 
 <script setup lang="ts">
@@ -65,5 +67,13 @@
 </script>
 
 <style scoped>
-
+#homeAbout {
+  overflow: hidden;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-color: transparent;
+  background: 
+   url("/img/index/sprinkle.svg") no-repeat center / cover fixed;
+}
 </style>
