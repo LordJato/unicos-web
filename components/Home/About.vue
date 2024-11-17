@@ -5,25 +5,27 @@
         <VContainer class="h-100" fluid>
           <VRow align="stretch">
             <VCol cols="12" md="4" v-for="(about, i) in aboutUser" :key="i">
-              <VCard height="100%" class="rounded-lg pa-5 position-relative" elevation="8">
-                <div style="background: #213268; left: 0; top: 0; height: 120px; width: 100%; position: absolute; ">
+              <VCard height="100%" class="rounded-lg pa-5 position-relative" elevation="4 ">
+                <div style="background: #213268; left: 0; top: 0; height: 100px; width: 100%; position: absolute; ">
                 </div>
-                <VImg :src="about.img" class="mx-auto rounded-circle border-xl border-background mt-8"
+                <VImg :src="about.img" class="mx-auto rounded-circle border-background mt-4"
                   max-width="130" />
-
-                <VCardItem class="text-center">
+                <VCardItem class="text-center mt-3">
                   <VCardTitle>{{ about.title }}</VCardTitle>
                   <VCardSubtitle>{{ about.subtitle }}</VCardSubtitle>
                 </VCardItem>
-                <VCardText class="mt-5">
+                <VCardText class="mt-5 px-6" style="height: 250px;">
                   <p class="mb-5">{{ about.text }}</p>
                   <div v-for="(benefit, i) in about.benefits" :key="i" class="d-flex mb-2">
-                    <v-icon color="green-darken-2" icon="mdi-check" class="mr-2"></v-icon>
-                    <p >
+                    <v-icon color="secondary" icon="mdi-check" class="mr-2"></v-icon>
+                    <p>
                       {{ benefit }}
                     </p>
                   </div>
                 </VCardText>
+                <VCardActions>
+                  <VBtn class="mx-auto text-subtitle-2 px-4" color="secondary" variant="outlined">How it works</VBtn>
+                </VCardActions>
               </VCard>
             </VCol>
           </VRow>
@@ -57,7 +59,7 @@ const aboutUser = ref<AboutUser[]>([
     url: "#",
   },
   {
-    img: '/img/index/job-seeker.gif',
+    img: '/img/index/clients.gif',
     title: "Client",
     subtitle: "Discover Your Ideal Partner",
     text: "  As a client or a company, find skilled workers tailored to your needs:",

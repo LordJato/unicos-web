@@ -121,7 +121,7 @@ function onClick() {
   left: 0;
   width: 25%;
   height: 100%;
-  background: url('/img/index/left-dots-bg.png');
+  background: url('/img/index/dots-bg-left.png');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -132,7 +132,7 @@ function onClick() {
   right: 0;
   width: 25%;
   height: 100%;
-  background: url("/img/index/right-dots-bg.png");
+  background: url("/img/index/dots-bg-right.png");
   background-size: cover;
   background-repeat: no-repeat;
 }

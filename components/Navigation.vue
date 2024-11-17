@@ -100,6 +100,6 @@ function onClick(e: string) {
 
 .v-app-bar :deep(.v-toolbar__content) {
   padding-right: 150px;
-  padding-left: 150px;
+  padding-left: 142px;
 }
 </style>
