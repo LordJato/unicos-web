@@ -23,21 +23,24 @@
     </section>
 
     <div class="border-waves">
-        <img :src="useThemeStore().borderWavesSrc" />
-    </div>
-    <!-- About -->
-    <div id="about">
-      <HomeAbout />
+      <img :src="useThemeStore().borderWavesSrc" />
     </div>
 
-    <!-- Hire Now -->
+    <div class="position-relative">
+      <div class="left-bg d-none d-md-flex"></div>
+      <div class="right-bg d-none d-md-flex"></div>
+      <HomeAbout />
+      <section id="popularServices">
+        <h1>Popular Services</h1>
+      </section>
+    </div>
+
+
+    <!-- Popular services -->
+
+
     <section id="hireNow">
       <h1>Hire Now</h1>
-
-    </section>
-    <!-- Popular services -->
-    <section id="popularServices">
-      <h1>Popular Services</h1>
     </section>
     <!-- Numbers of Client/Workers/Companies -->
     <section id="numbersOnboard">
@@ -66,9 +69,6 @@
 
 import { ref } from 'vue'
 import parallaxImg from "/img/index/bg.png";
-import spacexImage from "/img/agency-logo/spacex.png";
-import metaImage from "/img/agency-logo/meta.png";
-import microsoftImage from "/img/agency-logo/microsoft.png";
 import { useDisplay } from "vuetify";
 
 const { mdAndUp } = useDisplay();
@@ -77,12 +77,6 @@ const title = ref("Unicos");
 useSeoMeta({
   title,
 });
-
-const agencies = [
-  { name: "Microsoft", img: microsoftImage },
-  { name: "Meta", img: metaImage },
-  { name: "Spacex", img: spacexImage },
-];
 
 const loaded = ref(false)
 const loading = ref(false)
@@ -119,5 +113,27 @@ function onClick() {
   width: 100%;
   height: 3rem;
   margin-top: -40px;
+}
+
+.left-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 100%;
+  background: url('/img/index/left-dots-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.right-bg {
+  position: absolute;
+  top: -2%;
+  right: 0;
+  width: 25%;
+  height: 100%;
+  background: url("/img/index/right-dots-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 </style>
