@@ -1,13 +1,14 @@
 <template>
   <nav>
-    <VAppBar height="60" :color="props.color" :flat="props.flat" :class="{ expand: props.flat }" scroll-behavior="hide"
-      order="1" :elevation="props.flat ? 0 : 5" class="d-flex justify-space-between">
+    <VAppBar class="px-12" height="60" :color="props.color" :flat="props.flat"
+      :class="{ expand: props.flat, 'add-padding': mdAndUp }" scroll-behavior="hide" order="1"
+      :elevation="props.flat ? 0 : 5">
       <VAppBarTitle>
         <VImg :src="logoWhite" cover :max-width="props.flat ? 120 : 90" alt="Portfolio Icon"
           style="transition: 0.5s ease;" />
       </VAppBarTitle>
       <VAppBarNavIcon @click.stop="drawer = !drawer" class="d-flex d-md-none">
-        <VIcon size="x-large" :color="props.flat ? 'white-secondary' : 'primary'"> mdi-reorder-horizontal </VIcon>
+        <VIcon size="x-large"> mdi-reorder-horizontal </VIcon>
       </VAppBarNavIcon>
 
       <div class="d-none d-md-flex">
@@ -41,7 +42,9 @@ const props = defineProps({
 import { ref } from "vue";
 import { useGoTo } from "vuetify";
 import logoWhite from '/img/logo-white.png';
-import logo from '/img/logo.png';
+import { useDisplay } from 'vuetify'
+
+const { mdAndUp } = useDisplay()
 
 const scrollTo = useGoTo();
 
@@ -98,8 +101,8 @@ function onClick(e: string) {
   padding-top: 40px;
 }
 
-.v-app-bar :deep(.v-toolbar__content) {
-  padding-right: 150px;
-  padding-left: 142px;
+.add-padding {
+  padding-right: 255px !important;
+  padding-left: 235px !important;
 }
 </style>

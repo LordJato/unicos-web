@@ -1,10 +1,10 @@
 <template>
   <section id="homeAbout">
     <VRow align="center" justify="center" class="h-100">
-      <VCol cols="10">
-        <VContainer class="h-100" fluid>
-          <VRow align="stretch">
-            <VCol cols="12" md="4" v-for="(about, i) in aboutUser" :key="i">
+      <VCol cols="12" lg="9">
+        <VContainer class="h-100" >
+          <VRow align="stretch" justify="center">
+            <VCol cols="12"  md="4" v-for="(about, i) in aboutUser" :key="i" class="d-flex justify-center">
               <VCard height="100%" class="rounded-lg pa-5 position-relative" elevation="4 ">
                 <div style="background: #213268; left: 0; top: 0; height: 100px; width: 100%; position: absolute; ">
                 </div>
@@ -24,7 +24,7 @@
                   </div>
                 </VCardText>
                 <VCardActions>
-                  <VBtn class="mx-auto text-subtitle-2 px-4" color="secondary" variant="outlined">How it works</VBtn>
+                  <VBtn class="mx-auto text-subtitle-2 px-6" color="secondary" variant="outlined">How it works</VBtn>
                 </VCardActions>
               </VCard>
             </VCol>
@@ -71,7 +71,7 @@ const aboutUser = ref<AboutUser[]>([
     url: "#"
   },
   {
-    img: '/img/index/job-seeker.gif',
+    img: '/img/index/tenant.gif',
     title: "Tenant",
     subtitle: "Simplify HR management across your organization.",
     text: " As tenant, you can: ",
@@ -84,17 +84,4 @@ const aboutUser = ref<AboutUser[]>([
     url: "#"
   }
 ]);
-
 </script>
-
-<style scoped>
-/* #homeAbout {
-  overflow: hidden;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  background-color: transparent;
-  background:
-    url("/img/index/sprinkle.svg") no-repeat center / cover fixed;
-} */
-</style>
