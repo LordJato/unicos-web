@@ -3,6 +3,7 @@
     <VRow align="center" justify="center" class="h-100">
       <VCol cols="12" lg="9">
         <VContainer class="h-100" >
+          <div class="text-center mb-6 text-h4">How It Works</div>
           <VRow align="stretch" justify="center">
             <VCol cols="12"  md="4" v-for="(about, i) in aboutUser" :key="i" class="d-flex justify-center">
               <VCard height="100%" class="rounded-lg pa-5 position-relative" elevation="4 ">
@@ -24,7 +25,7 @@
                   </div>
                 </VCardText>
                 <VCardActions>
-                  <VBtn class="mx-auto text-subtitle-2 px-6" color="secondary" variant="outlined">How it works</VBtn>
+                  <VBtn class="mx-auto text-subtitle-2 px-6" color="secondary" variant="outlined">View More</VBtn>
                 </VCardActions>
               </VCard>
             </VCol>
