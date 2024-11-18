@@ -4,7 +4,6 @@
         <VRow align="center" justify="center" class="h-100">
             <VCol cols="12" lg="9">
                 <VContainer class="h-100">
-                   
                     <v-sheet class="mx-auto" elevation="8">
                         <v-slide-group v-model="model" class="pa-4" center-active show-arrows>
                             <v-slide-group-item v-for="(service, i) in services" :key="i"
