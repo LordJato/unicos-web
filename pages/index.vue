@@ -41,10 +41,6 @@
 
     <!-- Popular services -->
 
-
-    <section id="hireNow">
-      <h1>Hire Now</h1>
-    </section>
     <!-- Numbers of Client/Workers/Companies -->
     <section id="numbersOnboard">
       <h1>Total Onboards</h1>
@@ -59,11 +55,7 @@
     </section>
 
     <!-- refer -->
-    <section id="referral">
-      <h1>Refer</h1>
-    </section>
-
-
+    <HomeRefer />
   </div>
 
 </template>
