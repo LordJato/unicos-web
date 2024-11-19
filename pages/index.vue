@@ -46,9 +46,7 @@
       <h1>Total Onboards</h1>
     </section>
     <!-- top workers -->
-    <section id="topWorkers">
-      <h1>Our Top Workers</h1>
-    </section>
+    <HomeTopWorkers />
     <!-- clients feedback -->
     <HomePartnersFeedback />
 
