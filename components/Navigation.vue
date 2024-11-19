@@ -11,12 +11,12 @@
         <VIcon size="x-large"> mdi-reorder-horizontal </VIcon>
       </VAppBarNavIcon>
 
-      <div class="d-none d-md-flex">
+      <div class="d-none d-md-flex align-center">
         <VBtn v-for="(link, i) in links" :key="i" variant="plain" @click="onClick(link.section)"
           class="text-subtitle-2 font-weight-bold" :to="link.path">
           {{ link.title }}
         </VBtn>
-        <VBtn class="text-subtitle-2 font-weight-bold" color="primary" rounded="xs" size="large" variant="flat">
+        <VBtn class="text-subtitle-2 font-weight-bold text-white" color="secondary" rounded="xs" size="large" variant="flat">
           Get Started
         </VBtn>
       </div>
