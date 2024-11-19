@@ -1,13 +1,13 @@
 <template>
     <div id="homeRefer">
-        <VImg src="/public/img/index/refer.jpg" height="350" cover>
-            <VRow justify="center" align="center">
+        <VImg src="/public/img/index/refer.jpg" height="400" cover>
+            <VRow justify="center" align="center" class="h-100">
                 <VCol cols="12" lg="9">
                     <VContainer fluid>
                         <VRow justify="center" align="center">
                             <VCol cols="12" md="6" class="d-flex align-center">
                                 <div>
-                                    <h1 class="text-h4 mb-5 mt-8">Got connections?</h1>
+                                    <h1 class="text-h4 mb-5">Got connections?</h1>
                                     <p class="mb-3 text-h6">Join our referral program!</p>
                                     <p class="mb-3">Unlock big rewards! Earn $1/referral + up to $99,999 bonus for loyal partners!</p>
                                     <VBtn color="secondary" class="text-white text-subtitle-2">
