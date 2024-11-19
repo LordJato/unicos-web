@@ -30,10 +30,10 @@ const darkTheme: ThemeDefinition = {
     info: '#2196F3',
     success: '#4CAF50',
     warning: '#FB8C00',
-    'white-primary' : '#070F2B',
+    'white-primary' : '#9DB2BF',
     'on-surface': '#9DB2BF',
     'on-background': '#9DB2BF',
-  }
+  },
 }
  
 export default defineNuxtPlugin(nuxt => {
