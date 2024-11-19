@@ -50,9 +50,7 @@
       <h1>Our Top Workers</h1>
     </section>
     <!-- clients feedback -->
-    <section id="clientsFeedback">
-      <h1>Clients Feedback</h1>
-    </section>
+    <HomePartnersFeedback />
 
     <!-- refer -->
     <HomeRefer />
