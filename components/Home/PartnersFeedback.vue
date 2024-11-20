@@ -4,28 +4,36 @@
             <h1 class="text-h4">Voices from Our Community</h1>
             <p class="text-h6 mt-8 mb-16"> We're proud of the results we've achieved together. Here's what our clients
                 say about working with us </p>
-            <v-carousel hide-delimiters show-arrows height="100%" >
+            <v-carousel hide-delimiters show-arrows height="100%">
                 <v-carousel-item color="transparent">
                     <VCard max-width="1080" class="position-relative rounded-xl mx-auto" elevation="9">
-                        <VImg src="/img/index/business.jpg" cover>
+                        <VImg src="/public/img/index/business.jpg" cover>
                             <div class="overlay"></div>
-
-
                             <VContainer class="h-100 text-start pa-16">
                                 <VRow>
                                     <v-col cols="12" md="7">
                                         <v-icon icon="mdi-format-quote-open-outline" size="100"
                                             color="secondary"></v-icon>
-                                        <p class="text-subtitle-1 text-justify">We have worked with Dev Partners for over 5 years with a team of 40+
-                                            development staff. Roland and his team have been an excellent partner
-                                            providing consistently high quality development resources.
-
-                                          </p>
-                                          <p class="mt-2">
-
-                                            We have been particularly impressed with the long term loyalty of our
-                                            extended team and thoroughly recommend Dev Partners.
-                                          </p>
+                                        <p class="text-subtitle-1 text-justify mt-2">
+                                            Unicoss has been our trusted partner for over five years, providing top-tier
+                                            development resources through their team of 40+ skilled professionals. Under
+                                            Steto's leadership, they've consistently demonstrated exceptional quality,
+                                            loyalty, and commitment.
+                                        </p>
+                                        <p class="mt-8">
+                                            We strongly recommend Unicoss for their outstanding expertise and service.
+                                        </p>
+                                        <div class="d-flex align-center mt-10">
+                                            <span class="mr-3">
+                                                <v-avatar size="large">
+                                                    <v-img alt="John" src="https://cdn.vuetifyjs.com/images/john.jpg" />
+                                                </v-avatar>
+                                            </span>
+                                            <span>
+                                                <div class="text-body-1 font-weight-bold">Steto Javellana</div>
+                                                <div class="text-caption">Junior Software Developer</div>
+                                            </span>
+                                        </div>
                                     </v-col>
                                 </VRow>
                             </VContainer>
