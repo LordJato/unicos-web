@@ -56,6 +56,6 @@
     background-color: transparent;
     background:
         url("/img/index/circuit-board.svg") no-repeat center,
-        radial-gradient(circle, rgba(7, 15, 43, 1) 0%, rgba(33, 50, 104, 1) 100%);
+        linear-gradient(90deg, rgba(7,15,43,1) 0%, rgba(26,41,88,1) 87%, rgba(33,50,104,1) 100%);
 }
 </style>

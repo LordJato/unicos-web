@@ -50,6 +50,8 @@
     <!-- clients feedback -->
     <HomePartnersFeedback />
 
+    <HomeContact />
+
     <!-- refer -->
     <HomeRefer />
   </div>
