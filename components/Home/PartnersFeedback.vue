@@ -6,20 +6,20 @@
                 say about working with us </p>
             <v-carousel hide-delimiters show-arrows class="h-100">
                 <v-carousel-item color="transparent" v-for="(feedback, i) in feedbacks">
-                    <VCard  max-width="1100" height="550" class=" rounded-xl mx-auto" elevation="9">
-                        <VImg :src="feedback.backgroundImg" cover class="position-relative">
+                    <VCard  max-width="1100" class=" rounded-xl mx-auto" elevation="9">
+                        <VImg :src="feedback.backgroundImg" height="580" cover class="position-relative">
                             <div class="overlay"></div>
                             <VContainer class="h-100 text-start pa-16">
                                 <VRow class="h-100">
                                     <VCol cols="12" md="7" class="d-flex align-start flex-column">
                                         <VIcon icon="mdi-format-quote-open-outline" size="100" color="secondary" />
-                                        <p class="text-subtitle-1 text-justify mt-2">
+                                        <p class="text-caption text-md-subtitle-1 text-justify mt-2">
                                             {{ feedback.message }}
                                         </p>
-                                        <p class="mt-8" v-if="feedback.subMessage">
+                                        <p class="mt-2 mt-md-8 text-caption text-md-subtitle-1" v-if="feedback.subMessage">
                                             {{ feedback.subMessage }}
                                         </p>
-                                        <div class="d-flex align-center mt-auto">
+                                        <div class="d-flex align-center mt-4 mt-md-auto">
                                             <span class="mr-3">
                                                 <VAvatar size="large">
                                                     <VImg :alt="feedback.name" style="filter: grayscale(100%);"
@@ -39,11 +39,11 @@
                 </v-carousel-item>
                 <template v-slot:prev="{ props }">
                     <v-btn color="secondary" variant="elevated" @click="props.onClick"
-                        prepend-icon="mdi-page-previous-outline" class="text-white text-caption">Prev</v-btn>
+                        icon="mdi-page-previous-outline" class="text-white text-caption" size="small"></v-btn>
                 </template>
                 <template v-slot:next="{ props }">
                     <v-btn color="secondary" variant="elevated" elevation="5" @click="props.onClick"
-                        append-icon="mdi-page-next-outline" class="text-white text-caption">Next</v-btn>
+                        icon="mdi-page-next-outline" class="text-white text-caption" size="small"></v-btn>
                 </template>
             </v-carousel>
         </div>
@@ -97,6 +97,7 @@ const feedbacks = ref([
     background:
         url("/img/index/circuit-board.svg") no-repeat center,
         radial-gradient(circle, rgba(33, 50, 104, 1) 0%, rgba(7, 15, 43, 1) 76%);
+    height: 100vh;
 
 }
 

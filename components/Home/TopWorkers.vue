@@ -1,7 +1,7 @@
 <template>
-    <div>
-        <h1>Top workers</h1>
-    </div>
+    <section>
+        <h1 class="text-h4">Partner with dedicated professionals who deliver excellence with loyalty and commitment.</h1>
+    </section>
 </template>
 
 <script setup lang="ts">

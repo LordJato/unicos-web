@@ -51,6 +51,7 @@
 
 <style scoped>
 #homeContact {
+    top: 0;
     position: relative;
     min-height: 85vh;
     overflow: hidden;

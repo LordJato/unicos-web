@@ -106,7 +106,7 @@ function onClick() {
   top: 0;
   left: 0;
   width: 25%;
-  height: 100%;
+  height: 120%;
   background: url('/img/index/dots-bg-left.png');
   background-size: cover;
   background-repeat: no-repeat;
@@ -117,7 +117,7 @@ function onClick() {
   top: -2%;
   right: 0;
   width: 25%;
-  height: 100%;
+  height: 80%;
   background: url("/img/index/dots-bg-right.png");
   background-size: cover;
   background-repeat: no-repeat;
