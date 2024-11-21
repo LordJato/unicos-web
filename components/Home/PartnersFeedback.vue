@@ -2,7 +2,7 @@
     <section id="homeFeedback">
         <div class="w-100 text-center">
             <h1 class="text-h4">Voices from Our Community</h1>
-            <p class="text-h6 mt-8 mb-16"> We're proud of the results we've achieved together. Here's what our clients
+            <p class="text-h6 mt-4 mb-8"> We're proud of the results we've achieved together. Here's what our clients
                 say about working with us </p>
             <v-carousel hide-delimiters show-arrows height="100%">
                 <v-carousel-item color="transparent">
@@ -26,7 +26,8 @@
                                         <div class="d-flex align-center mt-10">
                                             <span class="mr-3">
                                                 <v-avatar size="large">
-                                                    <v-img alt="John" src="https://cdn.vuetifyjs.com/images/john.jpg" />
+                                                    <v-img alt="John" style="filter: grayscale(100%);"
+                                                        src="https://imgix.ranker.com/user_node_img/50082/1001639646/original/being-strong-photo-u1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=355" />
                                                 </v-avatar>
                                             </span>
                                             <span>
@@ -69,7 +70,8 @@
     background-color: transparent;
     background:
         url("/img/index/circuit-board.svg") no-repeat center,
-        linear-gradient(90deg, rgba(7, 15, 43, 1) 0%, rgba(26, 41, 88, 1) 87%, rgba(33, 50, 104, 1) 100%);
+        radial-gradient(circle, rgba(33, 50, 104, 1) 0%, rgba(7, 15, 43, 1) 76%);
+
 }
 
 .overlay {
