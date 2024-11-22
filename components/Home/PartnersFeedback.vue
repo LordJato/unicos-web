@@ -1,12 +1,13 @@
 <template>
     <section id="homeFeedback">
-        <div class="w-100 text-center">
-            <h1 class="text-h4">Voices from Our Community</h1>
-            <p class="text-h6 mt-4 mb-10"> We're proud of the results we've achieved together. Here's what our clients
-                say about working with us </p>
+        <div class="w-100">
+            <div class="w-100 w-md-25 mx-auto text-center">
+  <h1 class="text-h4">Voices from Our Community</h1>
+  <p class="text-h6 mt-4 mb-10">We're proud of the results we've achieved together. Here's what our clients say about working with us</p>
+</div>
             <v-carousel hide-delimiters show-arrows class="h-100">
                 <v-carousel-item color="transparent" v-for="(feedback, i) in feedbacks">
-                    <VCard  max-width="1100" class=" rounded-xl mx-auto" elevation="9">
+                    <VCard max-width="1100" class=" rounded-xl mx-auto" elevation="9">
                         <VImg :src="feedback.backgroundImg" height="580" cover class="position-relative">
                             <div class="overlay"></div>
                             <VContainer class="h-100 text-start pa-16">
@@ -16,7 +17,8 @@
                                         <p class="text-caption text-md-subtitle-1 text-justify mt-2">
                                             {{ feedback.message }}
                                         </p>
-                                        <p class="mt-2 mt-md-8 text-caption text-md-subtitle-1" v-if="feedback.subMessage">
+                                        <p class="mt-2 mt-md-8 text-caption text-md-subtitle-1"
+                                            v-if="feedback.subMessage">
                                             {{ feedback.subMessage }}
                                         </p>
                                         <div class="d-flex align-center mt-4 mt-md-auto">
@@ -38,11 +40,17 @@
                     </VCard>
                 </v-carousel-item>
                 <template v-slot:prev="{ props }">
-                    <v-btn color="secondary" variant="elevated" @click="props.onClick"
+                    <v-btn color="secondary" variant="elevated" @click="props.onClick" v-if="mdAndUp"
+                        prepend-icon="mdi-page-previous-outline" class="text-white text-caption"
+                      >Prev</v-btn>
+                    <v-btn v-else color="secondary" variant="elevated" @click="props.onClick"
                         icon="mdi-page-previous-outline" class="text-white text-caption" size="small"></v-btn>
                 </template>
                 <template v-slot:next="{ props }">
-                    <v-btn color="secondary" variant="elevated" elevation="5" @click="props.onClick"
+                    <v-btn color="secondary" variant="elevated" @click="props.onClick" v-if="mdAndUp"
+                        append-icon="mdi-page-next-outline" class="text-white text-caption"
+                       >Next</v-btn>
+                    <v-btn v-else color="secondary" variant="elevated" @click="props.onClick"
                         icon="mdi-page-next-outline" class="text-white text-caption" size="small"></v-btn>
                 </template>
             </v-carousel>
@@ -52,6 +60,10 @@
 </template>
 
 <script setup lang="ts">
+
+import { useDisplay } from 'vuetify'
+
+const { mdAndUp } = useDisplay()
 
 const feedbacks = ref([
     {
@@ -82,7 +94,7 @@ const feedbacks = ref([
     },
 
 
-    
+
 ])
 
 </script>
