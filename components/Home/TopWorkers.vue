@@ -5,7 +5,8 @@
                 <VContainer class="h-100">
                     <VRow justify="center" align="center">
                         <VCol cols="12" md="5">
-                            <h1 class="text-h4">Partner with dedicated professionals who deliver excellence with loyalty and commitment.</h1>
+                            <h1 class="text-h4">Meet Our Top Achievers!</h1>
+                            <p>Leading the charge in innovation and excellence. Explore their profiles, learn from their expertise, and collaborate with the best on Unicos.</p>
                         </VCol>
                         <VCol cols="12" md="7" class="d-flex justify-center align-center">
                             <v-card
