@@ -55,40 +55,62 @@
             <VCol cols="12" md="6" class="d-flex justify-center align-center">
               <VRow justify="center" align="center">
                 <VCol cols="12" md="6" class="mb-md-16">
-                  <VCard class="mb-4 text-center rounded-xl pa-8" color="#0b1420">
-                    <VImg class="rounded-circle mx-auto" cover height="120" width="120"
-                      src="https://rszr.getimg.ai/resize?url=https%3A%2F%2Fimg.getimg.ai%2Fgenerated%2Fimg-mGtSk9modTnvsDVsxaXZC.jpeg&type=auto&width=640&speed=5">
-                    </VImg>
-                    <VCardTitle>Steto Javellana</VCardTitle>
-                    <VCardSubtitle>Software Developer</VCardSubtitle>
-                    <VCardText>Content for card 1</VCardText>
-                  </VCard>
-                  <VCard class="mb-3 text-center rounded-xl pa-8" color="#0b1420">
-                    <VImg class="rounded-circle mx-auto" cover height="120" width="120"
-                      src="https://rszr.getimg.ai/resize?url=https%3A%2F%2Fimg.getimg.ai%2Fgenerated%2Fimg-mGtSk9modTnvsDVsxaXZC.jpeg&type=auto&width=640&speed=5">
-                    </VImg>
-                    <VCardTitle>Steto Javellana</VCardTitle>
-                    <VCardSubtitle>Software Developer</VCardSubtitle>
-                    <VCardText>Content for card 1</VCardText>
-                  </VCard>
+                  <VHover>
+                    <template v-slot:default="{ isHovering, props }">
+                      <VCard v-bind="props" :color="isHovering ? 'primary' : '#0b1420'"
+                        class="mb-4 text-center rounded-xl pa-8">
+                        <VImg class="rounded-circle mx-auto" cover height="120" width="120"
+                          src="https://rszr.getimg.ai/resize?url=https%3A%2F%2Fimg.getimg.ai%2Fgenerated%2Fimg-mGtSk9modTnvsDVsxaXZC.jpeg&type=auto&width=640&speed=5">
+                        </VImg>
+                        <VCardTitle>Steto Javellana</VCardTitle>
+                        <VCardSubtitle>Software Developer</VCardSubtitle>
+                        <VCardText>Content for card 1</VCardText>
+                      </VCard>
+                    </template>
+                  </VHover>
+                  <VHover>
+                    <template v-slot:default="{ isHovering, props }">
+                      <VCard class="mb-3 text-center rounded-xl pa-8" v-bind="props"
+                        :color="isHovering ? 'primary' : '#0b1420'">
+                        <VImg class="rounded-circle mx-auto" cover height="120" width="120"
+                          src="https://rszr.getimg.ai/resize?url=https%3A%2F%2Fimg.getimg.ai%2Fgenerated%2Fimg-mGtSk9modTnvsDVsxaXZC.jpeg&type=auto&width=640&speed=5">
+                        </VImg>
+                        <VCardTitle>Steto Javellana</VCardTitle>
+                        <VCardSubtitle>Software Developer</VCardSubtitle>
+                        <VCardText>Content for card 1</VCardText>
+                      </VCard>
+                    </template>
+                  </VHover>
                 </VCol>
                 <VCol cols="12" md="6" class="mt-md-16">
-                  <VCard class="mb-4 text-center rounded-xl pa-8 w-100" color="#0b1420">
-                    <VImg class="rounded-circle mx-auto" cover height="120" width="120"
-                      src="https://rszr.getimg.ai/resize?url=https%3A%2F%2Fimg.getimg.ai%2Fgenerated%2Fimg-mGtSk9modTnvsDVsxaXZC.jpeg&type=auto&width=640&speed=5">
-                    </VImg>
-                    <VCardTitle>Steto Javellana</VCardTitle>
-                    <VCardSubtitle>Software Developer</VCardSubtitle>
-                    <VCardText>Content for card 1</VCardText>
-                  </VCard>
-                  <VCard class="mb-4 text-center rounded-xl pa-8 w-100" color="#0b1420">
-                    <VImg class="rounded-circle mx-auto" cover height="120" width="120"
-                      src="https://rszr.getimg.ai/resize?url=https%3A%2F%2Fimg.getimg.ai%2Fgenerated%2Fimg-mGtSk9modTnvsDVsxaXZC.jpeg&type=auto&width=640&speed=5">
-                    </VImg>
-                    <VCardTitle>Steto Javellana</VCardTitle>
-                    <VCardSubtitle>Software Developer</VCardSubtitle>
-                    <VCardText>Content for card 1</VCardText>
-                  </VCard>
+                  <VHover>
+                    <template v-slot:default="{ isHovering, props }">
+                      <VCard class="mb-3 text-center rounded-xl pa-8" v-bind="props"
+                        :color="isHovering ? 'primary' : '#0b1420'">
+                        <VImg class="rounded-circle mx-auto" cover height="120" width="120"
+                          src="https://rszr.getimg.ai/resize?url=https%3A%2F%2Fimg.getimg.ai%2Fgenerated%2Fimg-mGtSk9modTnvsDVsxaXZC.jpeg&type=auto&width=640&speed=5">
+                        </VImg>
+                        <VCardTitle>Steto Javellana</VCardTitle>
+                        <VCardSubtitle>Software Developer</VCardSubtitle>
+                        <VCardText>Content for card 1</VCardText>
+                      </VCard>
+                    </template>
+                  </VHover>
+
+                  <VHover>
+                    <template v-slot:default="{ isHovering, props }">
+                      <VCard class="mb-3 text-center rounded-xl pa-8" v-bind="props"
+                        :color="isHovering ? 'primary' : '#0b1420'">
+                        <VImg class="rounded-circle mx-auto" cover height="120" width="120"
+                          src="https://rszr.getimg.ai/resize?url=https%3A%2F%2Fimg.getimg.ai%2Fgenerated%2Fimg-mGtSk9modTnvsDVsxaXZC.jpeg&type=auto&width=640&speed=5">
+                        </VImg>
+                        <VCardTitle>Steto Javellana</VCardTitle>
+                        <VCardSubtitle>Software Developer</VCardSubtitle>
+                        <VCardText>Content for card 1</VCardText>
+                      </VCard>
+                    </template>
+                  </VHover>
+
                 </VCol>
               </VRow>
             </VCol>
@@ -106,8 +128,8 @@
 <style scoped>
 #homeTopWorkers {
   background-image: url('/img/index/top-profile-bg.png');
-background-size: 50% 100%;
-background-position: left top;
-background-repeat: no-repeat;
+  background-size: 48% auto;
+  background-position: left top;
+  background-repeat: no-repeat;
 }
 </style>
