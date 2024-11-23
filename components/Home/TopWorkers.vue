@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="homeTopWorkers">
     <VRow justify="center" align="center" class="h-100">
       <VCol cols="12" lg="9">
         <VContainer class="h-100">
@@ -21,7 +21,6 @@
                   Portfolio showcasing expertise
                 </p>
               </div>
-
               <div class="d-flex mb-2">
                 <v-icon color="secondary" icon="mdi-tag-check-outline" class="mr-2" size="small"></v-icon>
                 <p>
@@ -104,4 +103,11 @@
 
 </script>
 
-<style scoped></style>
+<style scoped>
+#homeTopWorkers {
+  background-image: url('/img/index/top-profile-bg.png');
+background-size: 50% 100%;
+background-position: left top;
+background-repeat: no-repeat;
+}
+</style>
