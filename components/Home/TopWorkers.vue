@@ -19,41 +19,21 @@
             <VCol cols="12" md="6" class="d-flex justify-center align-center">
               <VRow justify="center" align="center">
                 <VCol cols="12" md="6" class="mb-md-16">
-                  <VHover>
+                  <VHover v-for="(achiever, i) in achievers">
                     <template v-slot:default="{ isHovering, props }">
                       <VCard v-bind="props" :color="isHovering ? 'secondary' : 'dark-grey'"
                         class="mb-4 text-center rounded-xl pa-8 extra-rounded" :class="{ 'text-white': isHovering }">
                         <VImg class="rounded-circle mx-auto" :class="{ 'black-white-overlay': !isHovering }" cover
-                          height="120" width="120"
-                          src="https://rszr.getimg.ai/resize?url=https%3A%2F%2Fimg.getimg.ai%2Fgenerated%2Fimg-mGtSk9modTnvsDVsxaXZC.jpeg&type=auto&width=640&speed=5">
+                          height="120" width="120" :src="achiever.img">
                         </VImg>
-                        <VCardTitle>Steto Javellana</VCardTitle>
-                        <VCardSubtitle>Software Developer</VCardSubtitle>
+                        <VCardTitle>{{ achiever.name }}</VCardTitle>
+                        <VCardSubtitle> {{ achiever.designation }}</VCardSubtitle>
                         <VCardText class="d-flex justify-space-around align-center">
-                          <div class="position-relative rounded-circle bg-white pa-1"
-                            style="width: 40px; height: 40px;" :class="{ 'black-white-overlay': !isHovering }">
-                            <VImg alt="Nuxt" src="https://develop365.gitlab.io/nuxtjs-2.8.X-doc/en/logos/nuxt-icon.png"
-                              class="rounded-circle"/>
+                          <div class="position-relative rounded-circle bg-white pa-1" style="width: 40px; height: 40px;"
+                            :class="{ 'black-white-overlay': !isHovering }" v-for="(tool, i) in achiever.tools">
+                            <VImg :alt="tool.name" :src="tool.imageSrc"
+                              class="rounded-circle" />
                           </div>
-
-                          <div class="position-relative rounded-circle bg-white pa-1"
-                            style="width: 40px; height: 40px;" :class="{ 'black-white-overlay': !isHovering }">
-                            <VImg alt="Vuetify" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKvAz8bSMDxZvg1ZjElGs285z3WDhxMySLcA&s"
-                              class="rounded-circle"/>
-                          </div>
-
-                          <div class="position-relative rounded-circle bg-white pa-1 d-flex align-center justify-center"
-                            style="width: 40px; height: 40px;" :class="{ 'black-white-overlay': !isHovering }">
-                            <VImg alt="Vuetify" src="https://i.pinimg.com/736x/9f/62/88/9f62881241737d130bb6b32f90e0886c.jpg"
-                              class="rounded-circle" cover/>
-                          </div>
-
-                          <div class="position-relative rounded-circle bg-white pa-1 d-flex align-center justify-center"
-                            style="width: 40px; height: 40px;" :class="{ 'black-white-overlay': !isHovering }">
-                            <VImg alt="Vuetify" src="https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png"
-                              class="rounded-circle" cover/>
-                          </div>
-                          
                         </VCardText>
                       </VCard>
                     </template>
@@ -124,6 +104,33 @@ const traits = ref([
   'Clear and Concise Reporting',
   'Long-term Collaboration Potential',
   'Strong work ethic'
+])
+
+
+const achievers = ref([
+  {
+    'img': 'https://rszr.getimg.ai/resize?url=https%3A%2F%2Fimg.getimg.ai%2Fgenerated%2Fimg-mGtSk9modTnvsDVsxaXZC.jpeg&type=auto&width=640&speed=5',
+    'name': 'Steto Javellana',
+    'designation': 'Software Developer',
+    'tools': [
+      {
+        'name': 'Nuxt',
+        imageSrc: 'https://develop365.gitlab.io/nuxtjs-2.8.X-doc/en/logos/nuxt-icon.png'
+      },
+      {
+        'name': 'Vue',
+        imageSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKvAz8bSMDxZvg1ZjElGs285z3WDhxMySLcA&s'
+      },
+      {
+        'name': 'Vuetify',
+        imageSrc: 'https://i.pinimg.com/736x/9f/62/88/9f62881241737d130bb6b32f90e0886c.jpg'
+      },
+      {
+        'name': 'JavaScript',
+        imageSrc: 'https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png'
+      },
+    ]
+  },
 ])
 
 </script>
