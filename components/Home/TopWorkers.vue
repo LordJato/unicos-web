@@ -5,50 +5,14 @@
         <VContainer class="h-100">
           <VRow justify="center" align="center">
             <VCol cols="12" md="6">
-              <h1 class="text-h4 mb-4">Meet Our Top Achievers!</h1>
-              <h3 class="text-h6 mb-4">Leading the charge in innovation and excellence. Explore their profiles, learn
+              <h1 class="text-h4">Meet Our Top Achievers!</h1>
+              <h3 class="text-h6 my-6">Leading the charge in innovation and excellence. Explore their profiles, learn
                 from their expertise,
                 and collaborate with the best on Unicos.</h3>
-              <div class="d-flex mb-2">
+              <div class="d-flex align-center mb-2" v-for="(trait, i) in traits" :key="i">
                 <v-icon color="secondary" icon="mdi-tag-check-outline" class="mr-2" size="small"></v-icon>
-                <p>
-                  Professional certifications
-                </p>
-              </div>
-              <div class="d-flex mb-2">
-                <v-icon color="secondary" icon="mdi-tag-check-outline" class="mr-2" size="small"></v-icon>
-                <p>
-                  Portfolio showcasing expertise
-                </p>
-              </div>
-              <div class="d-flex mb-2">
-                <v-icon color="secondary" icon="mdi-tag-check-outline" class="mr-2" size="small"></v-icon>
-                <p>
-                  High-quality deliverables
-                </p>
-              </div>
-              <div class="d-flex mb-2">
-                <v-icon color="secondary" icon="mdi-tag-check-outline" class="mr-2" size="small"></v-icon>
-                <p>
-                  Adherence to deadlines
-                </p>
-              </div>
-              <div class="d-flex mb-2">
-                <v-icon color="secondary" icon="mdi-tag-check-outline" class="mr-2" size="small"></v-icon>
-                <p>
-                  Clear and concise reporting
-                </p>
-              </div>
-              <div class="d-flex mb-2">
-                <v-icon color="secondary" icon="mdi-tag-check-outline" class="mr-2" size="small"></v-icon>
-                <p>
-                  Long-term collaboration potential
-                </p>
-              </div>
-              <div class="d-flex mb-2">
-                <v-icon color="secondary" icon="mdi-tag-check-outline" class="mr-2" size="small"></v-icon>
-                <p>
-                  Strong work ethic
+                <p class="text-h6">
+                  {{ trait }}
                 </p>
               </div>
             </VCol>
@@ -58,21 +22,48 @@
                   <VHover>
                     <template v-slot:default="{ isHovering, props }">
                       <VCard v-bind="props" :color="isHovering ? 'secondary' : 'dark-grey'"
-                        class="mb-4 text-center rounded-xl pa-8 extra-rounded" :class="{'text-white' : isHovering}">
-                        <VImg class="rounded-circle mx-auto"  :class="{'black-white-overlay' : !isHovering}" cover height="120" width="120"
+                        class="mb-4 text-center rounded-xl pa-8 extra-rounded" :class="{ 'text-white': isHovering }">
+                        <VImg class="rounded-circle mx-auto" :class="{ 'black-white-overlay': !isHovering }" cover
+                          height="120" width="120"
                           src="https://rszr.getimg.ai/resize?url=https%3A%2F%2Fimg.getimg.ai%2Fgenerated%2Fimg-mGtSk9modTnvsDVsxaXZC.jpeg&type=auto&width=640&speed=5">
                         </VImg>
                         <VCardTitle>Steto Javellana</VCardTitle>
                         <VCardSubtitle>Software Developer</VCardSubtitle>
-                        <VCardText>Content for card 1</VCardText>
+                        <VCardText class="d-flex justify-space-around align-center">
+                          <div class="position-relative rounded-circle bg-white pa-1"
+                            style="width: 40px; height: 40px;" :class="{ 'black-white-overlay': !isHovering }">
+                            <VImg alt="Nuxt" src="https://develop365.gitlab.io/nuxtjs-2.8.X-doc/en/logos/nuxt-icon.png"
+                              class="rounded-circle"/>
+                          </div>
+
+                          <div class="position-relative rounded-circle bg-white pa-1"
+                            style="width: 40px; height: 40px;" :class="{ 'black-white-overlay': !isHovering }">
+                            <VImg alt="Vuetify" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKvAz8bSMDxZvg1ZjElGs285z3WDhxMySLcA&s"
+                              class="rounded-circle"/>
+                          </div>
+
+                          <div class="position-relative rounded-circle bg-white pa-1 d-flex align-center justify-center"
+                            style="width: 40px; height: 40px;" :class="{ 'black-white-overlay': !isHovering }">
+                            <VImg alt="Vuetify" src="https://i.pinimg.com/736x/9f/62/88/9f62881241737d130bb6b32f90e0886c.jpg"
+                              class="rounded-circle" cover/>
+                          </div>
+
+                          <div class="position-relative rounded-circle bg-white pa-1 d-flex align-center justify-center"
+                            style="width: 40px; height: 40px;" :class="{ 'black-white-overlay': !isHovering }">
+                            <VImg alt="Vuetify" src="https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png"
+                              class="rounded-circle" cover/>
+                          </div>
+                          
+                        </VCardText>
                       </VCard>
                     </template>
                   </VHover>
                   <VHover>
                     <template v-slot:default="{ isHovering, props }">
                       <VCard v-bind="props" :color="isHovering ? 'secondary' : 'dark-grey'"
-                        class="mb-4 text-center rounded-xl pa-8" :class="{'text-white' : isHovering}">
-                        <VImg class="rounded-circle mx-auto"  :class="{'black-white-overlay' : !isHovering}" cover height="120" width="120"
+                        class="mb-4 text-center rounded-xl pa-8 extra-rounded" :class="{ 'text-white': isHovering }">
+                        <VImg class="rounded-circle mx-auto" :class="{ 'black-white-overlay': !isHovering }" cover
+                          height="120" width="120"
                           src="https://rszr.getimg.ai/resize?url=https%3A%2F%2Fimg.getimg.ai%2Fgenerated%2Fimg-mGtSk9modTnvsDVsxaXZC.jpeg&type=auto&width=640&speed=5">
                         </VImg>
                         <VCardTitle>Steto Javellana</VCardTitle>
@@ -86,8 +77,9 @@
                   <VHover>
                     <template v-slot:default="{ isHovering, props }">
                       <VCard v-bind="props" :color="isHovering ? 'secondary' : 'dark-grey'"
-                        class="mb-4 text-center rounded-xl pa-8" :class="{'text-white' : isHovering}">
-                        <VImg class="rounded-circle mx-auto"  :class="{'black-white-overlay' : !isHovering}" cover height="120" width="120"
+                        class="mb-4 text-center rounded-xl pa-8 extra-rounded" :class="{ 'text-white': isHovering }">
+                        <VImg class="rounded-circle mx-auto" :class="{ 'black-white-overlay': !isHovering }" cover
+                          height="120" width="120"
                           src="https://rszr.getimg.ai/resize?url=https%3A%2F%2Fimg.getimg.ai%2Fgenerated%2Fimg-mGtSk9modTnvsDVsxaXZC.jpeg&type=auto&width=640&speed=5">
                         </VImg>
                         <VCardTitle>Steto Javellana</VCardTitle>
@@ -100,8 +92,9 @@
                   <VHover>
                     <template v-slot:default="{ isHovering, props }">
                       <VCard v-bind="props" :color="isHovering ? 'secondary' : 'dark-grey'"
-                        class="mb-4 text-center rounded-xl pa-8" :class="{'text-white' : isHovering}">
-                        <VImg class="rounded-circle mx-auto"  :class="{'black-white-overlay' : !isHovering}" cover height="120" width="120"
+                        class="mb-4 text-center rounded-xl pa-8 extra-rounded" :class="{ 'text-white': isHovering }">
+                        <VImg class="rounded-circle mx-auto" :class="{ 'black-white-overlay': !isHovering }" cover
+                          height="120" width="120"
                           src="https://rszr.getimg.ai/resize?url=https%3A%2F%2Fimg.getimg.ai%2Fgenerated%2Fimg-mGtSk9modTnvsDVsxaXZC.jpeg&type=auto&width=640&speed=5">
                         </VImg>
                         <VCardTitle>Steto Javellana</VCardTitle>
@@ -122,6 +115,16 @@
 </template>
 
 <script setup lang="ts">
+
+const traits = ref([
+  'Professional Certifications',
+  'Portfolio Showcasing Expertise',
+  'High-quality Deliverables',
+  'Adherence To Deadlines',
+  'Clear and Concise Reporting',
+  'Long-term Collaboration Potential',
+  'Strong work ethic'
+])
 
 </script>
 
