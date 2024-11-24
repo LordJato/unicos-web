@@ -33,6 +33,7 @@ const darkTheme: ThemeDefinition = {
     'white-primary' : '#9DB2BF',
     'on-surface': '#9DB2BF',
     'on-background': '#9DB2BF',
+    'dark-grey' : '#0b1420'
   },
 }
  

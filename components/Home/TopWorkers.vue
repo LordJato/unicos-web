@@ -57,9 +57,9 @@
                 <VCol cols="12" md="6" class="mb-md-16">
                   <VHover>
                     <template v-slot:default="{ isHovering, props }">
-                      <VCard v-bind="props" :color="isHovering ? 'primary' : '#0b1420'"
-                        class="mb-4 text-center rounded-xl pa-8">
-                        <VImg class="rounded-circle mx-auto" cover height="120" width="120"
+                      <VCard v-bind="props" :color="isHovering ? 'secondary' : 'dark-grey'"
+                        class="mb-4 text-center rounded-xl pa-8 extra-rounded" :class="{'text-white' : isHovering}">
+                        <VImg class="rounded-circle mx-auto"  :class="{'black-white-overlay' : !isHovering}" cover height="120" width="120"
                           src="https://rszr.getimg.ai/resize?url=https%3A%2F%2Fimg.getimg.ai%2Fgenerated%2Fimg-mGtSk9modTnvsDVsxaXZC.jpeg&type=auto&width=640&speed=5">
                         </VImg>
                         <VCardTitle>Steto Javellana</VCardTitle>
@@ -70,9 +70,9 @@
                   </VHover>
                   <VHover>
                     <template v-slot:default="{ isHovering, props }">
-                      <VCard class="mb-3 text-center rounded-xl pa-8" v-bind="props"
-                        :color="isHovering ? 'primary' : '#0b1420'">
-                        <VImg class="rounded-circle mx-auto" cover height="120" width="120"
+                      <VCard v-bind="props" :color="isHovering ? 'secondary' : 'dark-grey'"
+                        class="mb-4 text-center rounded-xl pa-8" :class="{'text-white' : isHovering}">
+                        <VImg class="rounded-circle mx-auto"  :class="{'black-white-overlay' : !isHovering}" cover height="120" width="120"
                           src="https://rszr.getimg.ai/resize?url=https%3A%2F%2Fimg.getimg.ai%2Fgenerated%2Fimg-mGtSk9modTnvsDVsxaXZC.jpeg&type=auto&width=640&speed=5">
                         </VImg>
                         <VCardTitle>Steto Javellana</VCardTitle>
@@ -85,9 +85,9 @@
                 <VCol cols="12" md="6" class="mt-md-16">
                   <VHover>
                     <template v-slot:default="{ isHovering, props }">
-                      <VCard class="mb-3 text-center rounded-xl pa-8" v-bind="props"
-                        :color="isHovering ? 'primary' : '#0b1420'">
-                        <VImg class="rounded-circle mx-auto" cover height="120" width="120"
+                      <VCard v-bind="props" :color="isHovering ? 'secondary' : 'dark-grey'"
+                        class="mb-4 text-center rounded-xl pa-8" :class="{'text-white' : isHovering}">
+                        <VImg class="rounded-circle mx-auto"  :class="{'black-white-overlay' : !isHovering}" cover height="120" width="120"
                           src="https://rszr.getimg.ai/resize?url=https%3A%2F%2Fimg.getimg.ai%2Fgenerated%2Fimg-mGtSk9modTnvsDVsxaXZC.jpeg&type=auto&width=640&speed=5">
                         </VImg>
                         <VCardTitle>Steto Javellana</VCardTitle>
@@ -99,9 +99,9 @@
 
                   <VHover>
                     <template v-slot:default="{ isHovering, props }">
-                      <VCard class="mb-3 text-center rounded-xl pa-8" v-bind="props"
-                        :color="isHovering ? 'primary' : '#0b1420'">
-                        <VImg class="rounded-circle mx-auto" cover height="120" width="120"
+                      <VCard v-bind="props" :color="isHovering ? 'secondary' : 'dark-grey'"
+                        class="mb-4 text-center rounded-xl pa-8" :class="{'text-white' : isHovering}">
+                        <VImg class="rounded-circle mx-auto"  :class="{'black-white-overlay' : !isHovering}" cover height="120" width="120"
                           src="https://rszr.getimg.ai/resize?url=https%3A%2F%2Fimg.getimg.ai%2Fgenerated%2Fimg-mGtSk9modTnvsDVsxaXZC.jpeg&type=auto&width=640&speed=5">
                         </VImg>
                         <VCardTitle>Steto Javellana</VCardTitle>
@@ -131,5 +131,14 @@
   background-size: 48% auto;
   background-position: left top;
   background-repeat: no-repeat;
+}
+
+.black-white-overlay {
+  filter: grayscale(100%) brightness(50%);
+  transition: ease-in 1s;
+}
+
+.extra-rounded {
+  border-radius: 60px !important;
 }
 </style>
