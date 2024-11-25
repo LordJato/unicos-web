@@ -1,5 +1,6 @@
 <template>
-  <section id="homeTopWorkers">
+  <section id="homeTopWorkers" >
+    <div class="dot-bg"></div>
     <VRow justify="center" align="center" class="h-100">
       <VCol cols="12" lg="9">
         <VContainer class="h-100">
@@ -398,4 +399,17 @@ const achievers = ref([
     transform: translate(-50%, -50%) translate(0, 0);
   }
 }
+
+.dot-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 80%;
+  background: url('/img/index/top-workers-dots-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: -300px;
+}
+
 </style>
