@@ -42,9 +42,10 @@
     <!-- Popular services -->
 
     <!-- Numbers of Client/Workers/Companies -->
-    <section id="numbersOnboard">
-      <h1>Total Onboards</h1>
-    </section>
+    <div id="numbersOnboard">
+      <HomeAboutOnBoards />
+    <HomeAboutTenancy />
+    </div>
     <!-- top workers -->
     <HomeTopWorkers />
     <!-- clients feedback -->
