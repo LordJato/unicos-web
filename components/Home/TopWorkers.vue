@@ -16,14 +16,15 @@
                 </p>
               </div>
             </VCol>
-            <VCol cols="12" md="6" class="d-flex justify-center align-center position-relative" >
+            <VCol cols="12" md="6" class="d-flex justify-center align-center position-relative">
               <div class="pulsating-circle"></div>
-                <div class="pulsating-circle"></div>
-                <div class="pulsating-circle"></div>
-                <div class="pulsating-circle"></div>
+              <div class="pulsating-circle"></div>
+              <div class="pulsating-circle"></div>
+              <div class="pulsating-circle"></div>
               <VRow justify="center" align="center">
-                <VCol cols="12" md="6" :class="i % 2 === 0 ? 'mt-md-16' : 'mb-md-16'"  v-for="(achiever, i) in achievers.slice(0, 2)" >
-             
+                <VCol cols="12" md="6" :class="i % 2 === 0 ? 'mt-md-16' : 'mb-md-16'"
+                  v-for="(achiever, i) in achievers.slice(0, 2)">
+
                   <VHover>
                     <template v-slot:default="{ isHovering, props }">
                       <VCard v-bind="props" :color="isHovering ? 'secondary' : 'dark-grey'"
@@ -36,15 +37,15 @@
                         <VCardText class="d-flex justify-space-around align-center">
                           <div class="position-relative rounded-circle bg-white pa-1" style="width: 40px; height: 40px;"
                             :class="{ 'black-white-overlay': !isHovering }" v-for="(tool, i) in achiever.tools">
-                            <VImg :alt="tool.name" :src="tool.imageSrc"
-                              class="rounded-circle" />
+                            <VImg :alt="tool.name" :src="tool.imageSrc" class="rounded-circle" />
                           </div>
                         </VCardText>
                       </VCard>
                     </template>
                   </VHover>
                 </VCol>
-                <VCol cols="12" md="6" :class="i % 2 === 0 ? 'mt-md-16' : 'mb-md-16'" v-for="(achiever, i) in achievers.slice(2)">
+                <VCol cols="12" md="6" :class="i % 2 === 0 ? 'mt-md-16' : 'mb-md-16'"
+                  v-for="(achiever, i) in achievers.slice(2)">
                   <VHover>
                     <template v-slot:default="{ isHovering, props }">
                       <VCard v-bind="props" :color="isHovering ? 'secondary' : 'dark-grey'"
@@ -57,8 +58,7 @@
                         <VCardText class="d-flex justify-space-around align-center">
                           <div class="position-relative rounded-circle bg-white pa-1" style="width: 40px; height: 40px;"
                             :class="{ 'black-white-overlay': !isHovering }" v-for="(tool, i) in achiever.tools">
-                            <VImg :alt="tool.name" :src="tool.imageSrc"
-                              class="rounded-circle" />
+                            <VImg :alt="tool.name" :src="tool.imageSrc" class="rounded-circle" />
                           </div>
                         </VCardText>
                       </VCard>
@@ -210,7 +210,7 @@ const achievers = ref([
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(33, 50, 104, 1) 0%, rgba(7, 15, 43, 1) 60%);
+  background: radial-gradient(circle, rgba(33, 50, 104, 1) 0%, rgba(7, 15, 43, 1) 10%);
   z-index: -1;
 }
 
@@ -224,7 +224,7 @@ const achievers = ref([
   margin-left: -10%;
   margin-top: -10%;
   border-radius: 50%;
-  background-color: rgb(54, 197, 200);
+  background-color: rgb(54, 197, 200, 0.4);
   animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
 }
 
@@ -236,9 +236,9 @@ const achievers = ref([
   display: block;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle, rgba(33, 50, 104, 1) 0%, rgba(7, 15, 43, 1) 80%);
+  background: radial-gradient(circle, rgba(33, 50, 104, 0.8) 0%, rgba(7, 15, 43, 1) 60%);
   border-radius: 50%;
-  box-shadow: 0 0 8px rgba(54, 197, 200, 0.7);
+  box-shadow: 0 0 8px rgba(54, 197, 200, 0.2);
   animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite;
 }
 
@@ -248,7 +248,9 @@ const achievers = ref([
   0% {
     transform: scale(0.33);
   }
-  80%, 100% {
+
+  80%,
+  100% {
     opacity: 0;
   }
 }
@@ -258,9 +260,11 @@ const achievers = ref([
   0% {
     transform: scale(0.8);
   }
+
   50% {
     transform: scale(1);
   }
+
   100% {
     transform: scale(0.8);
   }
@@ -269,10 +273,10 @@ const achievers = ref([
 .pulsating-circle:nth-child(1) {
   width: 300px;
   height: 300px;
-  top: 40%;
-  left: 100%;
-  animation: float 4s ease-in-out infinite;
-  animation-delay: 30s;
+  top: 30%;
+  left: 90%;
+  animation: float 20s ease-in-out infinite;
+  animation-delay: 2s;
 }
 
 /* Second Circle */
@@ -281,7 +285,7 @@ const achievers = ref([
   height: 200px;
   top: 60%;
   left: 30%;
-  animation: float2 4s ease-in-out infinite;
+  animation: float2 15s ease-in-out infinite;
   animation-delay: 5s;
 }
 
@@ -291,17 +295,17 @@ const achievers = ref([
   height: 350px;
   top: 20%;
   left: 10%;
-  animation: float3 4s ease-in-out infinite;
+  animation: float3 20s ease-in-out infinite;
   animation-delay: 1s;
 }
 
 /* Fourth Circle */
 .pulsating-circle:nth-child(4) {
-  width: 400px;
-  height: 400px;
-  top: 70%;
+  width: 370px;
+  height: 370px;
+  top: 65%;
   left: 70%;
-  animation: float4 4s ease-in-out infinite;
+  animation: float4 10s ease-in-out infinite;
   animation-delay: 2s;
 }
 
@@ -311,9 +315,19 @@ const achievers = ref([
   0% {
     transform: translate(-50%, -50%) translate(0, 0);
   }
-  50% {
-    transform: translate(-50%, -50%) translate(-40px, 60px);
+
+  25% {
+    transform: translate(-50%, -50%) translate(130px, 15px);
   }
+
+  50% {
+    transform: translate(-50%, -50%) translate(-45px, 80px);
+  }
+
+  75% {
+    transform: translate(-50%, -50%) translate(-20px, -110px);
+  }
+
   100% {
     transform: translate(-50%, -50%) translate(0, 0);
   }
@@ -323,15 +337,19 @@ const achievers = ref([
   0% {
     transform: translate(-50%, -50%) translate(0, 0);
   }
+
   25% {
     transform: translate(-50%, -50%) translate(75px, -20px);
   }
+
   50% {
     transform: translate(-50%, -50%) translate(-60px, 40px);
   }
+
   75% {
     transform: translate(-50%, -50%) translate(40px, -70px);
   }
+
   100% {
     transform: translate(-50%, -50%) translate(0, 0);
   }
@@ -341,15 +359,19 @@ const achievers = ref([
   0% {
     transform: translate(-50%, -50%) translate(0, 0);
   }
+
   25% {
     transform: translate(-50%, -50%) translate(120px, -45px);
   }
+
   50% {
     transform: translate(-50%, -50%) translate(-90px, 75px);
   }
+
   75% {
     transform: translate(-50%, -50%) translate(60px, -30px);
   }
+
   100% {
     transform: translate(-50%, -50%) translate(0, 0);
   }
@@ -359,15 +381,19 @@ const achievers = ref([
   0% {
     transform: translate(-50%, -50%) translate(0, 0);
   }
+
   25% {
     transform: translate(-50%, -50%) translate(90px, -10px);
   }
+
   50% {
     transform: translate(-50%, -50%) translate(-70px, 110px);
   }
+
   75% {
     transform: translate(-50%, -50%) translate(50px, -90px);
   }
+
   100% {
     transform: translate(-50%, -50%) translate(0, 0);
   }
