@@ -16,9 +16,14 @@
                 </p>
               </div>
             </VCol>
-            <VCol cols="12" md="6" class="d-flex justify-center align-center">
+            <VCol cols="12" md="6" class="d-flex justify-center align-center position-relative" >
+              <div class="pulsating-circle"></div>
+                <div class="pulsating-circle"></div>
+                <div class="pulsating-circle"></div>
+                <div class="pulsating-circle"></div>
               <VRow justify="center" align="center">
-                <VCol cols="12" md="6" :class="i % 2 === 0 ? 'mt-md-16' : 'mb-md-16'"  v-for="(achiever, i) in achievers.slice(0, 2)">
+                <VCol cols="12" md="6" :class="i % 2 === 0 ? 'mt-md-16' : 'mb-md-16'"  v-for="(achiever, i) in achievers.slice(0, 2)" >
+             
                   <VHover>
                     <template v-slot:default="{ isHovering, props }">
                       <VCard v-bind="props" :color="isHovering ? 'secondary' : 'dark-grey'"
@@ -185,6 +190,7 @@ const achievers = ref([
   background-size: 48% auto;
   background-position: left top;
   background-repeat: no-repeat;
+  z-index: 1;
 }
 
 .black-white-overlay {
@@ -194,5 +200,176 @@ const achievers = ref([
 
 .extra-rounded {
   border-radius: 60px !important;
+}
+
+.pulsating-circle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(33, 50, 104, 1) 0%, rgba(7, 15, 43, 1) 60%);
+  z-index: -1;
+}
+
+.pulsating-circle:before {
+  content: '';
+  position: relative;
+  display: block;
+  width: 120%;
+  height: 120%;
+  box-sizing: border-box;
+  margin-left: -10%;
+  margin-top: -10%;
+  border-radius: 50%;
+  background-color: rgb(54, 197, 200);
+  animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+.pulsating-circle:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(33, 50, 104, 1) 0%, rgba(7, 15, 43, 1) 80%);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(54, 197, 200, 0.7);
+  animation: pulse-dot 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite;
+}
+
+
+/* Pulsing Ring Animation */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.33);
+  }
+  80%, 100% {
+    opacity: 0;
+  }
+}
+
+/* Pulsing Dot Animation */
+@keyframes pulse-dot {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+.pulsating-circle:nth-child(1) {
+  width: 300px;
+  height: 300px;
+  top: 40%;
+  left: 100%;
+  animation: float 4s ease-in-out infinite;
+  animation-delay: 30s;
+}
+
+/* Second Circle */
+.pulsating-circle:nth-child(2) {
+  width: 200px;
+  height: 200px;
+  top: 60%;
+  left: 30%;
+  animation: float2 4s ease-in-out infinite;
+  animation-delay: 5s;
+}
+
+/* Third Circle */
+.pulsating-circle:nth-child(3) {
+  width: 350px;
+  height: 350px;
+  top: 20%;
+  left: 10%;
+  animation: float3 4s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+/* Fourth Circle */
+.pulsating-circle:nth-child(4) {
+  width: 400px;
+  height: 400px;
+  top: 70%;
+  left: 70%;
+  animation: float4 4s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+
+/* Floating Animation */
+@keyframes float {
+  0% {
+    transform: translate(-50%, -50%) translate(0, 0);
+  }
+  50% {
+    transform: translate(-50%, -50%) translate(-40px, 60px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translate(0, 0);
+  }
+}
+
+@keyframes float2 {
+  0% {
+    transform: translate(-50%, -50%) translate(0, 0);
+  }
+  25% {
+    transform: translate(-50%, -50%) translate(75px, -20px);
+  }
+  50% {
+    transform: translate(-50%, -50%) translate(-60px, 40px);
+  }
+  75% {
+    transform: translate(-50%, -50%) translate(40px, -70px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translate(0, 0);
+  }
+}
+
+@keyframes float3 {
+  0% {
+    transform: translate(-50%, -50%) translate(0, 0);
+  }
+  25% {
+    transform: translate(-50%, -50%) translate(120px, -45px);
+  }
+  50% {
+    transform: translate(-50%, -50%) translate(-90px, 75px);
+  }
+  75% {
+    transform: translate(-50%, -50%) translate(60px, -30px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translate(0, 0);
+  }
+}
+
+@keyframes float4 {
+  0% {
+    transform: translate(-50%, -50%) translate(0, 0);
+  }
+  25% {
+    transform: translate(-50%, -50%) translate(90px, -10px);
+  }
+  50% {
+    transform: translate(-50%, -50%) translate(-70px, 110px);
+  }
+  75% {
+    transform: translate(-50%, -50%) translate(50px, -90px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translate(0, 0);
+  }
 }
 </style>
