@@ -2,6 +2,7 @@
     <section>
         <VImg src="/img/index/about-tenancy.png"></VImg>
 
+        <div>skip1</div>
     </section>
 </template>
 
