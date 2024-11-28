@@ -35,14 +35,8 @@ Experience secure, scalable, and reliable cloud-based solutions. Ideal for busin
 
 #aboutOnBoards {
   z-index: 1;
+  position: relative;
   overflow: hidden;
-  background: 
-    linear-gradient(
-      109.6deg,
-      rgba(0, 0, 0, 0.5) 11.2%,
-      rgba(63, 61, 61, 0.5) 78.9%
-    ),
-    url("") no-repeat left ;
 }
 
 </style>

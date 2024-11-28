@@ -30,11 +30,4 @@
 </script>
 
 <style scoped>
-/* :deep(.v-card__image) {
-  -webkit-mask-image: linear-gradient(to right,
-      transparent 0%,
-      rgba(0, 0, 0, 0.10) 70%,
-      rgba(0, 0, 0, 0.20) 80%,
-      rgba(0, 0, 0, 0.50) 100%);
-} */
 </style>

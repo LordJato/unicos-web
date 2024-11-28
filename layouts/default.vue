@@ -10,7 +10,7 @@
     <Footer />
     <VScrollYTransition>
       <VBtn v-show="fab" v-scroll="onScroll" position="fixed" color="primary" icon="mdi-arrow-up"
-        location="bottom right" class="ma-5" @click="toTop"></VBtn>
+        location="bottom right" class="ma-5" @click="toTop" style="z-index: 999"></VBtn>
     </VScrollYTransition>
   </VApp>
 </template>

@@ -6,7 +6,7 @@
           <div class="text-center mb-6 text-h4">How It Works</div>
           <VRow align="stretch" justify="center">
             <VCol cols="12"  md="4" v-for="(about, i) in aboutUser" :key="i" class="d-flex justify-center">
-              <VCard height="100%" class="rounded-lg pa-5 position-relative" elevation="4 ">
+              <VCard height="100%" class="rounded-lg pa-5 position-relative" elevation="4">
                 <div style="background: #213268; left: 0; top: 0; height: 100px; width: 100%; position: absolute; ">
                 </div>
                 <VImg :src="about.img" class="mx-auto rounded-circle border-background mt-4"

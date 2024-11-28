@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <div class="text-center text-h4 mt-16 mb-8">Explore Our Popular Services</div>
+    <div id="popularServices">
+        <div class="text-center text-h4 pt-16 mb-8">Explore Our Popular Services</div>
         <VRow align="center" justify="center" class="h-100">
             <VCol cols="12" lg="9">
                 <VContainer class="h-100">
@@ -79,9 +79,15 @@ const services = ref([
         'title': 'Fast Food Crew'
     }
 
-    
+
 ])
 
 </script>
 
-<style scoped></style>
+<style scoped>
+#popularServices {
+    position: relative;
+    background: #070F2B;
+    z-index: 1;
+}
+</style>

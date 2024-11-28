@@ -1,15 +1,13 @@
 <template>
-    <section id="whyUnicos" v-intersect="onIntersect">
-            <video v-if="isIntersecting" autoplay muted loop class="background-video">
-                <source :src="videoSrc" type="video/mp4">
-            </video>
-
-    </section>
+    <div id="whyUnicos" class="background-video-section" v-intersect="onIntersect">
+        <video v-if="isIntersecting" autoplay loop muted playsinline class="background-video">
+            <source src="/img/index/why-us-bg.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+    </div>
 </template>
 
 <script setup lang="ts">
-
-import videoBg from '@/public/img/index/why-us-bg.mp4'
 
 
 const isIntersecting = ref(false)
@@ -17,17 +15,24 @@ const isIntersecting = ref(false)
 const onIntersect = (isIntersectingValue: any) => {
     isIntersecting.value = isIntersectingValue
 }
-const videoSrc = videoBg
 
 </script>
 
 <style scoped>
+.background-video-section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
 .background-video {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     object-fit: cover;
+    object-position: center;
 }
 </style>
