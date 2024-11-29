@@ -87,7 +87,6 @@ const services = ref([
 <style scoped>
 #popularServices {
     position: relative;
-    background: #070F2B;
     z-index: 1;
 }
 </style>

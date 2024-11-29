@@ -3,11 +3,13 @@
         handler: onIntersect,
         options: {
             threshold: 0,
-            rootMargin: '50% 0px 50px 0px',
         },
     }">
+     <div class="svg-layered-border layered-top">
+            <img src="/public/img/index/layered-top.svg" class="w-100 h-25" />
+        </div>
         <video v-if="isIntersecting" autoplay loop muted playsinline class="background-video">
-            <source src="/img/index/why-us-bg.mp4" type="video/mp4" />
+            <source :src="videoSrc" type="video/mp4" />
             Your browser does not support the video tag.
         </video>
         <VRow justify="center" align="center" class="h-100">
@@ -71,14 +73,18 @@
                 </VContainer>
             </VCol>
         </VRow>
-
+        <div class="svg-layered-border layered-bottom">
+            <img src="/public/img/index/layered-bottom.svg" class="w-100 h-25" />
+        </div>
     </div>
 </template>
 
 <script setup lang="ts">
 
+import videoSrc from "@/public/img/index/why-us-bg.mp4";
 
-const isIntersecting = ref(false)
+
+const isIntersecting = ref(false);
 
 const onIntersect = (isIntersectingValue: any) => {
     isIntersecting.value = isIntersectingValue
@@ -92,6 +98,7 @@ const onIntersect = (isIntersectingValue: any) => {
     height: 120vh;
     width: 100%;
     overflow: hidden;
+    z-index: 0;
 }
 
 .background-video {
@@ -102,5 +109,25 @@ const onIntersect = (isIntersectingValue: any) => {
     height: 100%;
     object-fit: cover;
     object-position: center;
+    z-index: -9;
 }
+
+.svg-layered-border {
+  position: absolute;
+  
+  width: 100%;
+  z-index: -1;
+  
+}
+
+.layered-bottom{
+    bottom: 0;
+    margin-bottom: -20px;
+}
+
+
+.layered-top{
+    top: 0;
+}
+
 </style>
