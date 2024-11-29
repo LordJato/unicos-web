@@ -22,7 +22,7 @@ const lightTheme: ThemeDefinition = {
 const darkTheme: ThemeDefinition = {
   dark: true,
   colors: {
-    background: '#070F2B',
+    background: '#070f2b',
     surface: '#070F2B',
     primary: '#213268',
     secondary: '#36c5c8',
