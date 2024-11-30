@@ -38,13 +38,13 @@
       <HomePopularServices />
     </div>
 
+    <HomeChoosingUnicos />
 
-    <!-- Popular services -->
 
     <!-- Numbers of Client/Workers/Companies -->
     <div id="numbersOnboard">
       <HomeAboutOnBoards />
-    <HomeAboutTenancy />
+      <HomeAboutTenancy />
     </div>
     <!-- top workers -->
     <HomeTopWorkers />

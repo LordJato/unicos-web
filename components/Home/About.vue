@@ -33,7 +33,6 @@
         </VContainer>
       </VCol>
     </VRow>
-
   </section>
 
 </template>

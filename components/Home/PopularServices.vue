@@ -1,9 +1,9 @@
 <template>
-    <div id="popularServices">
-        <div class="text-center text-h4 pt-16 mb-8">Explore Our Popular Services</div>
+    <section id="popularServices">
         <VRow align="center" justify="center" class="h-100">
             <VCol cols="12" lg="9">
                 <VContainer class="h-100">
+                    <div class="text-center text-h4 mb-8">Explore Our Popular Services</div>
                     <v-sheet class="mx-auto" elevation="8">
                         <v-slide-group v-model="model" class="pa-4" center-active show-arrows>
                             <v-slide-group-item v-for="(service, i) in services" :key="i"
@@ -34,7 +34,7 @@
                 </VContainer>
             </VCol>
         </VRow>
-    </div>
+    </section>
 </template>
 
 <script setup lang="ts">

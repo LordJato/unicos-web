@@ -28,8 +28,8 @@
 
                   <VHover>
                     <template v-slot:default="{ isHovering, props }">
-                      <VCard v-bind="props" :color="isHovering ? 'secondary' : 'dark-grey'"
-                        class="mb-4 text-center rounded-xl pa-8 extra-rounded" :class="{ 'text-white': isHovering }">
+                      <VCard v-bind="props" :color="isHovering ? 'secondary' : ''"
+                        class="mb-4 text-center rounded-xl py-12 px-8 " :class="{ 'text-white': isHovering }" elevation="8">
                         <VImg class="rounded-circle mx-auto" :class="{ 'black-white-overlay': !isHovering }" cover
                           height="120" width="120" :src="achiever.img">
                         </VImg>
@@ -49,8 +49,8 @@
                   v-for="(achiever, i) in achievers.slice(2)">
                   <VHover>
                     <template v-slot:default="{ isHovering, props }">
-                      <VCard v-bind="props" :color="isHovering ? 'secondary' : 'dark-grey'"
-                        class="mb-4 text-center rounded-xl pa-8 extra-rounded" :class="{ 'text-white': isHovering }">
+                      <VCard v-bind="props" :color="isHovering ? 'secondary' : ''"
+                        class="mb-4 text-center rounded-xl py-12 px-8 " :class="{ 'text-white': isHovering }" elevation="8">
                         <VImg class="rounded-circle mx-auto" :class="{ 'black-white-overlay': !isHovering }" cover
                           height="120" width="120" :src="achiever.img">
                         </VImg>
