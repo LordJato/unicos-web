@@ -410,6 +410,7 @@ const achievers = ref([
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: -300px;
+  z-index: -1;
 }
 
 </style>

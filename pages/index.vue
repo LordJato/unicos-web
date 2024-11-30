@@ -97,6 +97,7 @@ function onClick() {
   width: 100%;
   height: 3rem;
   margin-top: -40px;
+  z-index: 1;
 }
 
 .left-bg {

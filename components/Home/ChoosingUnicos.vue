@@ -71,22 +71,19 @@
                                <span class="font-weight-bold text-secondary">1. </span> <span class="font-weight-bold"> Access to a vast talent pool</span>: Companies can easily find suitable candidates from a
                                 large pool of applicants.
                             </div>
-                            <div class="mt-2">
+                            <div class="mt-4">
                                 <span class="font-weight-bold text-secondary">2. </span> <span class="font-weight-bold"> Flexibility in hiring</span>: They can hire external clients or freelancers to support their
                                 business needs.
                             </div>
-                            <div class="mt-2">
+                            <div class="mt-4">
                                 <span class="font-weight-bold text-secondary">3. </span> <span class="font-weight-bold"> Streamlined HR operations</span>: Unicos simplifies management of HRIS (Human Resource
                                 Information System) and payroll processes.
                             </div>
                         </VCol>
                     </VRow>
                 </VCol>
-
             </VRow>
         </VContainer>
-
-
     </section>
 </template>
 
