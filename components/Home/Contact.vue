@@ -58,7 +58,6 @@
     display: flex;
     align-items: center;
     background:
-        url("/img/index/blob-haikei.svg") no-repeat left top,
         linear-gradient(150deg, rgba(54, 197, 200, 0.5046393557422969) 0%, rgba(7, 15, 43, 1) 6%, rgba(8, 16, 46, 1) 60%, rgba(26, 41, 88, 1) 75%, rgba(54, 197, 200, 0.9) 95%, rgba(33, 50, 104, 1) 100%);
 }
 </style>
