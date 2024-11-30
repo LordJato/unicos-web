@@ -35,7 +35,7 @@
       <div class="left-bg d-none d-md-flex"></div>
       <div class="right-bg d-none d-md-flex"></div>
       <HomeAbout />
-      <HomePopularServices />
+      <!-- <HomePopularServices /> -->
     </div>
 
     <HomeChoosingUnicos />
