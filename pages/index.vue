@@ -40,12 +40,7 @@
 
     <HomeChoosingUnicos />
 
-
-    <!-- Numbers of Client/Workers/Companies -->
-    <div id="numbersOnboard">
-      <HomeAboutOnBoards />
-      <HomeAboutTenancy />
-    </div>
+    <HomeAboutApplication />
     <!-- top workers -->
     <HomeTopWorkers />
     <!-- clients feedback -->
