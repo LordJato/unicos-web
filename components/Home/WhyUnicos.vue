@@ -5,7 +5,7 @@
             threshold: 0,
         },
     }">
-     <div class="svg-layered-border layered-top">
+        <div class="svg-layered-border layered-top">
             <img src="/public/img/index/layered-top.svg" class="w-100 h-25" />
         </div>
         <video v-if="isIntersecting" autoplay loop muted playsinline class="background-video">
@@ -17,56 +17,76 @@
                 <VContainer class="h-100">
                     <VRow align="center">
                         <VCol cols="12" md="6">
-                            <VCard class="pa-12" rounded="xl" max-width="600" style="background-color: rgba(7, 15, 43, 0.9);">
-                                <VCardTitle class="text-h4">Why Unicos?</VCardTitle>
-                             
+                            <VCard class="pa-12" rounded="xl" max-width="600"
+                                style="background-color: rgba(7, 15, 43, 0.9);">
+                                <VCardTitle class="text-h4" data-aos="zoom-in-up" data-aos-duration="1000">Why Unicos?
+                                </VCardTitle>
+
                                 <VCardText>
-                                    <div class="text-h6 font-weight-bold">A different approach, using a multi-tenant HRIS.
+                                    <div class="text-h6 font-weight-bold" data-aos="zoom-in-down"
+                                        data-aos-duration="1000">A different approach, using a multi-tenant
+                                        HRIS.
                                     </div>
-                                    <div class="text-subtitle-1 font-weight-black mt-3">Key Features:</div>
-                                    <div class="mt-1">
+                                    <div class="text-subtitle-1 font-weight-black mt-3" data-aos="zoom-in-left"
+                                        data-aos-duration="1000">Key Features:</div>
+                                    <div class="mt-1" data-aos="zoom-in-right" data-aos-duration="1000"
+                                        data-aos-delay="200">
                                         <span class="font-weight-bold">Company Access:</span> Manage multiple companies
                                         from a unified dashboard.
                                     </div>
-                                    <div class="mt-2">
+                                    <div class="mt-2" data-aos="zoom-in-right" data-aos-duration="1000"
+                                        data-aos-delay="400">
                                         <span class="font-weight-bold">HRIS Platform:</span>
                                         Streamline HR processes
                                         with our intuitive and customizable
                                         tool.
                                     </div>
-                                    <div class="mt-2">
+                                    <div class="mt-2" data-aos="zoom-in-right" data-aos-duration="1000"
+                                        data-aos-delay="600">
                                         <span class="font-weight-bold">Job Portal:</span>
-                                         Find talent or post job openings.
+                                        Find talent or post job openings.
                                     </div>
-                                    <div class="text-subtitle-1 font-weight-black mt-2">Benefits:</div>
+                                    <div class="text-subtitle-1 font-weight-black mt-2" data-aos="zoom-in-left"
+                                        data-aos-duration="1000">Benefits:</div>
 
 
-                                    <div class="mt-2"><span>
-                                        <VIcon color="secondary">mdi-circle-small</VIcon></span>
+                                    <div class="mt-2" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="200"><span>
+                                            <VIcon color="secondary">mdi-circle-small</VIcon>
+                                        </span>
                                         Seamless navigation across multiple management systems
                                     </div>
 
-                                    <div class="mt-2">
-                                        <span><VIcon color="secondary">mdi-circle-small</VIcon></span>Enhanced user experience
+                                    <div class="mt-2" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="300">
+                                        <span>
+                                            <VIcon color="secondary">mdi-circle-small</VIcon>
+                                        </span>Enhanced user experience
                                     </div>
-                                    <div class="mt-2">
-                                        <span><VIcon color="secondary">mdi-circle-small</VIcon></span>Efficient HR management
+                                    <div class="mt-2" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="400">
+                                        <span>
+                                            <VIcon color="secondary">mdi-circle-small</VIcon>
+                                        </span>Efficient HR management
                                     </div>
-                                    <div class="mt-2">
-                                        <span><VIcon color="secondary">mdi-circle-small</VIcon></span>Access to top candidates
+                                    <div class="mt-2"  data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="500">
+                                        <span>
+                                            <VIcon color="secondary">mdi-circle-small</VIcon>
+                                        </span>Access to top candidates
                                     </div>
-                                    <div class="mt-2">
-                                        <span><VIcon color="secondary">mdi-circle-small</VIcon></span>Reduced administrative burdens
+                                    <div class="mt-2"  data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="600">
+                                        <span>
+                                            <VIcon color="secondary">mdi-circle-small</VIcon>
+                                        </span>Reduced administrative burdens
                                     </div>
-                                    <div class="mt-2">
-                                        <span><VIcon color="secondary">mdi-circle-small</VIcon></span>Improved data analysis and insights
+                                    <div class="mt-2"  data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="700">
+                                        <span>
+                                            <VIcon color="secondary">mdi-circle-small</VIcon>
+                                        </span>Improved data analysis and insights
                                     </div>
-                                    <div class="font-weight-bold text-subtitle-1 mt-5">
+                                    <div class="font-weight-bold text-subtitle-1 mt-5" data-aos="zoom-out-up" data-aos-duration="2000">
                                         Unicos empowers businesses to optimize HR operations, enhance productivity, and
                                         drive growth.
                                     </div>
                                 </VCardText>
-                               
+
                             </VCard>
                         </VCol>
                     </VRow>
@@ -113,21 +133,20 @@ const onIntersect = (isIntersectingValue: any) => {
 }
 
 .svg-layered-border {
-  position: absolute;
-  
-  width: 100%;
-  z-index: -1;
-  
+    position: absolute;
+
+    width: 100%;
+    z-index: -1;
+
 }
 
-.layered-bottom{
+.layered-bottom {
     bottom: 0;
     margin-bottom: -20px;
 }
 
 
-.layered-top{
+.layered-top {
     top: 0;
 }
-
 </style>

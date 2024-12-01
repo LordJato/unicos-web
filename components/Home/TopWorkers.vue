@@ -30,7 +30,7 @@
                     <template v-slot:default="{ isHovering, props }">
                       <VCard v-bind="props" :color="isHovering ? 'secondary' : ''"
                         class="mb-4 text-center rounded-xl py-12 px-8 " :class="{ 'text-white': isHovering }"
-                        elevation="8">
+                        elevation="8" >
                         <VImg class="rounded-circle mx-auto" :class="{ 'black-white-overlay': !isHovering }" cover
                           height="120" width="120" :src="achiever.img">
                         </VImg>
@@ -53,7 +53,7 @@
                     <template v-slot:default="{ isHovering, props }">
                       <VCard v-bind="props" :color="isHovering ? 'secondary' : ''"
                         class="mb-4 text-center rounded-xl py-12 px-8 " :class="{ 'text-white': isHovering }"
-                        elevation="8">
+                        elevation="8" >
                         <VImg class="rounded-circle mx-auto" :class="{ 'black-white-overlay': !isHovering }" cover
                           height="120" width="120" :src="achiever.img">
                         </VImg>
