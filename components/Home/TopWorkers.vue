@@ -6,11 +6,11 @@
         <VContainer class="h-100">
           <VRow justify="center" align="center">
             <VCol cols="12" md="6">
-              <h1 class="text-h4">Meet Our Top Achievers!</h1>
+              <h1 class="text-h4" data-aos="flip-up" data-aos-duration="1000">Meet Our Top Achievers!</h1>
               <h3 class="text-h6 my-6">Leading the charge in innovation and excellence. Explore their profiles, learn
                 from their expertise,
                 and collaborate with the best on Unicos.</h3>
-              <div class="d-flex align-center mb-2" v-for="(trait, i) in traits" :key="i">
+              <div class="d-flex align-center mb-2" v-for="(trait, i) in traits" :key="i" data-aos="zoom-in-right" data-aos-duration="1000" :data-aos-delay="200 * (i + 1)">
                 <v-icon color="secondary" icon="mdi-tag-check-outline" class="mr-2" size="small"></v-icon>
                 <p class="text-h6">
                   {{ trait }}
