@@ -1,11 +1,14 @@
 <template>
-  <section id="homeAbout">
+  <section id="homeAbout" class="py-16">
     <VRow align="center" justify="center" class="h-100">
       <VCol cols="12" lg="9">
         <VContainer class="h-100" >
-          <div class="text-center mb-6 text-h4">How It Works</div>
+          <div class="text-center mb-6 text-h4 mb-16" data-aos="fade-up" >How It Works</div>
           <VRow align="stretch" justify="center">
-            <VCol cols="12"  md="4" v-for="(about, i) in aboutUser" :key="i" class="d-flex justify-center">
+            <VCol cols="12"  md="4" v-for="(about, i) in aboutUser" :key="i" class="d-flex justify-center" data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="6000"
+              :data-aos-delay="500 * (i + 1)">
               <VCard height="100%" class="rounded-lg pa-5 position-relative" elevation="4">
                 <div style="background: #213268; left: 0; top: 0; height: 100px; width: 100%; position: absolute; ">
                 </div>
@@ -34,7 +37,6 @@
       </VCol>
     </VRow>
   </section>
-
 </template>
 
 <script setup lang="ts">

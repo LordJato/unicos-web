@@ -34,7 +34,7 @@
                         <VImg class="rounded-circle mx-auto" :class="{ 'black-white-overlay': !isHovering }" cover
                           height="120" width="120" :src="achiever.img">
                         </VImg>
-                        <VCardTitle>{{ achiever.name }}</VCardTitle>
+                        <VCardTitle ><nuxt-link to="#" class="text-decoration-none" :class="{ 'text-grey': !isHovering, 'text-white': isHovering }">{{ achiever.name }}</nuxt-link></VCardTitle>
                         <VCardSubtitle> {{ achiever.designation }}</VCardSubtitle>
                         <VCardText class="d-flex justify-center align-center">
                           <div class="position-relative circle-image pa-1 mr-2" style="width: 40px; height: 40px;"
@@ -57,7 +57,7 @@
                         <VImg class="rounded-circle mx-auto" :class="{ 'black-white-overlay': !isHovering }" cover
                           height="120" width="120" :src="achiever.img">
                         </VImg>
-                        <VCardTitle>{{ achiever.name }}</VCardTitle>
+                        <VCardTitle ><nuxt-link to="#" class="text-decoration-none" :class="{ 'text-grey': !isHovering, 'text-white': isHovering }">{{ achiever.name }}</nuxt-link></VCardTitle>
                         <VCardSubtitle> {{ achiever.designation }}</VCardSubtitle>
                         <VCardText class="d-flex justify-center align-center">
                           <div class="position-relative circle-image pa-1 mr-2" style="width: 40px; height: 40px;"
@@ -132,7 +132,7 @@ const achievers = ref([
     ]
   },
   {
-    'img': 'https://img.freepik.com/premium-photo/lofi-anime-boy_863013-93528.jpg?w=360',
+    'img': 'https://img.freepik.com/premium-photo/anime-boy-sitting-couch-with-his-fingers-up-generative-ai_900814-78704.jpg?w=360',
     'name': 'Steto Javellana',
     'designation': 'Frontend Developer',
     'tools': [
@@ -155,7 +155,7 @@ const achievers = ref([
     ]
   },
   {
-    'img': 'https://img.freepik.com/premium-photo/anime-boy-sitting-couch-with-his-fingers-up-generative-ai_900814-78704.jpg?w=360',
+    'img': 'https://file.aiquickdraw.com/imgcompressed/img/compressed_ac7b0a7afaa9e70bec17638d56e9fad2.webp',
     'name': 'Steto Javellana',
     'designation': 'Database Developer',
     'tools': [
