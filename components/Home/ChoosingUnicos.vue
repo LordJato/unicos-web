@@ -49,8 +49,8 @@
                     </VRow>
                 </VCol>
                 <VCol cols="12" md="6" class="d-flex justify-end">
-                    <img class="position-abolute" width="880" height="460"
-                        src="https://simplycontact.com/wp-content/uploads/2024/10/Untitled-56-2.jpg.webp" />
+                    <img class="position-abolute" width="880" height="450"
+                        src="https://c1.wallpaperflare.com/preview/311/34/429/colleague-unsplash-team-group-work.jpg" />
                 </VCol>
             </VRow>
 
@@ -58,8 +58,8 @@
 
             <VRow  class="h-100 pt-16">
                 <VCol cols="12" md="6" class="d-flex justify-start">
-                    <img class="position-abolute" width="880" height="400"
-                        src="https://simplycontact.com/wp-content/uploads/2024/10/Untitled-56-2.jpg.webp" />
+                    <img class="position-abolute" width="880" height="450"
+                        src="https://onecms-res.cloudinary.com/image/upload/s--jTy7iOgL--/f_auto,q_auto/c_fill,g_auto,h_338,w_600/v1/mediacorp/cna/image/2021/11/23/istock-1227389550.jpg?itok=YqtxCCM9" />
                 </VCol>
                 <VCol cols="12" md="6">
                     <VRow class="h-100 d-flex justify-center justify-md-start">

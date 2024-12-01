@@ -1,6 +1,6 @@
 <template>
-  <section id="homeTopWorkers" >
-   
+  <section id="homeTopWorkers">
+
     <VRow justify="center" align="center" class="h-100">
       <VCol cols="12" lg="9">
         <VContainer class="h-100">
@@ -29,16 +29,18 @@
                   <VHover>
                     <template v-slot:default="{ isHovering, props }">
                       <VCard v-bind="props" :color="isHovering ? 'secondary' : ''"
-                        class="mb-4 text-center rounded-xl py-12 px-8 " :class="{ 'text-white': isHovering }" elevation="8">
+                        class="mb-4 text-center rounded-xl py-12 px-8 " :class="{ 'text-white': isHovering }"
+                        elevation="8">
                         <VImg class="rounded-circle mx-auto" :class="{ 'black-white-overlay': !isHovering }" cover
                           height="120" width="120" :src="achiever.img">
                         </VImg>
                         <VCardTitle>{{ achiever.name }}</VCardTitle>
                         <VCardSubtitle> {{ achiever.designation }}</VCardSubtitle>
-                        <VCardText class="d-flex justify-space-around align-center">
-                          <div class="position-relative rounded-circle bg-white pa-1" style="width: 40px; height: 40px;"
+                        <VCardText class="d-flex justify-center align-center">
+                          <div class="position-relative circle-image pa-1 mr-2" style="width: 40px; height: 40px;"
                             :class="{ 'black-white-overlay': !isHovering }" v-for="(tool, i) in achiever.tools">
-                            <VImg :alt="tool.name" :src="tool.imageSrc" class="rounded-circle" />
+                            <VTooltip activator="parent" location="bottom"  class="custom-tooltip"><div class="text-white font-weight-bold">{{ tool.name }}</div></VTooltip>
+                            <img :alt="tool.name" :src="tool.imageSrc" />
                           </div>
                         </VCardText>
                       </VCard>
@@ -50,16 +52,18 @@
                   <VHover>
                     <template v-slot:default="{ isHovering, props }">
                       <VCard v-bind="props" :color="isHovering ? 'secondary' : ''"
-                        class="mb-4 text-center rounded-xl py-12 px-8 " :class="{ 'text-white': isHovering }" elevation="8">
+                        class="mb-4 text-center rounded-xl py-12 px-8 " :class="{ 'text-white': isHovering }"
+                        elevation="8">
                         <VImg class="rounded-circle mx-auto" :class="{ 'black-white-overlay': !isHovering }" cover
                           height="120" width="120" :src="achiever.img">
                         </VImg>
                         <VCardTitle>{{ achiever.name }}</VCardTitle>
                         <VCardSubtitle> {{ achiever.designation }}</VCardSubtitle>
-                        <VCardText class="d-flex justify-space-around align-center">
-                          <div class="position-relative rounded-circle bg-white pa-1" style="width: 40px; height: 40px;"
+                        <VCardText class="d-flex justify-center align-center">
+                          <div class="position-relative circle-image pa-1 mr-2" style="width: 40px; height: 40px;"
                             :class="{ 'black-white-overlay': !isHovering }" v-for="(tool, i) in achiever.tools">
-                            <VImg :alt="tool.name" :src="tool.imageSrc" class="rounded-circle" />
+                            <VTooltip activator="parent" location="bottom"  class="custom-tooltip"><div class="text-white font-weight-bold">{{ tool.name }}</div></VTooltip>
+                            <img :alt="tool.name" :src="tool.imageSrc" />
                           </div>
                         </VCardText>
                       </VCard>
@@ -103,19 +107,34 @@ const achievers = ref([
         imageSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKvAz8bSMDxZvg1ZjElGs285z3WDhxMySLcA&s'
       },
       {
-        'name': 'Vuetify',
-        imageSrc: 'https://i.pinimg.com/736x/9f/62/88/9f62881241737d130bb6b32f90e0886c.jpg'
+        'name': 'Laravel',
+        imageSrc: 'https://i.pinimg.com/736x/d6/4f/7a/d64f7aa027832cc02c1ec999e3f4fa65.jpg'
       },
       {
-        'name': 'JavaScript',
-        imageSrc: 'https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png'
+        'name': 'MySQL',
+        imageSrc: 'https://pbs.twimg.com/profile_images/1255113654049128448/J5Yt92WW_400x400.png'
       },
     ]
   },
   {
-    'img': 'https://rszr.getimg.ai/resize?url=https%3A%2F%2Fimg.getimg.ai%2Fgenerated%2Fimg-mGtSk9modTnvsDVsxaXZC.jpeg&type=auto&width=640&speed=5',
+    'img': 'https://img.freepik.com/premium-photo/lofi-anime-boy_863013-93528.jpg?w=360',
     'name': 'Steto Javellana',
-    'designation': 'Software Developer',
+    'designation': 'Backend Developer',
+    'tools': [
+      {
+        'name': 'Laravel',
+        imageSrc: 'https://i.pinimg.com/736x/d6/4f/7a/d64f7aa027832cc02c1ec999e3f4fa65.jpg'
+      },
+      {
+        'name': 'ASP.NET Core',
+        imageSrc: 'https://www.pulumi.com/logos/tech/dotnet.png'
+      }
+    ]
+  },
+  {
+    'img': 'https://img.freepik.com/premium-photo/lofi-anime-boy_863013-93528.jpg?w=360',
+    'name': 'Steto Javellana',
+    'designation': 'Frontend Developer',
     'tools': [
       {
         'name': 'Nuxt',
@@ -136,49 +155,18 @@ const achievers = ref([
     ]
   },
   {
-    'img': 'https://rszr.getimg.ai/resize?url=https%3A%2F%2Fimg.getimg.ai%2Fgenerated%2Fimg-mGtSk9modTnvsDVsxaXZC.jpeg&type=auto&width=640&speed=5',
+    'img': 'https://img.freepik.com/premium-photo/anime-boy-sitting-couch-with-his-fingers-up-generative-ai_900814-78704.jpg?w=360',
     'name': 'Steto Javellana',
-    'designation': 'Software Developer',
+    'designation': 'Database Developer',
     'tools': [
       {
-        'name': 'Nuxt',
-        imageSrc: 'https://develop365.gitlab.io/nuxtjs-2.8.X-doc/en/logos/nuxt-icon.png'
+        'name': 'MySQL',
+        imageSrc: 'https://pbs.twimg.com/profile_images/1255113654049128448/J5Yt92WW_400x400.png'
       },
       {
-        'name': 'Vue',
-        imageSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKvAz8bSMDxZvg1ZjElGs285z3WDhxMySLcA&s'
-      },
-      {
-        'name': 'Vuetify',
-        imageSrc: 'https://i.pinimg.com/736x/9f/62/88/9f62881241737d130bb6b32f90e0886c.jpg'
-      },
-      {
-        'name': 'JavaScript',
-        imageSrc: 'https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png'
-      },
-    ]
-  },
-  {
-    'img': 'https://rszr.getimg.ai/resize?url=https%3A%2F%2Fimg.getimg.ai%2Fgenerated%2Fimg-mGtSk9modTnvsDVsxaXZC.jpeg&type=auto&width=640&speed=5',
-    'name': 'Steto Javellana',
-    'designation': 'Software Developer',
-    'tools': [
-      {
-        'name': 'Nuxt',
-        imageSrc: 'https://develop365.gitlab.io/nuxtjs-2.8.X-doc/en/logos/nuxt-icon.png'
-      },
-      {
-        'name': 'Vue',
-        imageSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKvAz8bSMDxZvg1ZjElGs285z3WDhxMySLcA&s'
-      },
-      {
-        'name': 'Vuetify',
-        imageSrc: 'https://i.pinimg.com/736x/9f/62/88/9f62881241737d130bb6b32f90e0886c.jpg'
-      },
-      {
-        'name': 'JavaScript',
-        imageSrc: 'https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png'
-      },
+        'name': 'MSSQL',
+        imageSrc: 'https://cdn-icons-png.flaticon.com/512/5968/5968364.png'
+      }
     ]
   },
 ])
@@ -186,6 +174,8 @@ const achievers = ref([
 </script>
 
 <style scoped>
+
+
 #homeTopWorkers {
   background-image: url('/img/index/top-profile-bg.png');
   background-size: 48% auto;
@@ -400,5 +390,20 @@ const achievers = ref([
   }
 }
 
+.circle-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.circle-image img {
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+}
 </style>

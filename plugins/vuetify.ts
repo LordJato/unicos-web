@@ -43,7 +43,7 @@ export default defineNuxtPlugin(nuxt => {
       defaultTheme: 'darkTheme',
       themes: {
         lightTheme,
-        darkTheme
+        darkTheme,
       },
     },
     ssr: true

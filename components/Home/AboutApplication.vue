@@ -55,7 +55,7 @@
                       Unicos is an innovative cloud-based Human Resource Information System (HRIS) and job portal
                       designed to transform the way organizations manage their workforce and connect with top talent.
                       Our intuitive platform seamlessly integrates HR processes, recruitment tools and job matching
-                      capabilities, empowering businesses to optimize their HR operations and foster growth
+                      capabilities, empowering businesses to optimize their HR operations and foster growth.
                     </v-card-text>
                   </div>
                 </v-expand-transition>
