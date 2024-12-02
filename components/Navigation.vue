@@ -68,21 +68,21 @@ const links = [
     icon: "mdi-account-details",
     title: "About",
     section: "#aboutSection",
-    path: "/about",
+    path: "#",
   },
 
   {
     icon: "mdi-account-tie",
     title: "Contact",
     section: "#contactSection",
-    path: "/contact",
+    path: "#",
   },
 
   {
     icon: "mdi-folder",
     title: "Opportunities",
     section: "#opportunitiesSection",
-    path: "/opportunities",
+    path: "#",
   },
 ];
 

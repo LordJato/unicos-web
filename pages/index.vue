@@ -7,22 +7,27 @@
           <VRow align="center" justify="center" class="h-100">
             <VCol cols="12" lg="9">
               <VRow align="center" justify="center" class="h-100">
-                <VCol cols="12" md="6">
+                <VCol cols="12" md="8">
                   <div class="mt-6">
-                    <p class="font-weight-bold text-h5 text-md-h4 mt-5">
-                      Unify job search, job posting, and HR management. One platform, endless possibilities.
+                    <p class="mt-2 text-h5 text-md-h4">
+                      A revolutionary platform uniting <a href=""
+                        class="typewrite text-h5 text-md-h3 text-secondary text-decoration-none font-weight-bold">
+                        <span class="wrap"> {{ txt }}</span>
+                      </a>
                     </p>
-                    <VTextField class="mt-5" :loading="loading" append-inner-icon="mdi-magnify" density="compact"
+                    <p class="text-h5 text-md-h4 mt-2">
+                      offering endless possibilities.
+                    </p>
+                    <VTextField class="mt-10" :loading="loading" append-inner-icon="mdi-magnify" density="compact"
                       label="Search for any services" variant="solo" hide-details single-line
                       @click:append-inner="onClick" width="350"></VTextField>
                   </div>
                 </VCol>
-                <VCol cols="12" md="6">
+                <VCol cols="12" md="4">
                 </VCol>
               </VRow>
             </VCol>
           </VRow>
-
         </VContainer>
       </VParallax>
     </section>
@@ -62,8 +67,6 @@ import { ref } from 'vue'
 import parallaxImg from "/img/index/bg.png";
 import { useDisplay } from "vuetify";
 
-const { mdAndUp } = useDisplay();
-
 const title = ref("Unicos");
 useSeoMeta({
   title,
@@ -79,11 +82,48 @@ function onClick() {
     loaded.value = true
   }, 2000)
 }
+
+const txt = ref('');
+const toRotate = ref(["Job Seekers", "Clients", "Companies", "Tenants"]);
+const period = ref(1000);
+const loopNum = ref(0);
+const isDeleting = ref(false);
+
+function tick() {
+  const i = loopNum.value % toRotate.value.length;
+  const fullTxt = toRotate.value[i];
+
+  if (isDeleting.value) {
+    txt.value = fullTxt.substring(0, txt.value.length - 1);
+  } else {
+    txt.value = fullTxt.substring(0, txt.value.length + 1);
+  }
+
+  let delta = 200 - Math.random() * 100;
+
+  if (isDeleting.value) delta /= 2;
+
+  if (!isDeleting.value && txt.value === fullTxt) {
+    delta = period.value;
+    isDeleting.value = true;
+  } else if (isDeleting.value && txt.value === '') {
+    isDeleting.value = false;
+    loopNum.value++;
+    delta = 500;
+  }
+
+  setTimeout(tick, delta);
+}
+
+onMounted(() => {
+  tick();
+});
+
+
 </script>
 
 
 <style scoped>
-
 #home {
   background: hsla(226, 52%, 27%, 1);
   background: linear-gradient(90deg, hsla(226, 52%, 27%, 1) 0%, hsla(227, 72%, 10%, 1) 100%);
@@ -120,5 +160,9 @@ function onClick() {
   background: url("/img/index/dots-bg-right.png");
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.typewrite>.wrap {
+  border-right: 0.08em solid #fff;
 }
 </style>
