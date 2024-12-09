@@ -20,7 +20,7 @@
                     </p>
                     <VTextField class="mt-10" :loading="loading" append-inner-icon="mdi-magnify" density="compact"
                       label="Search for any services" variant="solo" hide-details single-line
-                      @click:append-inner="onClick" width="350"></VTextField>
+                      @click:append-inner="onClick" max-width="350"></VTextField>
                   </div>
                 </VCol>
                 <VCol cols="12" md="4">
