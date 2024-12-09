@@ -18,7 +18,7 @@
                   <VCardTitle>{{ about.title }}</VCardTitle>
                   <VCardSubtitle>{{ about.subtitle }}</VCardSubtitle>
                 </VCardItem>
-                <VCardText class="mt-5 px-6" style="height: 250px;">
+                <VCardText class="mt-5 px-6" :style="mdAndUp ? 'height: 230px' : ''">
                   <p class="mb-5">{{ about.text }}</p>
                   <div v-for="(benefit, i) in about.benefits" :key="i" class="d-flex mb-2">
                     <v-icon color="secondary" icon="mdi-check" class="mr-2"></v-icon>
@@ -40,6 +40,10 @@
 </template>
 
 <script setup lang="ts">
+
+import { useDisplay } from 'vuetify'
+
+const { mdAndUp } = useDisplay()
 
 interface AboutUser {
   img: string;
