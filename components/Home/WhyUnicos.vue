@@ -94,7 +94,7 @@
             </VCol>
         </VRow>
         <div class="svg-layered-border layered-bottom">
-            <img src="/public/img/index/layered-bottom.svg" class="w-100 h-25" />
+            <img src="/img/index/layered-bottom.svg" class="w-100 h-25" />
         </div>
     </div>
 </template>
@@ -115,7 +115,7 @@ const onIntersect = (isIntersectingValue: any) => {
 <style scoped>
 #whyUnicos {
     position: relative;
-    height: 120vh;
+    height: 150vh;
     width: 100%;
     overflow: hidden;
     z-index: 0;

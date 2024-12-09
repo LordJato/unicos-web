@@ -46,10 +46,12 @@
     <HomeChoosingUnicos />
 
     <HomeAboutApplication />
-    <!-- top workers -->
-    <HomeTopWorkers />
     <!-- clients feedback -->
     <HomePartnersFeedback />
+      
+    <!-- top workers -->
+    <HomeTopWorkers />
+ 
 
     <HomeWhyUnicos />
 

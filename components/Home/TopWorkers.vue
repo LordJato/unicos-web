@@ -29,7 +29,7 @@
                   <VHover>
                     <template v-slot:default="{ isHovering, props }">
                       <VCard v-bind="props" :color="isHovering ? 'secondary' : ''"
-                        class="mb-4 text-center rounded-xl py-12 px-8 " :class="{ 'text-white': isHovering }"
+                        class="mb-4 text-center rounded-xl py-10 px-8 " :class="{ 'text-white': isHovering }"
                         elevation="8" >
                         <VImg class="rounded-circle mx-auto" :class="{ 'black-white-overlay': !isHovering }" cover
                           height="120" width="120" :src="achiever.img">
@@ -52,7 +52,7 @@
                   <VHover>
                     <template v-slot:default="{ isHovering, props }">
                       <VCard v-bind="props" :color="isHovering ? 'secondary' : ''"
-                        class="mb-4 text-center rounded-xl py-12 px-8 " :class="{ 'text-white': isHovering }"
+                        class="mb-4 text-center rounded-xl py-10 px-8 " :class="{ 'text-white': isHovering }"
                         elevation="8" >
                         <VImg class="rounded-circle mx-auto" :class="{ 'black-white-overlay': !isHovering }" cover
                           height="120" width="120" :src="achiever.img">
@@ -181,7 +181,8 @@ const achievers = ref([
   background-size: 48% auto;
   background-position: left top;
   background-repeat: no-repeat;
-  z-index: 1;
+  background-color: #070f2b;
+  margin-top: 60px;
 }
 
 .black-white-overlay {
@@ -284,7 +285,7 @@ const achievers = ref([
 .pulsating-circle:nth-child(3) {
   width: 350px;
   height: 350px;
-  top: 20%;
+  top: 25%;
   left: 10%;
   animation: float3 20s ease-in-out infinite;
   animation-delay: 1s;
