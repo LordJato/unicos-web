@@ -36,7 +36,7 @@
             </VCol>
             <VCol cols="12" md="6">
               <VCard class="mx-auto" data-aos="fade-down-right">
-                <VImg src="/img/index/about-on-boards-bg.png" cover max-height="400"></VImg>
+                <VImg src="/public/img/index/about-on-boards-bg.png" cover max-height="400"></VImg>
 
                 <VCardTitle class="text-center">
                   Cloud-based Application

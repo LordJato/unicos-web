@@ -3,7 +3,7 @@
         <VContainer class="h-100 px-0" fluid>
             <h1 class="text-h4 text-center mb-8" data-aos="fade-up">Why do our partners choose Unicos?</h1>
             <VRow class="h-100 py-16">
-                <VCol cols="12" md="6">
+                <VCol cols="12" md="6" class="order-last order-md-first">
                     <VRow class="h-100 d-flex justify-center justify-md-end">
                         <VCol cols="9" class="ps-md-6 pe-md-14">
                             <div class="text-h6 mb-5" data-aos="fade-right" data-aos-duration="500">
@@ -52,7 +52,7 @@
                         </VCol>
                     </VRow>
                 </VCol>
-                <VCol cols="12" md="6" class="d-flex justify-end">
+                <VCol cols="12" md="6" class="d-flex justify-end order-first order-md-last">
                     <img data-aos="zoom-out-left" data-aos-duration="5000" data-aos-delay="500" class="position-abolute"
                         width="880" height="450"
                         src="https://c1.wallpaperflare.com/preview/311/34/429/colleague-unsplash-team-group-work.jpg" />
@@ -62,7 +62,7 @@
             <div class="my-16"></div>
 
             <VRow class="h-100 pt-16">
-                <VCol cols="12" md="6" class="d-flex justify-start">
+                <VCol cols="12" md="6" class="d-flex justify-start ">
                     <img data-aos="zoom-out-right" data-aos-duration="5000" data-aos-delay="500"
                         class="position-abolute" width="880" height="450"
                         src="https://onecms-res.cloudinary.com/image/upload/s--jTy7iOgL--/f_auto,q_auto/c_fill,g_auto,h_338,w_600/v1/mediacorp/cna/image/2021/11/23/istock-1227389550.jpg?itok=YqtxCCM9" />

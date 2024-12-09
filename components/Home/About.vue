@@ -18,7 +18,7 @@
                   <VCardTitle>{{ about.title }}</VCardTitle>
                   <VCardSubtitle>{{ about.subtitle }}</VCardSubtitle>
                 </VCardItem>
-                <VCardText class="mt-5 px-6" :style="mdAndUp ? 'height: 230px' : ''">
+                <VCardText class="mt-5 px-6" :style="mdAndUp ? 'height: 250px' : ''">
                   <p class="mb-5">{{ about.text }}</p>
                   <div v-for="(benefit, i) in about.benefits" :key="i" class="d-flex mb-2">
                     <v-icon color="secondary" icon="mdi-check" class="mr-2"></v-icon>

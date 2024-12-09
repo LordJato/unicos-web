@@ -27,7 +27,7 @@
 
       <VList density="compact" nav>
         <VListItem height="50" v-for="(link, i) in links" :key="i" variant="text" @click="onClick(link.section)"
-          :prepend-icon="link.icon" :title="link.title" :to="link.path" />
+          :prepend-icon="link.icon" :title="link.title" :to="link.path" :value="link.title" />
       </VList>
     </VNavigationDrawer>
   </nav>
