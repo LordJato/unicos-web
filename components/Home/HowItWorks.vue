@@ -4,7 +4,7 @@
       <VCol cols="12" lg="9">
         <VContainer class="h-100" >
           <div class="mb-6 mb-16 text-center" > 
-              <v-icon icon="mdi-application-brackets" color="secondary" data-aos="fade-down" data-aos-duration="1000"></v-icon>
+              <v-icon icon="mdi-application-brackets" color="secondary" data-aos="fade-down" data-aos-duration="1000" ></v-icon>
               <div class="text-uppercase text-h6 text-md-h4 mt-2" data-aos="fade-up" data-aos-duration="1000">How It Works</div>
           </div>
           <VRow align="stretch" justify="center">

@@ -3,9 +3,9 @@
         <div class="w-100">
             <div class="w-100 w-md-25 mx-auto text-center">
             </div>
-            <div class="mb-6 mb-16 text-center">
+            <div class="mb-16 text-center">
                 <v-icon icon="mdi-comment-quote" color="secondary" data-aos="fade-down" data-aos-duration="1000"
-                    size="x-large"></v-icon>
+                    ></v-icon>
                 <div class="text-uppercase text-h6 text-md-h4 mt-2" data-aos="fade-up" data-aos-duration="1000">Voices
                     from Our Community</div>
                 <p class="text-subtitle-1 text-md-h6 mt-4 mb-10 w-75 w-md-25 mx-auto text-center" data-aos="fade-down"

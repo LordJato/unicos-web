@@ -1,7 +1,7 @@
 <template>
     <section id="chooseUnicos" class="py-16">
         <VContainer class="h-100 px-0" fluid>
-            <div class="mb-6 mb-16 text-center">
+            <div class="mb-16 text-center">
                 <v-icon icon="mdi-gesture-double-tap" color="secondary" data-aos="fade-down" data-aos-duration="1000"
                     size="x-large"></v-icon>
                 <div class="text-uppercase text-h6 text-md-h4 mt-2" data-aos="fade-up" data-aos-duration="1000">Why do

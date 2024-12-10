@@ -6,12 +6,14 @@
         <VContainer class="h-100">
           <VRow justify="center" align="center">
             <VCol cols="12" md="6">
-              <div class="mb-6 mb-16">
-                <v-icon icon="mdi-trophy-award" color="secondary" data-aos="fade-down" data-aos-duration="1000"
-                  size="x-large"></v-icon>
-                <div class="text-uppercase text-h6 text-md-h4 mt-2" data-aos="fade-up" data-aos-duration="1000">Meet Our
+              <div class="mb-6">
+                <div class="d-md-flex align-center text-center">
+                  <v-icon icon="mdi-trophy-award" color="secondary" data-aos="fade-down" data-aos-duration="1000"
+                  ></v-icon>
+                <div class="text-uppercase text-h6 text-md-h4 mt-2 ml-2" data-aos="fade-up" data-aos-duration="1000">Meet Our
                   Top Achievers!</div>
-                <div class="text-subtitle-1 text-md-h6 mt-4 mx-auto text-left" data-aos="fade-down"
+                </div>
+                <div class="text-subtitle-1 text-md-h6 mt-6 text-left" data-aos="fade-down"
                   data-aos-duration="200" data-aos-delay="1000">
                   Leading the charge in innovation and excellence. Explore their profiles, learn from their expertise,
                   and collaborate with the best on Unicos.

@@ -10,12 +10,16 @@
                         </VCol>
                         <VCol cols="12" md="6" class="d-flex justify-center align-center">
                             <div>
-                                <div class="mb-8 text-center">
-                                    <h1 class="text-h4 mb-3" data-aos="fade-left" data-aos-duration="1000">Get in Touch
-                                        with Unicos</h1>
-
-                                    <p style="text-wrap: pretty;" class="px-16" data-aos="fade-left"
-                                        data-aos-duration="1000" data-aos-delay="1000">Have questions or need expert
+                                <div class="mb-16 text-center">
+                                    <v-icon icon="mdi-email-newsletter" color="secondary" data-aos="fade-down"
+                                        data-aos-duration="1000" ></v-icon>
+                                    <div class="text-uppercase text-h6 text-md-h4 mt-2" data-aos="fade-up"
+                                        data-aos-duration="1000">Get in Touch
+                                        with Unicos</div>
+                                    <p style="text-wrap: pretty;"
+                                        class="text-subtitle-1 text-md-h6 mt-4 mb-10 w-md-75 mx-auto text-center"
+                                        data-aos="fade-down" data-aos-duration="200" data-aos-delay="1000">Have
+                                        questions or need expert
                                         advice? We're here to help. Reach out for top talent acquisition or to learn
                                         more about our services.</p>
                                 </div>
