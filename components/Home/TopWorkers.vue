@@ -6,13 +6,21 @@
         <VContainer class="h-100">
           <VRow justify="center" align="center">
             <VCol cols="12" md="6">
-              <h1 class="text-h4" data-aos="flip-up" data-aos-duration="1000">Meet Our Top Achievers!</h1>
-              <h3 class="text-h6 my-6">Leading the charge in innovation and excellence. Explore their profiles, learn
-                from their expertise,
-                and collaborate with the best on Unicos.</h3>
-              <div class="d-flex align-center mb-2" v-for="(trait, i) in traits" :key="i" data-aos="zoom-in-right" data-aos-duration="1000" :data-aos-delay="200 * (i + 1)">
+              <div class="mb-6 mb-16">
+                <v-icon icon="mdi-trophy-award" color="secondary" data-aos="fade-down" data-aos-duration="1000"
+                  size="x-large"></v-icon>
+                <div class="text-uppercase text-h6 text-md-h4 mt-2" data-aos="fade-up" data-aos-duration="1000">Meet Our
+                  Top Achievers!</div>
+                <div class="text-subtitle-1 text-md-h6 mt-4 mx-auto text-left" data-aos="fade-down"
+                  data-aos-duration="200" data-aos-delay="1000">
+                  Leading the charge in innovation and excellence. Explore their profiles, learn from their expertise,
+                  and collaborate with the best on Unicos.
+                </div>
+              </div>
+              <div class="d-flex align-center mb-2" v-for="(trait, i) in traits" :key="i" data-aos="zoom-in-right"
+                data-aos-duration="1000" :data-aos-delay="200 * (i + 1)">
                 <v-icon color="secondary" icon="mdi-tag-check-outline" class="mr-2" size="small"></v-icon>
-                <p class="text-h6">
+                <p class="text-subtitle-1">
                   {{ trait }}
                 </p>
               </div>
@@ -25,21 +33,24 @@
               <VRow justify="center" align="center">
                 <VCol cols="12" md="6" :class="i % 2 === 0 ? 'mt-md-16' : 'mb-md-16'"
                   v-for="(achiever, i) in achievers.slice(0, 2)">
-
                   <VHover>
                     <template v-slot:default="{ isHovering, props }">
                       <VCard v-bind="props" :color="isHovering ? 'secondary' : ''"
                         class="mb-4 text-center rounded-xl py-10 px-8 " :class="{ 'text-white': isHovering }"
-                        elevation="8" >
+                        elevation="8">
                         <VImg class="rounded-circle mx-auto" :class="{ 'black-white-overlay': !isHovering }" cover
                           height="120" width="120" :src="achiever.img">
                         </VImg>
-                        <VCardTitle ><nuxt-link to="#" class="text-decoration-none" :class="{ 'text-grey': !isHovering, 'text-white': isHovering }">{{ achiever.name }}</nuxt-link></VCardTitle>
+                        <VCardTitle><nuxt-link to="#" class="text-decoration-none"
+                            :class="{ 'text-grey': !isHovering, 'text-white': isHovering }">{{ achiever.name
+                            }}</nuxt-link></VCardTitle>
                         <VCardSubtitle> {{ achiever.designation }}</VCardSubtitle>
                         <VCardText class="d-flex justify-center align-center">
                           <div class="position-relative circle-image pa-1 mr-2" style="width: 40px; height: 40px;"
                             :class="{ 'black-white-overlay': !isHovering }" v-for="(tool, i) in achiever.tools">
-                            <VTooltip activator="parent" location="bottom"  class="custom-tooltip"><div class="text-white font-weight-bold">{{ tool.name }}</div></VTooltip>
+                            <VTooltip activator="parent" location="bottom" class="custom-tooltip" open-on-click>
+                              <div class="text-white font-weight-bold">{{ tool.name }}</div>
+                            </VTooltip>
                             <img :alt="tool.name" :src="tool.imageSrc" />
                           </div>
                         </VCardText>
@@ -53,16 +64,20 @@
                     <template v-slot:default="{ isHovering, props }">
                       <VCard v-bind="props" :color="isHovering ? 'secondary' : ''"
                         class="mb-4 text-center rounded-xl py-10 px-8 " :class="{ 'text-white': isHovering }"
-                        elevation="8" >
+                        elevation="8">
                         <VImg class="rounded-circle mx-auto" :class="{ 'black-white-overlay': !isHovering }" cover
                           height="120" width="120" :src="achiever.img">
                         </VImg>
-                        <VCardTitle ><nuxt-link to="#" class="text-decoration-none" :class="{ 'text-grey': !isHovering, 'text-white': isHovering }">{{ achiever.name }}</nuxt-link></VCardTitle>
+                        <VCardTitle><nuxt-link to="#" class="text-decoration-none"
+                            :class="{ 'text-grey': !isHovering, 'text-white': isHovering }">{{ achiever.name
+                            }}</nuxt-link></VCardTitle>
                         <VCardSubtitle> {{ achiever.designation }}</VCardSubtitle>
                         <VCardText class="d-flex justify-center align-center">
                           <div class="position-relative circle-image pa-1 mr-2" style="width: 40px; height: 40px;"
                             :class="{ 'black-white-overlay': !isHovering }" v-for="(tool, i) in achiever.tools">
-                            <VTooltip activator="parent" location="bottom"  class="custom-tooltip"><div class="text-white font-weight-bold">{{ tool.name }}</div></VTooltip>
+                            <VTooltip activator="parent" location="bottom" class="custom-tooltip" open-on-click>
+                              <div class="text-white font-weight-bold">{{ tool.name }}</div>
+                            </VTooltip>
                             <img :alt="tool.name" :src="tool.imageSrc" />
                           </div>
                         </VCardText>
@@ -174,13 +189,12 @@ const achievers = ref([
 </script>
 
 <style scoped>
-
-
 #homeTopWorkers {
   background: url('~/assets/images/hero/top-workers/bg.png') left top no-repeat #070f2b;
   background-size: 48% auto;
   margin-top: 60px;
 }
+
 .black-white-overlay {
   filter: grayscale(100%) brightness(50%);
   transition: ease-in 1s;
