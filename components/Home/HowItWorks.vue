@@ -3,7 +3,10 @@
     <VRow align="center" justify="center" class="h-100">
       <VCol cols="12" lg="9">
         <VContainer class="h-100" >
-          <div class="text-center mb-6 text-h4 mb-16" data-aos="fade-up" >How It Works</div>
+          <div class="mb-6 mb-16 text-center" > 
+              <v-icon icon="mdi-application-brackets" color="secondary" data-aos="fade-down" data-aos-duration="1000"></v-icon>
+              <div class="text-uppercase text-h6 text-md-h4 mt-2" data-aos="fade-up" data-aos-duration="1000">How It Works</div>
+          </div>
           <VRow align="stretch" justify="center">
             <VCol cols="12"  md="4" v-for="(about, i) in aboutUser" :key="i" class="d-flex justify-center" data-aos="flip-left"
               data-aos-easing="ease-out-cubic"
@@ -22,7 +25,7 @@
                   <p class="mb-5">{{ about.text }}</p>
                   <div v-for="(benefit, i) in about.benefits" :key="i" class="d-flex mb-2">
                     <v-icon color="secondary" icon="mdi-check" class="mr-2"></v-icon>
-                    <p>
+                  <p>
                       {{ benefit }}
                     </p>
                   </div>
@@ -43,6 +46,10 @@
 
 import { useDisplay } from 'vuetify'
 
+import JobSeekerGIF from '~/assets/images/hero/how-it-works/job-seeker.gif'
+import ClientsGIF from '~/assets/images/hero/how-it-works/clients.gif'
+import TenantGIF from '~/assets/images/hero/how-it-works/tenant.gif'
+
 const { mdAndUp } = useDisplay()
 
 interface AboutUser {
@@ -57,7 +64,7 @@ interface AboutUser {
 
 const aboutUser = ref<AboutUser[]>([
   {
-    img: '/img/index/job-seeker.gif',
+    img: JobSeekerGIF,
     title: "Job Seeker",
     subtitle: "Follow Your Heart's Desire",
     text: "As a job seeker or worker, unlock opportunities:",
@@ -65,7 +72,7 @@ const aboutUser = ref<AboutUser[]>([
     url: "#",
   },
   {
-    img: '/img/index/clients.gif',
+    img: ClientsGIF,
     title: "Client",
     subtitle: "Discover Your Ideal Partner",
     text: "  As a client or a company, find skilled workers tailored to your needs:",
@@ -77,7 +84,7 @@ const aboutUser = ref<AboutUser[]>([
     url: "#"
   },
   {
-    img: '/img/index/tenant.gif',
+    img: TenantGIF,
     title: "Tenant",
     subtitle: "Simplify HR management across your organization.",
     text: " As tenant, you can: ",

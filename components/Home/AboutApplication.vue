@@ -8,7 +8,7 @@
             <VCol cols="12" md="6">
 
               <VCard class="mx-auto" data-aos="fade-down-left">
-                <VImg src="/public/img/index/about-tenancy.png" cover max-height="400"></VImg>
+                <VImg src="~/assets/images/hero/about-application/tenancy.png" cover max-height="400"></VImg>
 
                 <VCardTitle class="text-center">
                   Multi-Tenant Architecture
@@ -36,7 +36,7 @@
             </VCol>
             <VCol cols="12" md="6">
               <VCard class="mx-auto" data-aos="fade-down-right">
-                <VImg src="/public/img/index/about-on-boards-bg.png" cover max-height="400"></VImg>
+                <VImg src="~/assets/images/hero/about-application/cloud-based.png" cover max-height="400"></VImg>
 
                 <VCardTitle class="text-center">
                   Cloud-based Application

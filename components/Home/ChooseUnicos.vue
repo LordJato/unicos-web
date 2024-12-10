@@ -1,7 +1,10 @@
 <template>
-    <section id="choosingUnicos" class="py-16">
+    <section id="chooseUnicos" class="py-16">
         <VContainer class="h-100 px-0" fluid>
-            <h1 class="text-h4 text-center mb-8" data-aos="fade-up">Why do our partners choose Unicos?</h1>
+            <div class="mb-6 mb-16 text-center"> 
+              <v-icon icon="mdi-gesture-tap" color="secondary"  data-aos="fade-down" data-aos-duration="1000" size="x-large"></v-icon>
+              <div class="text-uppercase text-h6 text-md-h4 mt-2"  data-aos="fade-up" data-aos-duration="1000">Why do our partners choose Unicos?</div>
+          </div> 
             <VRow class="h-100 py-16">
                 <VCol cols="12" md="6" class="order-last order-md-first">
                     <VRow class="h-100 d-flex justify-center justify-md-end">

@@ -2,7 +2,7 @@
   <div>
     <!-- Hero -->
     <section id="home">
-      <VParallax :src="parallaxImg" style="height: calc(100vh + 30px);">
+      <VParallax src="~/assets/images/hero/bg.png" style="height: calc(100vh + 30px);">
         <VContainer fluid class="h-100">
           <VRow align="center" justify="center" class="h-100">
             <VCol cols="12" lg="9">
@@ -39,11 +39,11 @@
     <div class="position-relative">
       <div class="left-bg d-none d-md-flex"></div>
       <div class="right-bg d-none d-md-flex"></div>
-      <HomeAbout />
+      <HomeHowItWorks />
       <!-- <HomePopularServices /> -->
     </div>
 
-    <HomeChoosingUnicos />
+    <HomeChooseUnicos />
 
     <HomeAboutApplication />
     <!-- clients feedback -->
@@ -66,8 +66,6 @@
 <script setup lang="ts">
 
 import { ref } from 'vue'
-import parallaxImg from "/img/index/bg.png";
-import { useDisplay } from "vuetify";
 
 const title = ref("Unicos");
 useSeoMeta({
@@ -148,7 +146,7 @@ onMounted(() => {
   left: 0;
   width: 25%;
   height: 120%;
-  background: url('/img/index/dots-bg-left.png');
+  background: url('~/assets/images/hero/how-it-works/bg-dots-left.png');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -159,7 +157,7 @@ onMounted(() => {
   right: 0;
   width: 25%;
   height: 80%;
-  background: url("/img/index/dots-bg-right.png");
+  background: url('~/assets/images/hero/how-it-works/bg-dots-right.png');
   background-size: cover;
   background-repeat: no-repeat;
 }
