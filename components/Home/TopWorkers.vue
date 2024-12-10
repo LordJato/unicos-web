@@ -177,14 +177,10 @@ const achievers = ref([
 
 
 #homeTopWorkers {
-  background-image: url('/img/index/top-profile-bg.png');
+  background: url('~/assets/images/hero/top-workers/bg.png') left top no-repeat #070f2b;
   background-size: 48% auto;
-  background-position: left top;
-  background-repeat: no-repeat;
-  background-color: #070f2b;
   margin-top: 60px;
 }
-
 .black-white-overlay {
   filter: grayscale(100%) brightness(50%);
   transition: ease-in 1s;

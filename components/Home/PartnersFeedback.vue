@@ -4,7 +4,7 @@
             <div class="w-100 w-md-25 mx-auto text-center">
             </div>
             <div class="mb-6 mb-16 text-center">
-                <v-icon icon="mdi-gesture-double-tap" color="secondary" data-aos="fade-down" data-aos-duration="1000"
+                <v-icon icon="mdi-comment-quote" color="secondary" data-aos="fade-down" data-aos-duration="1000"
                     size="x-large"></v-icon>
                 <div class="text-uppercase text-h6 text-md-h4 mt-2" data-aos="fade-up" data-aos-duration="1000">Voices
                     from Our Community</div>

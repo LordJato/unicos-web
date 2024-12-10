@@ -91,7 +91,7 @@ const showMultitenant = ref(false)
   right: 0;
   width: 50%;
   height: 80%;
-  background: url('/img/index/top-workers-dots-bg.png');
+  background: url('~/assets/images/hero/about-application/bg-dots.png');
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: -300px;
