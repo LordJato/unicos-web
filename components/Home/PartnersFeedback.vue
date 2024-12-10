@@ -2,60 +2,68 @@
     <section id="homeFeedback">
         <div class="w-100">
             <div class="w-100 w-md-25 mx-auto text-center">
-                <h1 class="text-h4" data-aos="fade-up" data-aos-duration="1000">Voices from Our Community</h1>
-                <p class="text-h6 mt-4 mb-10" data-aos="fade-down" data-aos-duration="200" data-aos-delay="1000">We're
+            </div>
+            <div class="mb-6 mb-16 text-center">
+                <v-icon icon="mdi-gesture-double-tap" color="secondary" data-aos="fade-down" data-aos-duration="1000"
+                    size="x-large"></v-icon>
+                <div class="text-uppercase text-h6 text-md-h4 mt-2" data-aos="fade-up" data-aos-duration="1000">Voices
+                    from Our Community</div>
+                <p class="text-subtitle-1 text-md-h6 mt-4 mb-10 w-75 w-md-25 mx-auto text-center" data-aos="fade-down"
+                    data-aos-duration="200" data-aos-delay="1000">We're
                     proud of the results we've achieved together. Here's what our
                     clients say about working with us</p>
             </div>
-            <v-carousel hide-delimiters show-arrows class="h-100">
-                <v-carousel-item color="transparent" v-for="(feedback, i) in feedbacks">
-                    <VCard max-width="1100" class=" rounded-xl mx-auto" elevation="9">
-                        <VImg :src="feedback.backgroundImg" height="580" cover class="position-relative">
-                            <div class="overlay"></div>
-                            <VContainer class="h-100 text-start pa-16">
-                                <VRow class="h-100">
-                                    <VCol cols="12" md="7" class="d-flex align-start flex-column">
-                                        <VIcon icon="mdi-format-quote-open-outline" size="100" color="secondary" />
-                                        <p class="text-caption text-md-subtitle-1 text-justify mt-2">
-                                            {{ feedback.message }}
-                                        </p>
-                                        <p class="mt-2 mt-md-8 text-caption text-md-subtitle-1"
-                                            v-if="feedback.subMessage">
-                                            {{ feedback.subMessage }}
-                                        </p>
-                                        <div class="d-flex align-center mt-4 mt-md-auto">
-                                            <span class="mr-3">
-                                                <VAvatar size="large">
-                                                    <VImg :alt="feedback.name" style="filter: grayscale(100%);"
-                                                        :src="feedback.img" />
-                                                </VAvatar>
-                                            </span>
-                                            <span>
-                                                <div class="text-body-1 font-weight-bold">{{ feedback.name }}</div>
-                                                <div class="text-caption">{{ feedback.position }}</div>
-                                            </span>
-                                        </div>
-                                    </VCol>
-                                </VRow>
-                            </VContainer>
-                        </VImg>
-                    </VCard>
-                </v-carousel-item>
+            <VCarousel v-model="carouselRef" hide-delimiters show-arrows>
+                <VCarouselItem color="transparent" v-for="(feedback, i) in feedbacks">
+                    <VImg :src="feedback.backgroundImg" min-height="400" cover
+                        class="position-relative rounded-xl mx-auto" max-width="1100">
+                        <div class="overlay"></div>
+                        <VContainer class="h-100 text-start pa-6 pa-md-16">
+                            <VRow class="h-100">
+                                <VCol cols="12" md="7" class="d-flex align-start flex-column">
+                                    <VIcon icon="mdi-format-quote-open-outline" class="text-h3 text-md-h1"
+                                        color="secondary" />
+                                    <p class="text-subtitle-2 text-md-subtitle-1 text-md-justify mt-2">
+                                        {{ feedback.message }}
+                                    </p>
+                                    <p class="mt-4 mt-md-8 text-subtitle-2 text-md-subtitle-1"
+                                        v-if="feedback.subMessage">
+                                        {{ feedback.subMessage }}
+                                    </p>
+                                    <div class="d-flex align-center mt-auto">
+                                        <span class="mr-3">
+                                            <VAvatar size="large">
+                                                <VImg :alt="feedback.name" style="filter: grayscale(100%);"
+                                                    :src="feedback.img" />
+                                            </VAvatar>
+                                        </span>
+                                        <span>
+                                            <div class="text-body-1 font-weight-bold">{{ feedback.name }}</div>
+                                            <div class="text-caption">{{ feedback.position }}</div>
+                                        </span>
+                                    </div>
+                                </VCol>
+                            </VRow>
+                        </VContainer>
+                    </VImg>
+
+                </VCarouselItem>
                 <template v-slot:prev="{ props }">
-                    <v-btn color="secondary" variant="elevated" @click="props.onClick" v-if="mdAndUp"
+                    <v-btn color="secondary" variant="elevated" @click.prevent="props.onClick" v-if="mdAndUp"
                         prepend-icon="mdi-page-previous-outline" class="text-white text-caption">Prev</v-btn>
-                    <v-btn v-else color="secondary" variant="elevated" @click="props.onClick"
-                        icon="mdi-page-previous-outline" class="text-white text-caption" size="small"></v-btn>
                 </template>
                 <template v-slot:next="{ props }">
-                    <v-btn color="secondary" variant="elevated" @click="props.onClick" v-if="mdAndUp"
+                    <v-btn color="secondary" variant="elevated" @click.prevent="props.onClick" v-if="mdAndUp"
                         append-icon="mdi-page-next-outline" class="text-white text-caption">Next</v-btn>
-                    <v-btn v-else color="secondary" variant="elevated" @click="props.onClick"
-                        icon="mdi-page-next-outline" class="text-white text-caption" size="small"></v-btn>
                 </template>
-            </v-carousel>
+            </VCarousel>
+            <div v-if="!mdAndUp" class="text-center">
+                <v-btn color="secondary" variant="elevated" @click.prevent="prevSlide"
+                    prepend-icon="mdi-page-previous-outline" class="text-white text-caption mr-2">Prev</v-btn>
+                <v-btn color="secondary" variant="elevated" @click.prevent="nextSlide"
+                    append-icon="mdi-page-next-outline" class="text-white text-caption">Next</v-btn>
+            </div>
         </div>
-
     </section>
 </template>
 
@@ -78,7 +86,7 @@ const feedbacks = ref([
     {
         backgroundImg: "https://img.freepik.com/premium-photo/business-woman-sitting-front-tablet-laptop-computer-with-financial-graphs-statistics-monitor-officexa_71455-2606.jpg",
         message: "Everything is hard in the beginning. It doesn’t matter how vast the sea or how profound the idea, there is always an origin. One step at a time to walk a thousand miles. Start from the bottom with the most sincere attitude towards the top. If it doesn’t work the first time, do it a second time. If you fail again, then go for the third. As long as you persevere, you will see results.",
-        subMessage: "We highly praise Unicos for their exceptional expertise and commitment to excellence.",
+        
         img: "https://i.pinimg.com/736x/11/aa/57/11aa571334382cab1e7e60d47b7a755a.jpg",
         name: 'Li Qiye',
         position: "Emperor's Domination"
@@ -96,6 +104,22 @@ const feedbacks = ref([
 
 
 ])
+
+const carouselRef = ref<number>(0);
+
+const nextSlide = () => {
+    if (carouselRef.value < feedbacks.value.length - 1) {
+        // Stop at the last slide
+        carouselRef.value += 1;
+    }
+};
+
+const prevSlide = () => {
+    if (carouselRef.value > 0) {
+        // Prevent going before the first slide
+        carouselRef.value -= 1;
+    }
+};
 
 </script>
 
