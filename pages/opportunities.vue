@@ -70,7 +70,6 @@
 </template>
 
 <script setup>
-import opportunitiesBG from '@/public/img/opportunities/bg.jpg'
 import { ref } from "vue";
 const title = ref("Opportunities");
 useSeoMeta({
@@ -87,7 +86,6 @@ useSeoMeta({
   left: 0;
   right: 0;
   height: 80%;
-  background-image: url('img/opportunities/bg.jpg');
   background-size: cover;
   background-position: center;
   opacity: 0.75;
