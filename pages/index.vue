@@ -153,13 +153,14 @@ onMounted(() => {
 
 .right-bg {
   position: absolute;
-  top: -2%;
+  top: 0;
   right: 0;
   width: 25%;
-  height: 80%;
+  height: 120%;
   background: url('~/assets/images/hero/how-it-works/bg-dots-right.png');
   background-size: cover;
   background-repeat: no-repeat;
+  margin-top: -30px;
 }
 
 .typewrite>.wrap {

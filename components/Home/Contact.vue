@@ -5,10 +5,10 @@
                 <VContainer class="h-100">
                     <VRow justify="center" align="center">
                         <VCol cols="12" md="6">
-                            <VImg src="/img/index/contact.png" cover data-aos="flip-right"
+                            <VImg src="~/assets/images/hero/contact/contact.png" cover data-aos="flip-right"
                                 data-aos-easing="ease-out-cubic" data-aos-duration="1000" />
                         </VCol>
-                        <VCol cols="12" md="6" class="d-flex justify-center align-center">
+                        <VCol cols="12" md="6" class="d-flex justify-end align-center">
                             <div>
                                 <div class="mb-16 text-center">
                                     <v-icon icon="mdi-email-newsletter" color="secondary" data-aos="fade-down"
@@ -64,7 +64,7 @@
 #homeContact {
     top: 0;
     position: relative;
-    min-height: 90vh;
+    min-height: 100vh;
     overflow: hidden;
     display: flex;
     align-items: center;

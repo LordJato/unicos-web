@@ -9,8 +9,8 @@
     </VMain>
     <Footer />
     <VScrollYTransition>
-      <VBtn v-show="fab" v-scroll="onScroll" position="fixed" color="primary" icon="mdi-arrow-up"
-        location="bottom right" class="ma-5" @click="toTop" style="z-index: 999"></VBtn>
+      <VBtn v-show="fab" v-scroll="onScroll" position="fixed" color="secondary" icon="mdi-arrow-up"
+        location="bottom right" class="ma-5 text-white" @click="toTop" style="z-index: 999" size="small"></VBtn>
     </VScrollYTransition>
   </VApp>
 </template>

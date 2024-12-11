@@ -1,5 +1,6 @@
 <template>
   <section id="aboutApplication">
+    <div class="dot-bg-left"></div>
     <VRow justify="center" align="center" class="h-100">
       <VCol cols="12" lg="9">
         <VContainer class="h-100">
@@ -88,11 +89,25 @@ const showMultitenant = ref(false)
   top: 0;
   right: 0;
   width: 50%;
-  height: 80%;
+  height: 100%;
   background: url('~/assets/images/hero/about-application/bg-dots.png');
   background-size: cover;
   background-repeat: no-repeat;
-  margin-top: -300px;
+  margin-top: -25%;
   z-index: -1;
+}
+
+
+.dot-bg-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 100%;
+  background: url('~/assets/images/hero/about-application/bg-dots-left.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  margin-top: -80px;
 }
 </style>

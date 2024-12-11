@@ -6,8 +6,8 @@
     <VFooter absolute class="pa-0">
       <VRow justify="center" align="center" >
         <VCol cols="12" lg="9">
-          <VContainer class="py-9">
-            <VRow justify="center" >
+          <VContainer >
+            <VRow justify="center" class="pt-16 pb-4" >
             <VCol cols="12" md="6">
               <div>
                   <VImg :src="useThemeStore().logoSrc" max-height="125" max-width="125" />
@@ -50,7 +50,7 @@
               </div>
             </VCol>
           </VRow>
-          <VDivider color="white-indigo-darken-3" thickness="2" class="mx-md-16"></VDivider>
+          <VDivider color="white-indigo-darken-3" thickness="2" ></VDivider>
           <div class="py-6 text-caption text-center">
             Copyright &#9400;
             {{ new Date().getFullYear() }} UNICOS. All rights reserved.
@@ -65,7 +65,6 @@
 </template>
 
 <script setup lang="ts">
-import { useDisplay } from "vuetify";
 
 const icons = [
   {

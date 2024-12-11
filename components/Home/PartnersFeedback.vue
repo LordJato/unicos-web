@@ -69,12 +69,13 @@
 <script setup lang="ts">
 
 import { useDisplay } from 'vuetify'
+import laptopHandImg from '~/assets/images/hero/feedback/business.jpg'
 
 const { mdAndUp } = useDisplay()
 
 const feedbacks = ref([
     {
-        backgroundImg: '/img/index/business.jpg',
+        backgroundImg: laptopHandImg,
         message: "Unicos has been our trusted partner for over five years, providing top-tier development resources through their team of 40+ skilled professionals. Under Steto's leadership, they've consistently demonstrated exceptional quality,loyalty, and commitment.",
         subMessage: "We strongly recommend Unicos for their outstanding expertise and service.",
         img: "https://imgix.ranker.com/user_node_img/50082/1001639646/original/being-strong-photo-u1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=355",
@@ -108,14 +109,12 @@ const carouselRef = ref<number>(0);
 
 const nextSlide = () => {
     if (carouselRef.value < feedbacks.value.length - 1) {
-        // Stop at the last slide
         carouselRef.value += 1;
     }
 };
 
 const prevSlide = () => {
     if (carouselRef.value > 0) {
-        // Prevent going before the first slide
         carouselRef.value -= 1;
     }
 };
@@ -130,7 +129,7 @@ const prevSlide = () => {
     background-size: cover;
     background-color: transparent;
     background:
-        url("/img/index/circuit-board.svg") no-repeat center,
+        url("~/assets/images/hero/feedback/circuit-board.svg") no-repeat center,
         radial-gradient(circle, rgba(33, 50, 104, 1) 0%, rgba(7, 15, 43, 1) 76%);
     height: 120vh;
 }
