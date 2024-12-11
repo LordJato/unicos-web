@@ -40,7 +40,7 @@ export default defineNuxtConfig({
         },
         {
           property: "og:image",
-          content: process.env.BASE_URL + "img/og-unicos.jpg",
+          content: process.env.BASE_URL + "og-unicos.jpg",
         },
         { name: "twitter:card", content: "summary" },
         { property: "twitter:domain", content: process.env.DOMAIN },
@@ -53,7 +53,7 @@ export default defineNuxtConfig({
         },
         {
           name: "twitter:image",
-          content: process.env.BASE_URL + "img/og-unicos.png",
+          content: process.env.BASE_URL + "og-unicos.jpg",
         },
       ],
     },
