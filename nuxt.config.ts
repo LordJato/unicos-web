@@ -1,6 +1,64 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 export default defineNuxtConfig({
+  app: {
+    head: {
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
+      link: [
+        {
+          rel: "canonical",
+          href: process.env.BASE_URL,
+        },
+      ],
+      meta: [
+        {
+          property: "title",
+          content: "Unicos",
+        },
+        {
+          name: "description",
+          content:
+            "Simplify human resources management across your entire organization with UNICOS",
+        },
+        {
+          property: "og:url",
+          content: process.env.BASE_URL,
+        },
+        {
+          property: "og:type",
+          content: "website",
+        },
+        {
+          property: "og:title",
+          content: "Unicos",
+        },
+        {
+          property: "og:description",
+          content:
+            "Simplify human resources management across your entire organization with UNICOS",
+        },
+        {
+          property: "og:image",
+          content: process.env.BASE_URL + "img/og-unicos.jpg",
+        },
+        { name: "twitter:card", content: "summary" },
+        { property: "twitter:domain", content: process.env.DOMAIN },
+        { property: "twitter:url", content: process.env.BASE_URL },
+        { name: "twitter:title", content: "Unicos" },
+        {
+          name: "twitter:description",
+          content:
+            "Simplify human resources management across your entire organization with UNICOS.",
+        },
+        {
+          name: "twitter:image",
+          content: process.env.BASE_URL + "img/og-unicos.png",
+        },
+      ],
+    },
+    
+  },
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
   css: [
@@ -27,5 +85,12 @@ export default defineNuxtConfig({
       },
     },
   },
+  runtimeConfig : {
+    public: {
+      emailServiceID: process.env.EMAIL_SERVICE_ID,
+      emailTemplateID: process.env.EMAIL_TEMPLATE_ID,
+      emailPublicKey: process.env.EMAIL_PUBLIC_KEY
+    }
+  }
 })
 
