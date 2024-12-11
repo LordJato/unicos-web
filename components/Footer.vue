@@ -31,7 +31,7 @@
                   <span class="font-weight-bold">Phone:</span> (123) 456-7890
                 </div>
                 <div>
-                  <v-btn v-for="(item, i) in icons" :key="i" :icon="item.icon" variant="text" color="primary"
+                  <v-btn v-for="(item, i) in icons" :key="i" :icon="item.icon" variant="text" color="secondary"
                     class="text-caption ml-n4"></v-btn>
                 </div>
               </div>
@@ -39,13 +39,13 @@
               <div id="helpDetails" class="d-inline">
                 <div class="font-weight-bold mb-3">Help</div>
                 <div>
-                  <a href="#" class="text-caption mb-1 text-decoration-none">For Company</a>
+                  <a href="#" class="text-caption mb-1 text-decoration-none text-secondary">For Company</a>
                 </div>
                 <div>
-                  <a href="#" class="text-caption mb-1 text-decoration-none">For Client</a>
+                  <a href="#" class="text-caption mb-1 text-decoration-none text-secondary">For Client</a>
                 </div>
                 <div>
-                  <a href="#" class="text-caption mb-1 text-decoration-none">For Worker</a>
+                  <a href="#" class="text-caption mb-1 text-decoration-none text-secondary">For Worker</a>
                 </div>
               </div>
             </VCol>

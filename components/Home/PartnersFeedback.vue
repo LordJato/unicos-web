@@ -14,9 +14,9 @@
                     clients say about working with us</p>
             </div>
             <VCarousel v-model="carouselRef" hide-delimiters show-arrows>
-                <VCarouselItem color="transparent" v-for="(feedback, i) in feedbacks">
+                <VCarouselItem color="transparent" v-for="(feedback, i) in feedbacks" >
                     <VImg :src="feedback.backgroundImg" min-height="400" cover
-                        class="position-relative rounded-xl mx-auto" max-width="1100">
+                        class="position-relative rounded-xl ma-auto" max-width="1100">
                         <div class="overlay"></div>
                         <VContainer class="h-100 text-start pa-6 pa-md-16">
                             <VRow class="h-100">
@@ -46,7 +46,6 @@
                             </VRow>
                         </VContainer>
                     </VImg>
-
                 </VCarouselItem>
                 <template v-slot:prev="{ props }">
                     <v-btn color="secondary" variant="elevated" @click.prevent="props.onClick" v-if="mdAndUp"
@@ -57,7 +56,7 @@
                         append-icon="mdi-page-next-outline" class="text-white text-caption">Next</v-btn>
                 </template>
             </VCarousel>
-            <div v-if="!mdAndUp" class="text-center">
+            <div v-if="!mdAndUp" class="text-center mt-n16">
                 <v-btn color="secondary" variant="elevated" @click.prevent="prevSlide"
                     prepend-icon="mdi-page-previous-outline" class="text-white text-caption mr-2">Prev</v-btn>
                 <v-btn color="secondary" variant="elevated" @click.prevent="nextSlide"
