@@ -1,7 +1,7 @@
 <template>
   <nav>
     <VAppBar class="px-12" height="60" :color="props.color" :flat="props.flat"
-      :class="{ expand: props.flat, 'add-padding': mdAndUp }" scroll-behavior="hide" order="1"
+      :class="{ expand: props.flat, 'lg-and-down-padding' : lg, 'not-flat-padding' : !props.flat && lg}" scroll-behavior="hide" order="1"
       :elevation="props.flat ? 0 : 5">
       <VAppBarTitle>
         <VImg :src="logoWhite" cover :max-width="props.flat ? 120 : 90" alt="Portfolio Icon"
@@ -44,7 +44,7 @@ import { useGoTo } from "vuetify";
 import logoWhite from '/img/logo-white.png';
 import { useDisplay } from 'vuetify'
 
-const { mdAndUp } = useDisplay()
+const { lg } = useDisplay()
 
 const scrollTo = useGoTo();
 
@@ -99,6 +99,16 @@ function onClick(e: string) {
 .expand {
   height: 70px !important;
   padding-top: 40px;
+}
+
+.lg-and-down-padding {
+  padding-right: 185px !important;
+  padding-left: 165px !important;
+}
+
+.not-flat-padding {
+  padding-right: 130px !important;
+  padding-left: 110px !important;
 }
 
 .add-padding {

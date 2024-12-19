@@ -13,7 +13,7 @@
             Your browser does not support the video tag.
         </video>
         <VRow justify="center" align="center" class="h-100">
-            <VCol cols="12" lg="9">
+            <VCol cols="12" lg="10" xl="9">
                 <VContainer class="h-100">
                     <VRow align="center">
                         <VCol cols="12" md="6">
@@ -22,15 +22,15 @@
                                 <div class="d-md-flex align-center text-center">
                                     <v-icon icon="mdi-cloud-question" color="secondary" data-aos="fade-down"
                                         data-aos-duration="1000" ></v-icon>
-                                    <div class="text-uppercase text-h6 text-md-h4 mt-2 ml-2" data-aos="fade-up"
+                                    <div class="text-h6 text-md-h4 ml-2" data-aos="fade-up"
                                         data-aos-duration="1000">Why Unicos?</div>
                                 </div>
-                                <div class="text-subtitle-1 text-md-h6 mt-6 text-left" data-aos="fade-down"
+                                <div class="text-subtitle-1 text-md-h6  mt-6 text-left" data-aos="fade-down"
                                     data-aos-duration="200" data-aos-delay="1000">
                                     A different approach, using a multi-tenant
                                     HRIS.
                                 </div>
-                                <div class="text-subtitle-1 text-md-h6 font-weight-bold mt-3" data-aos="zoom-in-left"
+                                <div class="text-subtitle-1 font-weight-bold mt-3" data-aos="zoom-in-left"
                                     data-aos-duration="1000">Key Features:</div>
                                 <div class="mt-1" data-aos="zoom-in-right" data-aos-duration="1000"
                                     data-aos-delay="200">
@@ -49,16 +49,8 @@
                                     <span class="font-weight-bold">Job Portal:</span>
                                     Find talent or post job openings.
                                 </div>
-                                <div class="text-subtitle-1 text-md-h6 font-weight-bold mt-2" data-aos="zoom-in-left"
+                                <div class="text-subtitle-1 font-weight-bold mt-2" data-aos="zoom-in-left"
                                     data-aos-duration="1000">Benefits:</div>
-
-
-                                <div class="mt-2" data-aos="zoom-in-right" data-aos-duration="1000"
-                                    data-aos-delay="200"><span>
-                                        <VIcon color="secondary">mdi-circle-small</VIcon>
-                                    </span>
-                                    Seamless navigation across multiple management systems
-                                </div>
 
                                 <div class="mt-2" data-aos="zoom-in-right" data-aos-duration="1000"
                                     data-aos-delay="300">
@@ -127,6 +119,9 @@ const onIntersect = (isIntersectingValue: any) => {
     width: 100%;
     overflow: hidden;
     z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .background-video {

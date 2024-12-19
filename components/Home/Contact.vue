@@ -1,29 +1,28 @@
 <template>
     <div id="homeContact">
         <VRow justify="center" align="center" class="h-100">
-            <VCol cols="12" lg="9">
+            <VCol cols="12" xl="9" lg="10">
                 <VContainer class="h-100">
-                    <VRow justify="center" align="center">
+                    <VRow align="center">
                         <VCol cols="12" md="6">
                             <VImg src="~/assets/images/hero/contact/contact.png" cover data-aos="flip-right"
-                                data-aos-easing="ease-out-cubic" data-aos-duration="1000" />
+                                data-aos-easing="ease-out-cubic" data-aos-duration="1000"  />
                         </VCol>
                         <VCol cols="12" md="6" class="d-flex justify-end align-center">
                             <div>
-                                <div class="mb-16 text-center">
+                                <div class="mb-16 text-center" style="width: 448px;">
                                     <v-icon icon="mdi-email-newsletter" color="secondary" data-aos="fade-down"
-                                        data-aos-duration="1000"></v-icon>
-                                    <div class="text-uppercase text-h6 text-md-h4 mt-2" data-aos="fade-up"
+                                        data-aos-duration="1000" class="mx-auto text-center"></v-icon>
+                                    <div class="text-h6 text-md-h4 mt-2" data-aos="fade-up"
                                         data-aos-duration="1000">Get in Touch
                                         with Unicos</div>
-                                    <p style="text-wrap: pretty;"
-                                        class="text-subtitle-1 text-md-h6 mt-4 mb-10 w-md-75 mx-auto text-center"
-                                        data-aos="fade-down" data-aos-duration="200" data-aos-delay="1000">Have
-                                        questions or need expert
-                                        advice? We're here to help. Reach out for top talent acquisition or to learn
-                                        more about our services.</p>
+                                        <p class="text-subtitle-1 text-md-h6 mt-4 mb-10 text-center" data-aos="fade-down"
+                                    data-aos-duration="200" data-aos-delay="1000" >Have
+                                    questions or need expert
+                                    advice? We're here to help. Reach out for top talent acquisition or to learn
+                                    more about our services.</p>
                                 </div>
-                                <VCard class="mx-auto pa-6 pb-8" max-width="448" rounded="lg" data-aos="fade-up-left"
+                                <VCard class="ms-auto pa-6 pb-8" max-width="448" rounded="lg" data-aos="fade-up-left"
                                     data-aos-easing="ease-out-cubic" data-aos-duration="1000">
                                     <VForm @submit.prevent="sendEmail" class="text-start" ref="form">
                                         <div class="text-subtitle-1 text-medium-emphasis">Name</div>

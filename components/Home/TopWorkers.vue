@@ -2,7 +2,7 @@
   <section id="homeTopWorkers">
 
     <VRow justify="center" align="center" class="h-100">
-      <VCol cols="12" lg="9">
+      <VCol cols="12" xl="9" lg="10">
         <VContainer class="h-100">
           <VRow justify="center" align="center">
             <VCol cols="12" md="6">
@@ -38,7 +38,7 @@
                   <VHover>
                     <template v-slot:default="{ isHovering, props }">
                       <VCard v-bind="props" :color="isHovering ? 'secondary' : ''"
-                        class="mb-4 text-center rounded-xl py-10 px-8 " :class="{ 'text-white': isHovering }"
+                        class="mb-4 text-center rounded-xl py-10 px-8 px-lg-2 " :class="{ 'text-white': isHovering }"
                         elevation="8">
                         <VImg class="rounded-circle mx-auto" :class="{ 'black-white-overlay': !isHovering }" cover
                           height="120" width="120" :src="achiever.img">
@@ -65,7 +65,7 @@
                   <VHover>
                     <template v-slot:default="{ isHovering, props }">
                       <VCard v-bind="props" :color="isHovering ? 'secondary' : ''"
-                        class="mb-4 text-center rounded-xl py-10 px-8 " :class="{ 'text-white': isHovering }"
+                        class="mb-4 text-center rounded-xl py-10 px-8 px-lg-2" :class="{ 'text-white': isHovering }"
                         elevation="8">
                         <VImg class="rounded-circle mx-auto" :class="{ 'black-white-overlay': !isHovering }" cover
                           height="120" width="120" :src="achiever.img">

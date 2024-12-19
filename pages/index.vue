@@ -8,14 +8,17 @@
             <VCol cols="12" lg="9">
               <VRow align="center" justify="center" class="h-100">
                 <VCol cols="12" md="8">
-                  <div class="mt-6">
-                    <p class="mt-2 text-h5 text-md-h4">
-                      A revolutionary platform uniting <a href=""
+                  <div class="mt-6 text-center text-md-left">
+                    <p class="mt-2 text-h6 text-md-h4">
+                      A revolutionary platform uniting 
+                    </p>
+                    <p class="mt-2">
+                      <a href=""
                         class="typewrite text-h5 text-md-h3 text-secondary text-decoration-none font-weight-bold">
                         <span class="wrap"> {{ txt }}</span>
                       </a>
                     </p>
-                    <p class="text-h5 text-md-h4 mt-2">
+                    <p class="text-h6 text-md-h4 mt-2">
                       offering endless possibilities.
                     </p>
                     <VTextField class="mt-10" :loading="loading" append-inner-icon="mdi-magnify" density="compact"

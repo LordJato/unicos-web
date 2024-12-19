@@ -131,7 +131,7 @@ const prevSlide = () => {
     background:
         url("~/assets/images/hero/feedback/circuit-board.svg") no-repeat center,
         radial-gradient(circle, rgba(33, 50, 104, 1) 0%, rgba(7, 15, 43, 1) 76%);
-    height: 120vh;
+    min-height: 120vh;
 }
 
 .overlay {

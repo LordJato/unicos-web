@@ -1,7 +1,7 @@
 <template>
   <section id="homeAbout" class="py-16">
     <VRow align="center" justify="center" class="h-100">
-      <VCol cols="12" lg="9">
+      <VCol cols="12" xl="9" lg="10">
         <VContainer class="h-100" >
           <div class="mb-6 mb-16 text-center" > 
               <v-icon icon="mdi-application-brackets" color="secondary" data-aos="fade-down" data-aos-duration="1000" ></v-icon>
@@ -21,7 +21,7 @@
                   <VCardTitle>{{ about.title }}</VCardTitle>
                   <VCardSubtitle>{{ about.subtitle }}</VCardSubtitle>
                 </VCardItem>
-                <VCardText class="mt-5 px-6" :style="mdAndUp ? 'height: 250px' : ''">
+                <VCardText class="mt-5 px-6 px-lg-1" :style="mdAndUp ? 'height: 280px' : ''">
                   <p class="mb-5">{{ about.text }}</p>
                   <div v-for="(benefit, i) in about.benefits" :key="i" class="d-flex mb-2">
                     <v-icon color="secondary" icon="mdi-check" class="mr-2"></v-icon>

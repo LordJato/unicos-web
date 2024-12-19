@@ -8,9 +8,9 @@
                     our partners choose Unicos?</div>
             </div>
             <VRow class="h-100 py-16">
-                <VCol cols="12" md="6" class="order-last order-md-first">
+                <VCol cols="12" md="6" class="order-last order-md-first px-9 px-md-0">
                     <VRow class="h-100 d-flex justify-center justify-md-end">
-                        <VCol cols="9" class="ps-md-6 pe-md-14">
+                        <VCol cols="12" xl="9" lg="10" class="ps-md-6 pe-md-14">
                             <div class="text-h6 mb-5" data-aos="fade-right" data-aos-duration="500">
                                 <span class="font-weight-bold">First</span>, Unicos ensures data protection and
                                 confidentiality through robust security
@@ -58,23 +58,24 @@
                     </VRow>
                 </VCol>
                 <VCol cols="12" md="6" class="d-flex justify-end order-first order-md-last">
-                    <img data-aos="zoom-out-left" data-aos-duration="5000" data-aos-delay="500" class="position-abolute"
-                        width="880" height="450"
-                        src="https://c1.wallpaperflare.com/preview/311/34/429/colleague-unsplash-team-group-work.jpg" />
+                    <VImg data-aos="zoom-out-left" data-aos-duration="5000" data-aos-delay="500"
+                        class="position-abolute" height="450"
+                        src="https://c1.wallpaperflare.com/preview/311/34/429/colleague-unsplash-team-group-work.jpg"
+                        cover />
                 </VCol>
             </VRow>
 
             <div class="my-16"></div>
 
             <VRow class="h-100 pt-16">
-                <VCol cols="12" md="6" class="d-flex justify-start ">
-                    <img data-aos="zoom-out-right" data-aos-duration="5000" data-aos-delay="500"
-                        class="position-abolute" width="880" height="450"
+                <VCol cols="12" md="6" class="d-flex justify-start position-relative">
+                    <v-img data-aos="zoom-out-right" data-aos-duration="5000" data-aos-delay="500"
+                        class="position-abolute" height="450" cover
                         src="https://onecms-res.cloudinary.com/image/upload/s--jTy7iOgL--/f_auto,q_auto/c_fill,g_auto,h_338,w_600/v1/mediacorp/cna/image/2021/11/23/istock-1227389550.jpg?itok=YqtxCCM9" />
                 </VCol>
                 <VCol cols="12" md="6">
                     <VRow class="h-100 d-flex justify-center justify-md-start">
-                        <VCol cols="9" class="ps-md-16">
+                        <VCol cols="12" xl="9" lg="10" class="ps-md-16 px-9 px-md-0">
                             <div class="text-h6 mb-5" data-aos="fade-right" data-aos-offset="300"
                                 data-aos-easing="ease-in-sine">
                                 <span class="font-weight-bold">Second</span>, Unicos revolutionizes business growth. Our

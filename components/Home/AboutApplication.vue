@@ -3,13 +3,13 @@
     <div class="dot-bg-left d-none d-md-flex"></div>
     <div class="dot-bg d-none d-md-flex"></div>
     <VRow justify="center" align="center" class="h-100">
-      <VCol cols="12" lg="9">
+      <VCol cols="12" xl="9" lg="10">
         <VContainer class="h-100">
           <VRow justify="center" align="center">
             <VCol cols="12" md="6">
               <div data-aos="fade-down-left" data-aos-duration="1000">
                 <VCard class="mx-auto">
-                  <VImg src="~/assets/images/hero/about-application/tenancy.png" cover max-height="400"></VImg>
+                  <VImg src="~/assets/images/hero/about-application/tenancy.png" cover max-height="400" eager></VImg>
                   <VCardTitle class="text-center">
                     Multi-Tenant Architecture
                   </VCardTitle>
