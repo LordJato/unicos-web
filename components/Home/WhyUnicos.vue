@@ -17,7 +17,7 @@
                 <VContainer class="h-100">
                     <VRow align="center">
                         <VCol cols="12" md="6">
-                            <VCard class="pa-12" rounded="xl" max-width="600"
+                            <VCard class="pa-12 my-16 my-md-none" rounded="xl" max-width="600"
                                 style="background-color: rgba(7, 15, 43, 0.9);">
                                 <div class="d-md-flex align-center text-center">
                                     <v-icon icon="mdi-cloud-question" color="secondary" data-aos="fade-down"
@@ -115,7 +115,7 @@ const onIntersect = (isIntersectingValue: any) => {
 <style scoped>
 #whyUnicos {
     position: relative;
-    height: 150vh;
+    min-height: 150vh;
     width: 100%;
     overflow: hidden;
     z-index: 0;

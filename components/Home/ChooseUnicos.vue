@@ -8,7 +8,7 @@
                     our partners choose Unicos?</div>
             </div>
             <VRow class="h-100 py-16">
-                <VCol cols="12" md="6" class="order-last order-md-first px-9 px-md-0">
+                <VCol cols="12" md="6" class="order-last order-md-first px-9 px-md-5">
                     <VRow class="h-100 d-flex justify-center justify-md-end">
                         <VCol cols="12" xl="9" lg="10" class="ps-md-6 pe-md-14">
                             <div class="text-h6 mb-5" data-aos="fade-right" data-aos-duration="500">
@@ -75,7 +75,7 @@
                 </VCol>
                 <VCol cols="12" md="6">
                     <VRow class="h-100 d-flex justify-center justify-md-start">
-                        <VCol cols="12" xl="9" lg="10" class="ps-md-16 px-9 px-md-0">
+                        <VCol cols="12" xl="9" lg="10" class="ps-md-16 px-9 px-md-5">
                             <div class="text-h6 mb-5" data-aos="fade-right" data-aos-offset="300"
                                 data-aos-easing="ease-in-sine">
                                 <span class="font-weight-bold">Second</span>, Unicos revolutionizes business growth. Our

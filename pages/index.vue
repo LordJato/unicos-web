@@ -6,9 +6,9 @@
         <VContainer fluid class="h-100">
           <VRow align="center" justify="center" class="h-100">
             <VCol cols="12" lg="9">
-              <VRow align="center" justify="center" class="h-100">
-                <VCol cols="12" md="8">
-                  <div class="mt-6 text-center text-md-left">
+              <VRow align="center" class="h-100">
+                <VCol cols="12" lg="8" class="d-flex justify-center justify-md-start align-center" >
+                  <div class="mt-6">
                     <p class="mt-2 text-h6 text-md-h4">
                       A revolutionary platform uniting 
                     </p>
@@ -21,12 +21,12 @@
                     <p class="text-h6 text-md-h4 mt-2">
                       offering endless possibilities.
                     </p>
-                    <VTextField class="mt-10" :loading="loading" append-inner-icon="mdi-magnify" density="compact"
+                    <VTextField class="mt-10 " :loading="loading" append-inner-icon="mdi-magnify" density="compact"
                       label="Search for any services" variant="solo" hide-details single-line
                       @click:append-inner="onClick" max-width="350"></VTextField>
                   </div>
                 </VCol>
-                <VCol cols="12" md="4">
+                <VCol cols="12" md="4" class="d-md-none">
                 </VCol>
               </VRow>
             </VCol>
