@@ -151,6 +151,7 @@ async function sendEmail(): Promise<any> {
     display: flex;
     align-items: center;
     background:
+        url('~/assets/images/hero/contact/dots-left.png') center/cover no-repeat, 
         linear-gradient(150deg, rgba(7, 15, 43, 1) 0%, rgba(8, 16, 46, 1) 60%, rgba(26, 41, 88, 1) 75%, rgba(54, 197, 200, 1) 95%, rgba(33, 50, 104, 1) 100%);
 }
 
