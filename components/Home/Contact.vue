@@ -1,5 +1,6 @@
 <template>
     <div id="homeContact">
+        <div class="dot-bg-cover d-none d-md-flex"></div>
         <VRow justify="center" align="center" class="h-100">
             <VCol cols="12" xl="9" lg="10">
                 <VContainer class="h-100">
@@ -147,12 +148,10 @@ async function sendEmail(): Promise<any> {
     top: 0;
     position: relative;
     min-height: 100vh;
-    overflow: hidden;
     display: flex;
     align-items: center;
     background:
-        url('~/assets/images/hero/contact/dots-left.png') center/cover no-repeat, 
-        linear-gradient(150deg, rgba(7, 15, 43, 1) 0%, rgba(8, 16, 46, 1) 60%, rgba(26, 41, 88, 1) 75%, rgba(54, 197, 200, 1) 95%, rgba(33, 50, 104, 1) 100%);
+        linear-gradient(150deg, rgba(7, 15, 43, 1) 70%, rgba(8, 16, 46, 1) 71%, rgba(26, 41, 88, 1) 75%, rgba(54, 197, 200, 1) 95%, rgba(33, 50, 104, 1) 100%);
 }
 
 .v-alert {
@@ -161,6 +160,15 @@ async function sendEmail(): Promise<any> {
     right: 2%;
     margin: 0 auto;
     display: flex;
+}
+
+.dot-bg-cover {
+  position: absolute;
+  top: -2%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('~/assets/images/hero/contact/dots-cover.png');
 }
 </style>
 

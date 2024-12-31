@@ -21,9 +21,9 @@
                                 style="background-color: rgba(7, 15, 43, 0.9);">
                                 <div class="d-md-flex align-center text-center">
                                     <v-icon icon="mdi-cloud-question" color="secondary" data-aos="fade-down"
-                                        data-aos-duration="1000" ></v-icon>
-                                    <div class="text-h6 text-md-h4 ml-2" data-aos="fade-up"
-                                        data-aos-duration="1000">Why Unicos?</div>
+                                        data-aos-duration="1000"></v-icon>
+                                    <div class="text-h6 text-md-h4 ml-2" data-aos="fade-up" data-aos-duration="1000">Why
+                                        Unicos?</div>
                                 </div>
                                 <div class="text-subtitle-1 text-md-h6  mt-6 text-left" data-aos="fade-down"
                                     data-aos-duration="200" data-aos-delay="1000">
@@ -137,17 +137,14 @@ const onIntersect = (isIntersectingValue: any) => {
 
 .svg-layered-border {
     position: absolute;
-
     width: 100%;
-    z-index: -1;
-
+    z-index: -1 !important;
 }
 
 .layered-bottom {
     bottom: 0;
     margin-bottom: -20px;
 }
-
 
 .layered-top {
     top: 0;
