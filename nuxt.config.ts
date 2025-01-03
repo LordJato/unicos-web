@@ -57,7 +57,7 @@ export default defineNuxtConfig({
         },
       ],
     },
-    
+
   },
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
@@ -77,7 +77,22 @@ export default defineNuxtConfig({
     //...
     '@pinia/nuxt',
     "nuxt-aos",
+    "@nuxtjs/sitemap",
+    "@nuxtjs/robots"
   ],
+  sitemap: {
+    urls: ['https://unicos.site'], // Set the base URL of your site
+    include: ['/'], // List of routes to include in the sitemap
+    defaults: {
+      changefreq: 'daily',
+      priority: 1.0,
+    },
+  },
+  robots: {
+    sitemap: [
+      '/sitemap.xml'
+    ],
+  },
   vite: {
     vue: {
       template: {
@@ -85,7 +100,7 @@ export default defineNuxtConfig({
       },
     },
   },
-  runtimeConfig : {
+  runtimeConfig: {
     public: {
       emailServiceID: process.env.EMAIL_SERVICE_ID,
       emailTemplateID: process.env.EMAIL_TEMPLATE_ID,
