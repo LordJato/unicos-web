@@ -67,7 +67,7 @@ const aboutUser = ref<AboutUser[]>([
     img: JobSeekerGIF,
     title: "Job Seeker",
     subtitle: "Follow Your Heart's Desire",
-    text: "As a job seeker or worker, unlock opportunities:",
+    text: "As a job seeker or a freelancer, unlock opportunities:",
     benefits: ['Search and apply to job openings from various clients and companies', 'Highlight your expertise and showcase your portfolio to attract top employers and land your dream job.', 'Find temporary or project-based work with leading clients.'],
     url: "#",
   },
