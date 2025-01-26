@@ -104,7 +104,9 @@ export default defineNuxtConfig({
     public: {
       emailServiceID: process.env.EMAIL_SERVICE_ID,
       emailTemplateID: process.env.EMAIL_TEMPLATE_ID,
-      emailPublicKey: process.env.EMAIL_PUBLIC_KEY
+      emailPublicKey: process.env.EMAIL_PUBLIC_KEY,
+      spaURL : process.env.SPA_URL,
+      apiURL : process.env.API_URL
     }
   }
 })

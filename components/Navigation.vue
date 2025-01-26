@@ -1,33 +1,82 @@
 <template>
   <nav>
-    <VAppBar class="px-12" height="60" :color="props.color" :flat="props.flat"
-      :class="{ expand: props.flat, 'lg-padding' : lg && props.flat, 'xl-padding' : xl ,'not-flat-padding' : !props.flat}" scroll-behavior="hide" order="1"
-      :elevation="props.flat ? 0 : 5">
+    <VAppBar
+      class="px-12"
+      height="60"
+      :color="props.color"
+      :flat="props.flat"
+      :class="{
+        expand: props.flat,
+        'lg-padding': lg && props.flat,
+        'xl-padding': xl,
+        'not-flat-padding': !props.flat,
+      }"
+      scroll-behavior="hide"
+      order="1"
+      :elevation="props.flat ? 0 : 5"
+    >
       <VAppBarTitle>
-        <VImg :src="logoWhite" cover :max-width="props.flat ? 120 : 90" alt="Portfolio Icon"
-          style="transition: 0.5s ease;" />
+        <VImg
+          :src="logoWhite"
+          cover
+          :max-width="props.flat ? 120 : 90"
+          alt="Portfolio Icon"
+          style="transition: 0.5s ease"
+        />
       </VAppBarTitle>
       <VAppBarNavIcon @click.stop="drawer = !drawer" class="d-flex d-md-none">
         <VIcon size="x-large"> mdi-reorder-horizontal </VIcon>
       </VAppBarNavIcon>
 
       <div class="d-none d-md-flex align-center">
-        <VBtn v-for="(link, i) in links" :key="i" variant="plain" @click="onClick(link.section)"
-          class="text-subtitle-2 font-weight-bold" :to="link.path">
+        <VBtn
+          v-for="(link, i) in links"
+          :key="i"
+          variant="plain"
+          @click="onClick(link.section)"
+          class="text-subtitle-2 font-weight-bold"
+          :to="link.path"
+        >
           {{ link.title }}
         </VBtn>
-        <VBtn class="text-subtitle-2 font-weight-bold text-white" color="secondary" rounded="xs" size="large" variant="flat">
+        <VBtn
+          class="text-subtitle-2 font-weight-bold text-white"
+          color="secondary"
+          rounded="xs"
+          size="large"
+          variant="flat"
+          :to="spaURL"
+        >
           Get Started
         </VBtn>
       </div>
     </VAppBar>
-    <VNavigationDrawer v-model="drawer" temporary scrim order="0" class="d-md-none">
-      <VListItem height="80" prepend-avatar="/img/icon.png" title="Steto Javellana"></VListItem>
+    <VNavigationDrawer
+      v-model="drawer"
+      temporary
+      scrim
+      order="0"
+      class="d-md-none"
+    >
+      <VListItem
+        height="80"
+        prepend-avatar="/img/icon.png"
+        title="Steto Javellana"
+      ></VListItem>
       <VDivider />
 
       <VList density="compact" nav>
-        <VListItem height="50" v-for="(link, i) in links" :key="i" variant="text" @click="onClick(link.section)"
-          :prepend-icon="link.icon" :title="link.title" :to="link.path" :value="link.title" />
+        <VListItem
+          height="50"
+          v-for="(link, i) in links"
+          :key="i"
+          variant="text"
+          @click="onClick(link.section)"
+          :prepend-icon="link.icon"
+          :title="link.title"
+          :to="link.path"
+          :value="link.title"
+        />
       </VList>
     </VNavigationDrawer>
   </nav>
@@ -41,12 +90,15 @@ const props = defineProps({
 
 import { ref } from "vue";
 import { useGoTo } from "vuetify";
-import logoWhite from '/img/logo-white.png';
-import { useDisplay } from 'vuetify'
+import logoWhite from "/img/logo-white.png";
+import { useDisplay } from "vuetify";
 
-const { lg, xl } = useDisplay()
+const { lg, xl } = useDisplay();
 
 const scrollTo = useGoTo();
+const config = useRuntimeConfig();
+
+const spaURL = config.public.spaURL as string
 
 const goToOptions = {
   container: "__nuxt",
@@ -115,5 +167,4 @@ function onClick(e: string) {
   padding-right: 185px !important;
   padding-left: 165px !important;
 }
-
 </style>
