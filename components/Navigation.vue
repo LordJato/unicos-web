@@ -61,7 +61,7 @@
       <VListItem
         height="80"
         prepend-avatar="/img/icon.png"
-        title="Steto Javellana"
+        title="Unicos"
       ></VListItem>
       <VDivider />
 
