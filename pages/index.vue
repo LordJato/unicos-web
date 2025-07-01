@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- Hero -->
     <section id="home">
       <VParallax src="~/assets/images/hero/bg.png" style="height: calc(100vh + 30px);">
         <VContainer fluid class="h-100">
