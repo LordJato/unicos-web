@@ -22,15 +22,7 @@ import { useRoute } from 'vue-router'
 const route = useRoute()
 
 // const isHomePage = computed(() => {
-//   const arr = ['/', '/contact', '/opportunities']
-//   return arr.includes(route.path)
-// } )
 
-// watch(route, (val, newVal) => {
-//   const result = isHomePage.value
-//   // Use the result as needed
-//   console.log(result)
-// })
 
 const show = ref<boolean>(false);
 const fab = ref<boolean | null>(false);
